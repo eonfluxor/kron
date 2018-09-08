@@ -4,7 +4,7 @@
 ![platforms](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20Linux-lightgrey.svg)
 
 # What is Delay?
-Delay is an Manager offering 4 convenient Timer modes through a friendly interface. Delay takes care of the invovled NSTimer implementation and lifecycle. 
+Delay is a Manager offering 4 convenient Timer modes through a friendly interface. Delay takes care of the invovled NSTimer implementation and lifecycle. 
 
 1. `debounce` Calls immediatly and reject calls until time out elapses
 1. `debounceLast` As `debounce` but also performs the last call after time out
