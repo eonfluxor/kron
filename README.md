@@ -15,11 +15,13 @@ Delay is an timer manager offering 4 convenient modes through a friendly interfa
 
 ### Why Delay?
 
-Instead of returning a timer instance, Delay manages the Timer instances internally through a `DelayKey` -> `Timer` dictionary.
+Instead of returning a timer instance, Delay manages the Timer instances internally through a `DelayKey` -> `Timer` dictionary. This makes easy to call delay from distant components or threads accesing the timers by their key value 
 
-The `DelayKey` can be etiher an `String` struct or `AnyObject` instance. 
-If an object is passed the key is inferred from the object's pointer.
- 
+The `DelayKey` can be etiher an `String` struct or `AnyObject` instance.  If an object is passed the key is inferred from the object's pointer.
+
+As the intention is to facilitate calling delay from distant implementations you can optional pass a context `ctx` value. A context can be `Any` struct or class instance and it's internally wrapped with a weak reference to prevent retain cycles. The context is then optionally passed to the timeOut closure.
+
+
 ```
 Delay.idle(1, key:"debounce mouse"){ (key,ctx) in
             //
