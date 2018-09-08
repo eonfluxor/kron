@@ -40,6 +40,12 @@ Delay.idle(1, key:self.currentModel){ (key,ctx) in
 }
 ```
 
+## Documentation
+
+Self-generated documentation using jazzy and hosted in github available here:
+
+[Documentation](https://htmlpreview.github.io/?https://raw.githubusercontent.com/eonfluxor/delay/master/docs/index.html)
+
 ## CocoaPods
 
 If you use [CocoaPods][] to manage your dependencies, simply add
