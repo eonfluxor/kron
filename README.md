@@ -13,7 +13,7 @@ Delay is a Manager offering 4 convenient Timer modes through a friendly interfac
 
 ### Why Delay?
 
-Instead of returning a timer instance, Delay manages the Timer instances internally through a `DelayKey` -> `Timer` dictionary. This makes easy to call delay from distant components or threads accesing the timers by their key value 
+Instead of returning a timer instance, Delay manages the Timer instances internally through a `DelayKey` -> `Timer` dictionary. This makes easy to call delay from distant components or threads accesing the timers by their key value.
 
 The `DelayKey` can be etiher an `String` struct or `AnyObject` instance.  If an object is passed the key is inferred from the object's pointer.
 
