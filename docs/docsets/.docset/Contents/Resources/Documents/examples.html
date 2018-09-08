@@ -72,7 +72,69 @@
         <section class="section">
           <div class="section-content">
             
-            <h1 id='examples' class='heading'>Examples</h1>
+            <h2 id='examples' class='heading'>Examples</h2>
+
+<p>Please review the test units for exhaustive implementation samples.</p>
+
+<p>In all instances the timer will be reset by simply calling delay with the same key. (See below <code>Static vs Instance</code> to learn more about the Static keyspace).</p>
+
+<ol>
+<li><strong>Idle Timer</strong></li>
+</ol>
+<pre class="highlight plaintext"><code>Delay.idle(1, key:"keyStrokes"){ (key,ctx) in
+      print("performed after 1 second of inactivity")
+}
+</code></pre>
+
+<ol>
+<li><strong>Debouncer</strong></li>
+</ol>
+<pre class="highlight plaintext"><code>Delay.debounce(1, key:"Scroll"){ (key,ctx) in
+      print("performed immediately and again no sooner than 1 second")
+}
+</code></pre>
+
+<ol>
+<li><strong>Debouncer and perform last</strong></li>
+</ol>
+<pre class="highlight plaintext"><code>Delay.debounceLast(1, key:"Scroll"){ (key,ctx) in
+      print("performed immediately and again no sooner than 1 second")
+      print("also performs the last call after 1 second of inactivity")
+}
+</code></pre>
+
+<ol>
+<li><strong>Watchdog</strong></li>
+</ol>
+<pre class="highlight plaintext"><code>Delay.wachtDog(10, key:"ApiResponse"){ (key,ctx) in
+      print("performed  after 10 seconds unless canceled")
+
+}
+
+...
+
+// Called somewhere else to abort the timeOut
+Delay.wachtDogCancel("ApiResponse")
+
+</code></pre>
+<h3 id='satic-vs-instance' class='heading'>Satic vs Instance</h3>
+
+<p>You can use the provided static functions. Internally the class manages 3 singletons to prevent key collisions between the three different modes:</p>
+<pre class="highlight plaintext"><code>//Debouncer
+Delay.debounce
+Delay.debounceLast
+
+//Idle
+Delay.idle
+
+//Watchdog
+Delay.watchdog
+</code></pre>
+
+<p>Optionally you can instantiate Delay:</p>
+<pre class="highlight plaintext"><code>let delay = Delay()
+delay.debounce( ...
+</code></pre>
 
           </div>
         </section>

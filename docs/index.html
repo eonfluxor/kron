@@ -78,7 +78,7 @@
 <img src="https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20Linux-lightgrey.svg" alt="platforms"></p>
 <h1 id='what-is-delay' class='heading'>What is Delay?</h1>
 
-<p>Delay is an Manager offering 4 convenient Timer modes through a friendly interface. Delay takes care of the invovled NSTimer implementation and lifecycle. </p>
+<p>Delay is a Manager offering 4 convenient Timer modes through a friendly interface. Delay takes care of the invovled NSTimer implementation and lifecycle. </p>
 
 <ol>
 <li><code>debounce</code> Calls immediatly and reject calls until time out elapses</li>
@@ -88,7 +88,7 @@
 </ol>
 <h3 id='why-delay' class='heading'>Why Delay?</h3>
 
-<p>Instead of returning a timer instance, Delay manages the Timer instances internally through a <code>DelayKey</code> -&gt; <code>Timer</code> dictionary. This makes easy to call delay from distant components or threads accesing the timers by their key value </p>
+<p>Instead of returning a timer instance, Delay manages the Timer instances internally through a <code>DelayKey</code> -&gt; <code>Timer</code> dictionary. This makes easy to call delay from distant components or threads accesing the timers by their key value.</p>
 
 <p>The <code>DelayKey</code> can be etiher an <code>String</code> struct or <code>AnyObject</code> instance.  If an object is passed the key is inferred from the object&rsquo;s pointer.</p>
 

@@ -1,9 +1,0 @@
-jazzy \
-  --clean \
-  --author Eonflux \
-  --author_url https://eonflux.io \
-  --github_url https://github.com/eonfluxor/delay \
-  --module Delay \
-  --root-url https://eonflux.io/delay/ \
-  --output docs/swift \
-  --theme 'fullwidth'
