@@ -7,25 +7,26 @@
 
 ## What is Delay?
 __delay__ 
-
-## Getting Started
-
-1. **[Topic][]**
-  
-   text [`Link`][], [`Link`][], [`Link`][] and [`Link`][].
    
 ## Examples
 
-1. **Title**
+Please review the test units for exhaustive implementation samples.
 
-     text [_UI Examples_ playground][], which demonstrates:
-     * one.
-     * two.
-
-## Installation
+1. **Debouncer**
 
 ```
-github "eonfluxor/delay" ~> 3.0
+Delay.idle(1, key:"test", ctx: context){ (key,ctx) in
+            expectation2.fulfill()
+}
+```
+
+Using an object as the key:
+
+```
+let object = UIView()
+Delay.idle(1, key:object, ctx: context){ (key,ctx) in
+            expectation2.fulfill()
+}
 ```
 
 #### CocoaPods
