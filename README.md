@@ -12,22 +12,63 @@ __delay__
 
 Please review the test units for exhaustive implementation samples.
 
-1. **Debouncer**
-
+1. **Idle Timer**
+    
+    Reset the idle timer by calling the function with the same key:
 ```
 Delay.idle(1, key:"test", ctx: context){ (key,ctx) in
             expectation2.fulfill()
 }
 ```
-
-Using an object as the key:
-
+   
+   Optionally use any object pointer as key:
 ```
+
 let object = UIView()
 Delay.idle(1, key:object, ctx: context){ (key,ctx) in
             expectation2.fulfill()
 }
 ```
+1. **Debouncer**
+
+```
+TODO
+```
+
+1. **Debouncer and perform last**
+
+```
+TODO
+```
+
+1. **Watchdog**
+
+```
+TODO
+```
+#### Satic vs Instance
+
+You can use the provided static functions. Internally the class manages 3 singletons to prevent key collisions between the three different modes:
+
+```
+//Debouncer
+Delay.debounce
+Delay.debounceLast
+
+//Idle
+Delay.idle
+
+//Watchdog
+Delay.watchdog
+```
+
+Optionally you can instantiate Delay:
+
+```
+let delay = Delay()
+delay.debounce( ...
+```
+
 
 #### CocoaPods
 
