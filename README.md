@@ -6,8 +6,8 @@
 # What is Delay?
 Delay is an Manager offering 4 convenient Timer modes through a friendly interface. Delay takes care of the invovled NSTimer implementation and lifecycle. 
 
-1. `debounce` Calls immediatly and reject calls until time out
-1. `debounceLast` As `debounce` but also performs the last call
+1. `debounce` Calls immediatly and reject calls until time out elapses
+1. `debounceLast` As `debounce` but also performs the last call after time out
 1. `idle` Performs the last call after not being called during the timeout interval
 1. `watchdog` As `idle` but allowing to be canceled with `watchDogCancel`
 
