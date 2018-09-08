@@ -1,0 +1,18 @@
+#custom_categories:
+#  - name: Getting Started 
+#    children:
+#    - Examples
+theme: fullwidth 
+skip_undocumented: true
+readme: README.md
+documentation: Documentation/*.md
+hide_documentation_coverage: true
+#xcodebuild_arguments:
+#  - -workspace
+#  - Delay.xcworkspace
+#  - -scheme
+#  - Delay
+author: Eonflux - Hassan Uriostegui
+author_url: https://eonflux.io/
+github_url: https://github.com/eonflux/delay/
+#dash_url: http://eonflux.io/delay/docs/ReactiveSwift.xml
