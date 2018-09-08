@@ -6,7 +6,45 @@
 🎉 [Getting Started](#getting-started) 
 
 ## What is Delay?
-__delay__ 
+Delay is an timer manager offering 4 convenient modes through a friendly interface. Delay takes care of the invovled NSTimer implementation and lifecycle. 
+
+1. Delay
+1. DelayLast
+1. Idle
+1. Watchdog
+
+Instead of returning a timer instance, Delay manages the Timer instances internally through a `DelayKey` -> `Timer` dictionary.
+
+The DelayKey can be an `String` struct or an `AnyObject` instance. If an objects is passed the key is inferred from the object's pointer.
+ 
+```
+Delay.idle(1, key:"debounce mouse"){ (key,ctx) in
+            //
+}
+```
+
+```
+let context = 'userTap'
+Delay.idle(1, key:"debounce mouse", ctx: context){ (key,ctx) in
+       print(ctx as! String) // userTap
+}
+```
+
+```
+let object = UIView()
+Delay.idle(1, key:object){ (key,ctx) in
+            expectation2.fulfill()
+}
+```
+
+## CocoaPods
+
+If you use [CocoaPods][] to manage your dependencies, simply add
+delay to your `Podfile`:
+
+```
+pod 'delay', '~> 3.0'
+```
    
 ## Examples
 
@@ -16,37 +54,44 @@ Please review the test units for exhaustive implementation samples.
     
     Reset the idle timer by calling the function with the same key:
 ```
-Delay.idle(1, key:"test", ctx: context){ (key,ctx) in
-            expectation2.fulfill()
+Delay.idle(1, key:"keyStrokes"){ (key,ctx) in
+      print("performed after 1 second of inactivity")
 }
 ```
    
-   Optionally use any object pointer as key:
-```
-
-let object = UIView()
-Delay.idle(1, key:object, ctx: context){ (key,ctx) in
-            expectation2.fulfill()
-}
-```
 1. **Debouncer**
 
 ```
-TODO
+Delay.debounce(1, key:"Scroll"){ (key,ctx) in
+      print("performed immediately and again no sooner than 1 second")
+}
 ```
 
 1. **Debouncer and perform last**
 
 ```
-TODO
+Delay.debounceLast(1, key:"Scroll"){ (key,ctx) in
+      print("performed immediately and again no sooner than 1 second")
+      print("also performs the last call after 1 second of inactivity")
+}
 ```
 
 1. **Watchdog**
 
 ```
-TODO
+Delay.wachtDog(10, key:"ApiResponse"){ (key,ctx) in
+      print("performed  after 10 seconds unless canceled")
+
+}
+
+...
+
+// Called somewhere else to abort the timeOut
+Delay.wachtDogCancel("ApiResponse")
+
 ```
-#### Satic vs Instance
+
+### Satic vs Instance
 
 You can use the provided static functions. Internally the class manages 3 singletons to prevent key collisions between the three different modes:
 
@@ -67,16 +112,6 @@ Optionally you can instantiate Delay:
 ```
 let delay = Delay()
 delay.debounce( ...
-```
-
-
-#### CocoaPods
-
-If you use [CocoaPods][] to manage your dependencies, simply add
-delay to your `Podfile`:
-
-```
-pod 'delay', '~> 3.0'
 ```
 
 ## Have a question?
