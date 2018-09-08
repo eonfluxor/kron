@@ -55,9 +55,10 @@ pod 'delay', '~> 3.0'
 
 Please review the test units for exhaustive implementation samples.
 
+In all instances the timer will be reset by simply calling delay with the same key. (See below `Static vs Instance` to learn more about the Static keyspace).
+
 1. **Idle Timer**
     
-    Resets the timer by calling the function with the same key:
 ```
 Delay.idle(1, key:"keyStrokes"){ (key,ctx) in
       print("performed after 1 second of inactivity")
