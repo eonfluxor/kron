@@ -5,7 +5,7 @@
 
 🎉 [Getting Started](#getting-started) 
 
-## What is Delay?
+# What is Delay?
 Delay is an timer manager offering 4 convenient modes through a friendly interface. Delay takes care of the invovled NSTimer implementation and lifecycle. 
 
 1. Delay
@@ -13,9 +13,12 @@ Delay is an timer manager offering 4 convenient modes through a friendly interfa
 1. Idle
 1. Watchdog
 
+### Why Delay?
+
 Instead of returning a timer instance, Delay manages the Timer instances internally through a `DelayKey` -> `Timer` dictionary.
 
-The DelayKey can be an `String` struct or an `AnyObject` instance. If an objects is passed the key is inferred from the object's pointer.
+The `DelayKey` can be etiher an `String` struct or `AnyObject` instance. 
+If an object is passed the key is inferred from the object's pointer.
  
 ```
 Delay.idle(1, key:"debounce mouse"){ (key,ctx) in
@@ -52,7 +55,7 @@ Please review the test units for exhaustive implementation samples.
 
 1. **Idle Timer**
     
-    Reset the idle timer by calling the function with the same key:
+    Resets the timer by calling the function with the same key:
 ```
 Delay.idle(1, key:"keyStrokes"){ (key,ctx) in
       print("performed after 1 second of inactivity")
