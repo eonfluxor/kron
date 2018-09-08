@@ -3,15 +3,13 @@
 ![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg) 
 ![platforms](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20Linux-lightgrey.svg)
 
-🎉 [Getting Started](#getting-started) 
-
 # What is Delay?
 Delay is an Manager offering 4 convenient Timer modes through a friendly interface. Delay takes care of the invovled NSTimer implementation and lifecycle. 
 
 1. `debounce` Calls immediatly and reject calls until time out
-1. `debounceLast` As Debounce but also performs the last call
+1. `debounceLast` As `debounce` but also performs the last call
 1. `idle` Performs the last call after not being called during the timeout interval
-1. `watchdog` As Idle but allowing to be canceled with `watchDogCancel`
+1. `watchdog` As `idle` but allowing to be canceled with `watchDogCancel`
 
 ### Why Delay?
 
