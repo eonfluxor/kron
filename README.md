@@ -21,21 +21,21 @@ As the intention is to facilitate calling delay from distant implementations you
 
 
 ```
-Delay.idle(1, key:"debounce mouse"){ (key,ctx) in
+Delay.idle(1, key:"updateUI"){ (key,ctx) in
             //
 }
 ```
 
 ```
 let context = 'userTap'
-Delay.idle(1, key:"debounce mouse", ctx: context){ (key,ctx) in
+Delay.idle(1, key:"updateUI", ctx: context){ (key,ctx) in
        print(ctx as! String) // userTap
 }
 ```
 
 ```
-let object = UIView()
-Delay.idle(1, key:object){ (key,ctx) in
+//self.currentModel should be an AnyObject instance
+Delay.idle(1, key:self.currentModel){ (key,ctx) in
             expectation2.fulfill()
 }
 ```
