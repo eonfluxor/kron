@@ -72,106 +72,113 @@
         <section class="section">
           <div class="section-content">
             
-            <p align="center">
-    <!-- <a href="https://github.com/eonfluxor/delay/"><img src="Logo/PNG/logo.png" alt="delay" /></a><br /><br /> &ndash;>
-    Delay Timers Made Easy.<br /><br />
-    <!-- <a href="http://eonfluxor.io/delay/docs/latest/"><img src="Logo/PNG/Docs.png" alt="Latest Delay Documentation" width="143" height="40" /></a> <a href="http://eonfluxor.io/slack/"><img src="Logo/PNG/JoinSlack.png" alt="Join the delay Slack community." width="143" height="40" /></a> &ndash;>
-</p>
+            <p><a href="#cocoapods"><img src="https://img.shields.io/cocoapods/v/delay.svg" alt="CocoaPods compatible"></a> 
+<a href="https://github.com/eonfluxor/delay/releases"><img src="https://img.shields.io/github/release/eonfluxor/delay.svg" alt="GitHub release"></a> 
+<img src="https://img.shields.io/badge/Swift-4.0-orange.svg" alt="Swift 4.0"> 
+<img src="https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20Linux-lightgrey.svg" alt="platforms"></p>
+<h1 id='what-is-delay' class='heading'>What is Delay?</h1>
 
-<!-- <br /> &ndash;>
-
-<!-- [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](#carthage)  -->
-
-<p><a href="#cocoapods"><img src="https://img.shields.io/cocoapods/v/delay.svg" alt="CocoaPods compatible"></a> </p>
-
-<!-- [![SwiftPM compatible](https://img.shields.io/badge/SwiftPM-compatible-orange.svg)](#swift-package-manager)  -->
-
-<p><a href="https://github.com/eonfluxor/delay/releases"><img src="https://img.shields.io/github/release/eonfluxor/delay.svg" alt="GitHub release"></a> 
-<img src="https://img.shields.io/badge/Swift-4.0-orange.svg" alt="Swift 4.0"> </p>
-
-<!-- ![platforms](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20Linux-lightgrey.svg) -->
-
-<!-- 🎉 [Getting Started](#getting-started) 🚄 [Release Roadmap](#release-roadmap) -->
-<h2 id='what-is-delay' class='heading'>What is Delay?</h2>
-
-<p><strong>delay</strong> </p>
-<h2 id='getting-started' class='heading'>Getting Started</h2>
+<p>Delay is an Manager offering 4 convenient Timer modes through a friendly interface. Delay takes care of the invovled NSTimer implementation and lifecycle. </p>
 
 <ol>
-<li><strong>[Topic][]</strong></li>
+<li><code>debounce</code> Calls immediatly and reject calls until time out elapses</li>
+<li><code>debounceLast</code> As <code>debounce</code> but also performs the last call after time out</li>
+<li><code>idle</code> Performs the last call after not being called during the timeout interval</li>
+<li><code>watchdog</code> As <code>idle</code> but allowing to be canceled with <code>watchDogCancel</code></li>
 </ol>
+<h3 id='why-delay' class='heading'>Why Delay?</h3>
 
-<p>text [<code>Link</code>][], [<code>Link</code>][], [<code>Link</code>][] and [<code>Link</code>][].</p>
-<h2 id='examples' class='heading'>Examples</h2>
+<p>Instead of returning a timer instance, Delay manages the Timer instances internally through a <code>DelayKey</code> -&gt; <code>Timer</code> dictionary. This makes easy to call delay from distant components or threads accesing the timers by their key value </p>
 
-<ol>
-<li><p><strong>Title</strong></p>
+<p>The <code>DelayKey</code> can be etiher an <code>String</code> struct or <code>AnyObject</code> instance.  If an object is passed the key is inferred from the object&rsquo;s pointer.</p>
 
-<p>text <a href="https://github.com/eonfluxor/delay/blob/master/delay-UIExamples.playground/Pages/ValidatingProperty.xcplaygroundpage/Contents.swift"><em>UI Examples</em> playground</a>, which demonstrates:</p>
-
-<ul>
-<li>one.</li>
-<li>two.</li>
-</ul></li>
-<li><p><strong><a href="Documentation/Example.OnlineSearch.md">Online Searching</a></strong></p></li>
-</ol>
-<h2 id='advanced-topics' class='heading'>Advanced Topics</h2>
-
-<ol>
-<li><strong><a href="https://github.com/eonfluxor/eonfluxor/#readme">eonfluxor</a></strong></li>
-</ol>
-
-<p>Bindings and reactive extensions for Cocoa and Cocoa Touch frameworks are offered separately as eonfluxor.</p>
-
-<ol>
-<li><p><strong><a href="http://eonfluxor.io/delay/docs/latest/">API Reference</a></strong></p></li>
-<li><p><strong><a href="Documentation/APIContracts.md">API Contracts</a></strong></p></li>
-</ol>
-
-<p>Contracts of the delay primitives, Best Practices with delay, and Guidelines on implementing custom operators.</p>
-
-<ol>
-<li><strong><a href="Documentation/DebuggingTechniques.md">Debugging Techniques</a></strong></li>
-</ol>
-<h2 id='installation' class='heading'>Installation</h2>
-
-<p>delay supports macOS 10.9+, iOS 8.0+, watchOS 2.0+, tvOS 9.0+ and Linux.</p>
-<pre class="highlight plaintext"><code>github "eonfluxor/delay" ~&gt; 3.0
+<p>As the intention is to facilitate calling delay from distant implementations you can optional pass a context <code>ctx</code> value. A context can be <code>Any</code> struct or class instance and it&rsquo;s internally wrapped with a weak reference to prevent retain cycles. The context is then optionally passed to the timeOut closure.</p>
+<pre class="highlight plaintext"><code>Delay.idle(1, key:"updateUI"){ (key,ctx) in
+            //
+}
 </code></pre>
-<h4 id='cocoapods' class='heading'>CocoaPods</h4>
+<pre class="highlight plaintext"><code>let context = 'userTap'
+Delay.idle(1, key:"updateUI", ctx: context){ (key,ctx) in
+       print(ctx as! String) // userTap
+}
+</code></pre>
+<pre class="highlight plaintext"><code>//self.currentModel should be an AnyObject instance
+Delay.idle(1, key:self.currentModel){ (key,ctx) in
+            expectation2.fulfill()
+}
+</code></pre>
+<h2 id='cocoapods' class='heading'>CocoaPods</h2>
 
-<p>If you use <a href="https://cocoapods.org/">CocoaPods</a> to manage your dependencies, simply add
+<p>If you use [CocoaPods][] to manage your dependencies, simply add
 delay to your <code>Podfile</code>:</p>
 <pre class="highlight plaintext"><code>pod 'delay', '~&gt; 3.0'
 </code></pre>
-<h2 id='playground' class='heading'>Playground</h2>
+<h2 id='examples' class='heading'>Examples</h2>
 
-<p>We also provide a great Playground, so you can get used to eonfluxor&rsquo;s operators. In order to start using it:</p>
+<p>Please review the test units for exhaustive implementation samples.</p>
+
+<p>In all instances the timer will be reset by simply calling delay with the same key. (See below <code>Static vs Instance</code> to learn more about the Static keyspace).</p>
 
 <ol>
-<li>Clone the delay repository.</li>
-<li>Retrieve the project dependencies using one of the following terminal commands from the delay project root directory:
-
-<ul>
-<li><code>git submodule update --init --recursive</code> <strong>OR</strong>, if you have <a href="https://github.com/Carthage/Carthage/#readme">Carthage</a> installed<br></li>
-<li><code>carthage checkout</code></li>
-</ul></li>
-<li>Open <code>delay.xcworkspace</code></li>
-<li>Build <code>Result-Mac</code> scheme</li>
-<li>Build <code>delay-macOS</code> scheme</li>
-<li>Finally open the <code>delay.playground</code></li>
-<li>Choose <code>View &gt; Show Debug Area</code></li>
+<li><strong>Idle Timer</strong></li>
 </ol>
+<pre class="highlight plaintext"><code>Delay.idle(1, key:"keyStrokes"){ (key,ctx) in
+      print("performed after 1 second of inactivity")
+}
+</code></pre>
+
+<ol>
+<li><strong>Debouncer</strong></li>
+</ol>
+<pre class="highlight plaintext"><code>Delay.debounce(1, key:"Scroll"){ (key,ctx) in
+      print("performed immediately and again no sooner than 1 second")
+}
+</code></pre>
+
+<ol>
+<li><strong>Debouncer and perform last</strong></li>
+</ol>
+<pre class="highlight plaintext"><code>Delay.debounceLast(1, key:"Scroll"){ (key,ctx) in
+      print("performed immediately and again no sooner than 1 second")
+      print("also performs the last call after 1 second of inactivity")
+}
+</code></pre>
+
+<ol>
+<li><strong>Watchdog</strong></li>
+</ol>
+<pre class="highlight plaintext"><code>Delay.wachtDog(10, key:"ApiResponse"){ (key,ctx) in
+      print("performed  after 10 seconds unless canceled")
+
+}
+
+...
+
+// Called somewhere else to abort the timeOut
+Delay.wachtDogCancel("ApiResponse")
+
+</code></pre>
+<h3 id='satic-vs-instance' class='heading'>Satic vs Instance</h3>
+
+<p>You can use the provided static functions. Internally the class manages 3 singletons to prevent key collisions between the three different modes:</p>
+<pre class="highlight plaintext"><code>//Debouncer
+Delay.debounce
+Delay.debounceLast
+
+//Idle
+Delay.idle
+
+//Watchdog
+Delay.watchdog
+</code></pre>
+
+<p>Optionally you can instantiate Delay:</p>
+<pre class="highlight plaintext"><code>let delay = Delay()
+delay.debounce( ...
+</code></pre>
 <h2 id='have-a-question' class='heading'>Have a question?</h2>
 
-<p>If you need any help, please visit our <a href="https://github.com/eonfluxor/delay/issues?q=is%3Aissue+label%3Aquestion+">GitHub issues</a> or <a href="http://stackoverflow.com/questions/tagged/reactive-cocoa">Stack Overflow</a>. Feel free to file an issue if you do not manage to find any solution from the archives.</p>
-<h2 id='release-roadmap' class='heading'>Release Roadmap</h2>
-
-<p><strong>Current Stable Release:</strong><br /><a href="https://github.com/eonfluxor/delay/releases"><img src="https://img.shields.io/github/release/eonfluxor/delay.svg" alt="GitHub release"></a></p>
-<h3 id='plan-of-record' class='heading'>Plan of Record</h3>
-<h4 id='abi-stability-release' class='heading'>ABI stability release</h4>
-
-<p>delay is expected to declare library ABI stability when Swift rolls out resilence support. Until then, delay would incrementally adopt new language features that help move towards to goal. The ETA is Swift 5.</p>
+<p>If you need any help, please visit our [GitHub issues][]. Feel free to file an issue if you do not manage to find any solution from the archives.</p>
 
           </div>
         </section>
