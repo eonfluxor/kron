@@ -101,7 +101,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files = 'Delay/**/*.swift'
-  s.swift_version = '4.0'
+  s.swift_version = '4.1'
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
