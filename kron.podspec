@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "kron"
-  s.version      = "1.2.0"
+  s.version      = "1.2.1"
   s.summary      = "Timers made easy. (debounce, idle, watchdog and more!)"
 
   # This description is used to generate tags and improve search results.
@@ -89,7 +89,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/eonfluxor/kron.git"}
+  s.source       = { :git => "https://github.com/eonfluxor/kron.git", :tag => "v#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
