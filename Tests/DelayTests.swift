@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import Delay
 
 class DelayTests: XCTestCase {
     
@@ -139,7 +138,7 @@ class DelayTests: XCTestCase {
         Delay.idle(1, key:"test", ctx: ref){ (key,ctx) in
             print("reatin on closure \(CFGetRetainCount(ctx as CFTypeRef)))")
         
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0 ) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0 ) {
                
                 if(ctx == nil){
                     expectation.fulfill()
@@ -152,11 +151,7 @@ class DelayTests: XCTestCase {
         }
         
         ref = nil
-        
-        
-        
-        
-        waitForExpectations(timeout: 100, handler: nil)
+        waitForExpectations(timeout: 4, handler: nil)
     }
     
 }

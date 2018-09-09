@@ -7,58 +7,219 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		268D4DE8214466A100C0B35F /* Delay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 268D4DDE214466A000C0B35F /* Delay.framework */; };
-		268D4DED214466A100C0B35F /* DelayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268D4DEC214466A100C0B35F /* DelayTests.swift */; };
-		268D4DEF214466A100C0B35F /* Delay.h in Headers */ = {isa = PBXBuildFile; fileRef = 268D4DE1214466A000C0B35F /* Delay.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		268D4DF9214466AD00C0B35F /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268D4DF8214466AD00C0B35F /* Delay.swift */; };
-		268D4DFB21446AB500C0B35F /* DelayPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268D4DFA21446AB500C0B35F /* DelayPublic.swift */; };
+		260392102144A4EB004AD7B8 /* Delay_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260392072144A4EB004AD7B8 /* Delay_iOS.framework */; };
+		260392172144A4EB004AD7B8 /* Delay_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 260392092144A4EB004AD7B8 /* Delay_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2603922C2144A50A004AD7B8 /* Delay_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260392232144A50A004AD7B8 /* Delay_OSX.framework */; };
+		260392332144A50A004AD7B8 /* Delay_OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 260392252144A50A004AD7B8 /* Delay_OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		260392482144A518004AD7B8 /* Delay_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2603923F2144A518004AD7B8 /* Delay_tvOS.framework */; };
+		2603924F2144A518004AD7B8 /* Delay_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 260392412144A518004AD7B8 /* Delay_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2603925B2144A67F004AD7B8 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392572144A67F004AD7B8 /* Delay.swift */; };
+		2603925C2144A67F004AD7B8 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392572144A67F004AD7B8 /* Delay.swift */; };
+		2603925D2144A67F004AD7B8 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392572144A67F004AD7B8 /* Delay.swift */; };
+		2603925E2144A67F004AD7B8 /* DelayPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392582144A67F004AD7B8 /* DelayPublic.swift */; };
+		2603925F2144A67F004AD7B8 /* DelayPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392582144A67F004AD7B8 /* DelayPublic.swift */; };
+		260392602144A67F004AD7B8 /* DelayPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392582144A67F004AD7B8 /* DelayPublic.swift */; };
+		260392612144A67F004AD7B8 /* Delay.h in Headers */ = {isa = PBXBuildFile; fileRef = 260392592144A67F004AD7B8 /* Delay.h */; };
+		260392622144A67F004AD7B8 /* Delay.h in Headers */ = {isa = PBXBuildFile; fileRef = 260392592144A67F004AD7B8 /* Delay.h */; };
+		260392632144A67F004AD7B8 /* Delay.h in Headers */ = {isa = PBXBuildFile; fileRef = 260392592144A67F004AD7B8 /* Delay.h */; };
+		260392642144A67F004AD7B8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2603925A2144A67F004AD7B8 /* Info.plist */; };
+		260392652144A67F004AD7B8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2603925A2144A67F004AD7B8 /* Info.plist */; };
+		260392662144A67F004AD7B8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2603925A2144A67F004AD7B8 /* Info.plist */; };
+		2603926A2144A68A004AD7B8 /* DelayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392682144A68A004AD7B8 /* DelayTests.swift */; };
+		2603926B2144A68A004AD7B8 /* DelayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392682144A68A004AD7B8 /* DelayTests.swift */; };
+		2603926C2144A68A004AD7B8 /* DelayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392682144A68A004AD7B8 /* DelayTests.swift */; };
+		2603926D2144A68A004AD7B8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 260392692144A68A004AD7B8 /* Info.plist */; };
+		2603926E2144A68A004AD7B8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 260392692144A68A004AD7B8 /* Info.plist */; };
+		2603926F2144A68A004AD7B8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 260392692144A68A004AD7B8 /* Info.plist */; };
+		260392702144A859004AD7B8 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392572144A67F004AD7B8 /* Delay.swift */; };
+		260392712144A85A004AD7B8 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392572144A67F004AD7B8 /* Delay.swift */; };
+		260392722144A85A004AD7B8 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392572144A67F004AD7B8 /* Delay.swift */; };
+		260392732144A85D004AD7B8 /* DelayPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392582144A67F004AD7B8 /* DelayPublic.swift */; };
+		260392742144A85E004AD7B8 /* DelayPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392582144A67F004AD7B8 /* DelayPublic.swift */; };
+		260392752144A85F004AD7B8 /* DelayPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392582144A67F004AD7B8 /* DelayPublic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		268D4DE9214466A100C0B35F /* PBXContainerItemProxy */ = {
+		260392112144A4EB004AD7B8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 268D4DD5214466A000C0B35F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 268D4DDD214466A000C0B35F;
-			remoteInfo = Delay;
+			remoteGlobalIDString = 260392062144A4EB004AD7B8;
+			remoteInfo = "Delay-iOS";
+		};
+		2603922D2144A50A004AD7B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 268D4DD5214466A000C0B35F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 260392222144A50A004AD7B8;
+			remoteInfo = "Delay-OSX";
+		};
+		260392492144A518004AD7B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 268D4DD5214466A000C0B35F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2603923E2144A518004AD7B8;
+			remoteInfo = "Delay-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		268D4DDE214466A000C0B35F /* Delay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Delay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		268D4DE1214466A000C0B35F /* Delay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Delay.h; sourceTree = "<group>"; };
-		268D4DE2214466A000C0B35F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		268D4DE7214466A100C0B35F /* DelayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DelayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		268D4DEC214466A100C0B35F /* DelayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayTests.swift; sourceTree = "<group>"; };
-		268D4DEE214466A100C0B35F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		268D4DF8214466AD00C0B35F /* Delay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
-		268D4DFA21446AB500C0B35F /* DelayPublic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayPublic.swift; sourceTree = "<group>"; };
+		260391672144A314004AD7B8 /* Delay.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Delay.podspec; sourceTree = "<group>"; };
+		260392072144A4EB004AD7B8 /* Delay_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Delay_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		260392092144A4EB004AD7B8 /* Delay_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Delay_iOS.h; sourceTree = "<group>"; };
+		2603920A2144A4EB004AD7B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2603920F2144A4EB004AD7B8 /* Delay-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Delay-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		260392162144A4EB004AD7B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		260392232144A50A004AD7B8 /* Delay_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Delay_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		260392252144A50A004AD7B8 /* Delay_OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Delay_OSX.h; sourceTree = "<group>"; };
+		260392262144A50A004AD7B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2603922B2144A50A004AD7B8 /* Delay-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Delay-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		260392322144A50A004AD7B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2603923F2144A518004AD7B8 /* Delay_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Delay_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		260392412144A518004AD7B8 /* Delay_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Delay_tvOS.h; sourceTree = "<group>"; };
+		260392422144A518004AD7B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		260392472144A518004AD7B8 /* Delay-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Delay-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2603924E2144A518004AD7B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		260392572144A67F004AD7B8 /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
+		260392582144A67F004AD7B8 /* DelayPublic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelayPublic.swift; sourceTree = "<group>"; };
+		260392592144A67F004AD7B8 /* Delay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Delay.h; sourceTree = "<group>"; };
+		2603925A2144A67F004AD7B8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		260392682144A68A004AD7B8 /* DelayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelayTests.swift; sourceTree = "<group>"; };
+		260392692144A68A004AD7B8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		268D4DDA214466A000C0B35F /* Frameworks */ = {
+		260392032144A4EB004AD7B8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		268D4DE4214466A100C0B35F /* Frameworks */ = {
+		2603920C2144A4EB004AD7B8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				268D4DE8214466A100C0B35F /* Delay.framework in Frameworks */,
+				260392102144A4EB004AD7B8 /* Delay_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2603921F2144A50A004AD7B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		260392282144A50A004AD7B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2603922C2144A50A004AD7B8 /* Delay_OSX.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2603923B2144A518004AD7B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		260392442144A518004AD7B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				260392482144A518004AD7B8 /* Delay_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		260392082144A4EB004AD7B8 /* Delay-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				260392092144A4EB004AD7B8 /* Delay_iOS.h */,
+				2603920A2144A4EB004AD7B8 /* Info.plist */,
+			);
+			path = "Delay-iOS";
+			sourceTree = "<group>";
+		};
+		260392132144A4EB004AD7B8 /* Delay-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				260392162144A4EB004AD7B8 /* Info.plist */,
+			);
+			path = "Delay-iOSTests";
+			sourceTree = "<group>";
+		};
+		260392242144A50A004AD7B8 /* Delay-OSX */ = {
+			isa = PBXGroup;
+			children = (
+				260392252144A50A004AD7B8 /* Delay_OSX.h */,
+				260392262144A50A004AD7B8 /* Info.plist */,
+			);
+			path = "Delay-OSX";
+			sourceTree = "<group>";
+		};
+		2603922F2144A50A004AD7B8 /* Delay-OSXTests */ = {
+			isa = PBXGroup;
+			children = (
+				260392322144A50A004AD7B8 /* Info.plist */,
+			);
+			path = "Delay-OSXTests";
+			sourceTree = "<group>";
+		};
+		260392402144A518004AD7B8 /* Delay-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				260392412144A518004AD7B8 /* Delay_tvOS.h */,
+				260392422144A518004AD7B8 /* Info.plist */,
+			);
+			path = "Delay-tvOS";
+			sourceTree = "<group>";
+		};
+		2603924B2144A518004AD7B8 /* Delay-tvOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				2603924E2144A518004AD7B8 /* Info.plist */,
+			);
+			path = "Delay-tvOSTests";
+			sourceTree = "<group>";
+		};
+		260392562144A67F004AD7B8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				260392572144A67F004AD7B8 /* Delay.swift */,
+				260392582144A67F004AD7B8 /* DelayPublic.swift */,
+				260392592144A67F004AD7B8 /* Delay.h */,
+				2603925A2144A67F004AD7B8 /* Info.plist */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		260392672144A68A004AD7B8 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				260392682144A68A004AD7B8 /* DelayTests.swift */,
+				260392692144A68A004AD7B8 /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		268D4DD4214466A000C0B35F = {
 			isa = PBXGroup;
 			children = (
-				268D4DE0214466A000C0B35F /* Delay */,
-				268D4DEB214466A100C0B35F /* DelayTests */,
+				260392562144A67F004AD7B8 /* Sources */,
+				260392672144A68A004AD7B8 /* Tests */,
+				260391672144A314004AD7B8 /* Delay.podspec */,
+				260392082144A4EB004AD7B8 /* Delay-iOS */,
+				260392132144A4EB004AD7B8 /* Delay-iOSTests */,
+				260392242144A50A004AD7B8 /* Delay-OSX */,
+				2603922F2144A50A004AD7B8 /* Delay-OSXTests */,
+				260392402144A518004AD7B8 /* Delay-tvOS */,
+				2603924B2144A518004AD7B8 /* Delay-tvOSTests */,
 				268D4DDF214466A000C0B35F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,80 +227,155 @@
 		268D4DDF214466A000C0B35F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				268D4DDE214466A000C0B35F /* Delay.framework */,
-				268D4DE7214466A100C0B35F /* DelayTests.xctest */,
+				260392072144A4EB004AD7B8 /* Delay_iOS.framework */,
+				2603920F2144A4EB004AD7B8 /* Delay-iOSTests.xctest */,
+				260392232144A50A004AD7B8 /* Delay_OSX.framework */,
+				2603922B2144A50A004AD7B8 /* Delay-OSXTests.xctest */,
+				2603923F2144A518004AD7B8 /* Delay_tvOS.framework */,
+				260392472144A518004AD7B8 /* Delay-tvOSTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		268D4DE0214466A000C0B35F /* Delay */ = {
-			isa = PBXGroup;
-			children = (
-				268D4DE1214466A000C0B35F /* Delay.h */,
-				268D4DE2214466A000C0B35F /* Info.plist */,
-				268D4DFA21446AB500C0B35F /* DelayPublic.swift */,
-				268D4DF8214466AD00C0B35F /* Delay.swift */,
-			);
-			path = Delay;
-			sourceTree = "<group>";
-		};
-		268D4DEB214466A100C0B35F /* DelayTests */ = {
-			isa = PBXGroup;
-			children = (
-				268D4DEC214466A100C0B35F /* DelayTests.swift */,
-				268D4DEE214466A100C0B35F /* Info.plist */,
-			);
-			path = DelayTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		268D4DDB214466A000C0B35F /* Headers */ = {
+		260392042144A4EB004AD7B8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				268D4DEF214466A100C0B35F /* Delay.h in Headers */,
+				260392612144A67F004AD7B8 /* Delay.h in Headers */,
+				260392172144A4EB004AD7B8 /* Delay_iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		260392202144A50A004AD7B8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				260392622144A67F004AD7B8 /* Delay.h in Headers */,
+				260392332144A50A004AD7B8 /* Delay_OSX.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2603923C2144A518004AD7B8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				260392632144A67F004AD7B8 /* Delay.h in Headers */,
+				2603924F2144A518004AD7B8 /* Delay_tvOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		268D4DDD214466A000C0B35F /* Delay */ = {
+		260392062144A4EB004AD7B8 /* Delay-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 268D4DF2214466A100C0B35F /* Build configuration list for PBXNativeTarget "Delay" */;
+			buildConfigurationList = 260392182144A4EB004AD7B8 /* Build configuration list for PBXNativeTarget "Delay-iOS" */;
 			buildPhases = (
-				268D4DD9214466A000C0B35F /* Sources */,
-				268D4DDA214466A000C0B35F /* Frameworks */,
-				268D4DDB214466A000C0B35F /* Headers */,
-				268D4DDC214466A000C0B35F /* Resources */,
+				260392022144A4EB004AD7B8 /* Sources */,
+				260392032144A4EB004AD7B8 /* Frameworks */,
+				260392042144A4EB004AD7B8 /* Headers */,
+				260392052144A4EB004AD7B8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Delay;
-			productName = Delay;
-			productReference = 268D4DDE214466A000C0B35F /* Delay.framework */;
+			name = "Delay-iOS";
+			productName = "Delay-iOS";
+			productReference = 260392072144A4EB004AD7B8 /* Delay_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		268D4DE6214466A100C0B35F /* DelayTests */ = {
+		2603920E2144A4EB004AD7B8 /* Delay-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 268D4DF5214466A100C0B35F /* Build configuration list for PBXNativeTarget "DelayTests" */;
+			buildConfigurationList = 2603921B2144A4EB004AD7B8 /* Build configuration list for PBXNativeTarget "Delay-iOSTests" */;
 			buildPhases = (
-				268D4DE3214466A100C0B35F /* Sources */,
-				268D4DE4214466A100C0B35F /* Frameworks */,
-				268D4DE5214466A100C0B35F /* Resources */,
+				2603920B2144A4EB004AD7B8 /* Sources */,
+				2603920C2144A4EB004AD7B8 /* Frameworks */,
+				2603920D2144A4EB004AD7B8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				268D4DEA214466A100C0B35F /* PBXTargetDependency */,
+				260392122144A4EB004AD7B8 /* PBXTargetDependency */,
 			);
-			name = DelayTests;
-			productName = DelayTests;
-			productReference = 268D4DE7214466A100C0B35F /* DelayTests.xctest */;
+			name = "Delay-iOSTests";
+			productName = "Delay-iOSTests";
+			productReference = 2603920F2144A4EB004AD7B8 /* Delay-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		260392222144A50A004AD7B8 /* Delay-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 260392342144A50A004AD7B8 /* Build configuration list for PBXNativeTarget "Delay-OSX" */;
+			buildPhases = (
+				2603921E2144A50A004AD7B8 /* Sources */,
+				2603921F2144A50A004AD7B8 /* Frameworks */,
+				260392202144A50A004AD7B8 /* Headers */,
+				260392212144A50A004AD7B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Delay-OSX";
+			productName = "Delay-OSX";
+			productReference = 260392232144A50A004AD7B8 /* Delay_OSX.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2603922A2144A50A004AD7B8 /* Delay-OSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 260392372144A50A004AD7B8 /* Build configuration list for PBXNativeTarget "Delay-OSXTests" */;
+			buildPhases = (
+				260392272144A50A004AD7B8 /* Sources */,
+				260392282144A50A004AD7B8 /* Frameworks */,
+				260392292144A50A004AD7B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2603922E2144A50A004AD7B8 /* PBXTargetDependency */,
+			);
+			name = "Delay-OSXTests";
+			productName = "Delay-OSXTests";
+			productReference = 2603922B2144A50A004AD7B8 /* Delay-OSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2603923E2144A518004AD7B8 /* Delay-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 260392502144A518004AD7B8 /* Build configuration list for PBXNativeTarget "Delay-tvOS" */;
+			buildPhases = (
+				2603923A2144A518004AD7B8 /* Sources */,
+				2603923B2144A518004AD7B8 /* Frameworks */,
+				2603923C2144A518004AD7B8 /* Headers */,
+				2603923D2144A518004AD7B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Delay-tvOS";
+			productName = "Delay-tvOS";
+			productReference = 2603923F2144A518004AD7B8 /* Delay_tvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		260392462144A518004AD7B8 /* Delay-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 260392532144A518004AD7B8 /* Build configuration list for PBXNativeTarget "Delay-tvOSTests" */;
+			buildPhases = (
+				260392432144A518004AD7B8 /* Sources */,
+				260392442144A518004AD7B8 /* Frameworks */,
+				260392452144A518004AD7B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2603924A2144A518004AD7B8 /* PBXTargetDependency */,
+			);
+			name = "Delay-tvOSTests";
+			productName = "Delay-tvOSTests";
+			productReference = 260392472144A518004AD7B8 /* Delay-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -152,11 +388,22 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = eonflux;
 				TargetAttributes = {
-					268D4DDD214466A000C0B35F = {
+					260392062144A4EB004AD7B8 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 0940;
 					};
-					268D4DE6214466A100C0B35F = {
+					2603920E2144A4EB004AD7B8 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					260392222144A50A004AD7B8 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					2603922A2144A50A004AD7B8 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					2603923E2144A518004AD7B8 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					260392462144A518004AD7B8 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
@@ -173,58 +420,418 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				268D4DDD214466A000C0B35F /* Delay */,
-				268D4DE6214466A100C0B35F /* DelayTests */,
+				260392062144A4EB004AD7B8 /* Delay-iOS */,
+				2603920E2144A4EB004AD7B8 /* Delay-iOSTests */,
+				260392222144A50A004AD7B8 /* Delay-OSX */,
+				2603922A2144A50A004AD7B8 /* Delay-OSXTests */,
+				2603923E2144A518004AD7B8 /* Delay-tvOS */,
+				260392462144A518004AD7B8 /* Delay-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		268D4DDC214466A000C0B35F /* Resources */ = {
+		260392052144A4EB004AD7B8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				260392642144A67F004AD7B8 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		268D4DE5214466A100C0B35F /* Resources */ = {
+		2603920D2144A4EB004AD7B8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2603926D2144A68A004AD7B8 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		260392212144A50A004AD7B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				260392652144A67F004AD7B8 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		260392292144A50A004AD7B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2603926E2144A68A004AD7B8 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2603923D2144A518004AD7B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				260392662144A67F004AD7B8 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		260392452144A518004AD7B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2603926F2144A68A004AD7B8 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		268D4DD9214466A000C0B35F /* Sources */ = {
+		260392022144A4EB004AD7B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				268D4DFB21446AB500C0B35F /* DelayPublic.swift in Sources */,
-				268D4DF9214466AD00C0B35F /* Delay.swift in Sources */,
+				2603925E2144A67F004AD7B8 /* DelayPublic.swift in Sources */,
+				2603925B2144A67F004AD7B8 /* Delay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		268D4DE3214466A100C0B35F /* Sources */ = {
+		2603920B2144A4EB004AD7B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				268D4DED214466A100C0B35F /* DelayTests.swift in Sources */,
+				2603926A2144A68A004AD7B8 /* DelayTests.swift in Sources */,
+				260392702144A859004AD7B8 /* Delay.swift in Sources */,
+				260392732144A85D004AD7B8 /* DelayPublic.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2603921E2144A50A004AD7B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2603925F2144A67F004AD7B8 /* DelayPublic.swift in Sources */,
+				2603925C2144A67F004AD7B8 /* Delay.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		260392272144A50A004AD7B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				260392712144A85A004AD7B8 /* Delay.swift in Sources */,
+				260392742144A85E004AD7B8 /* DelayPublic.swift in Sources */,
+				2603926B2144A68A004AD7B8 /* DelayTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2603923A2144A518004AD7B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				260392602144A67F004AD7B8 /* DelayPublic.swift in Sources */,
+				2603925D2144A67F004AD7B8 /* Delay.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		260392432144A518004AD7B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				260392722144A85A004AD7B8 /* Delay.swift in Sources */,
+				260392752144A85F004AD7B8 /* DelayPublic.swift in Sources */,
+				2603926C2144A68A004AD7B8 /* DelayTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		268D4DEA214466A100C0B35F /* PBXTargetDependency */ = {
+		260392122144A4EB004AD7B8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 268D4DDD214466A000C0B35F /* Delay */;
-			targetProxy = 268D4DE9214466A100C0B35F /* PBXContainerItemProxy */;
+			target = 260392062144A4EB004AD7B8 /* Delay-iOS */;
+			targetProxy = 260392112144A4EB004AD7B8 /* PBXContainerItemProxy */;
+		};
+		2603922E2144A50A004AD7B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 260392222144A50A004AD7B8 /* Delay-OSX */;
+			targetProxy = 2603922D2144A50A004AD7B8 /* PBXContainerItemProxy */;
+		};
+		2603924A2144A518004AD7B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2603923E2144A518004AD7B8 /* Delay-tvOS */;
+			targetProxy = 260392492144A518004AD7B8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		260392192144A4EB004AD7B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Delay-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.Delay-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2603921A2144A4EB004AD7B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Delay-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.Delay-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2603921C2144A4EB004AD7B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Delay-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.Delay-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2603921D2144A4EB004AD7B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Delay-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.Delay-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		260392352144A50A004AD7B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Delay-OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.Delay-OSX";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		260392362144A50A004AD7B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Delay-OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.Delay-OSX";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		260392382144A50A004AD7B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Delay-OSXTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.Delay-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		260392392144A50A004AD7B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Delay-OSXTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.Delay-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		260392512144A518004AD7B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Delay-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.Delay-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		260392522144A518004AD7B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Delay-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.Delay-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
+		260392542144A518004AD7B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Delay-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.Delay-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		260392552144A518004AD7B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Delay-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.Delay-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
 		268D4DF0214466A100C0B35F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -345,119 +952,68 @@
 			};
 			name = Release;
 		};
-		268D4DF3214466A100C0B35F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Delay/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = eonflux.Delay;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		268D4DF4214466A100C0B35F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Delay/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = eonflux.Delay;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		268D4DF6214466A100C0B35F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DelayTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = eonflux.DelayTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		268D4DF7214466A100C0B35F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DelayTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = eonflux.DelayTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		260392182144A4EB004AD7B8 /* Build configuration list for PBXNativeTarget "Delay-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				260392192144A4EB004AD7B8 /* Debug */,
+				2603921A2144A4EB004AD7B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2603921B2144A4EB004AD7B8 /* Build configuration list for PBXNativeTarget "Delay-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2603921C2144A4EB004AD7B8 /* Debug */,
+				2603921D2144A4EB004AD7B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		260392342144A50A004AD7B8 /* Build configuration list for PBXNativeTarget "Delay-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				260392352144A50A004AD7B8 /* Debug */,
+				260392362144A50A004AD7B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		260392372144A50A004AD7B8 /* Build configuration list for PBXNativeTarget "Delay-OSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				260392382144A50A004AD7B8 /* Debug */,
+				260392392144A50A004AD7B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		260392502144A518004AD7B8 /* Build configuration list for PBXNativeTarget "Delay-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				260392512144A518004AD7B8 /* Debug */,
+				260392522144A518004AD7B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		260392532144A518004AD7B8 /* Build configuration list for PBXNativeTarget "Delay-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				260392542144A518004AD7B8 /* Debug */,
+				260392552144A518004AD7B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		268D4DD8214466A000C0B35F /* Build configuration list for PBXProject "Delay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				268D4DF0214466A100C0B35F /* Debug */,
 				268D4DF1214466A100C0B35F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		268D4DF2214466A100C0B35F /* Build configuration list for PBXNativeTarget "Delay" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				268D4DF3214466A100C0B35F /* Debug */,
-				268D4DF4214466A100C0B35F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		268D4DF5214466A100C0B35F /* Build configuration list for PBXNativeTarget "DelayTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				268D4DF6214466A100C0B35F /* Debug */,
-				268D4DF7214466A100C0B35F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

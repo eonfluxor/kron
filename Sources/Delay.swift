@@ -6,7 +6,11 @@
 //  Copyright © 2018 eonflux. All rights reserved.
 //
 
+#if os(OSX)
+import AppKit
+#else
 import UIKit
+#endif
 
 
 /// Delay offers 3 timer modes: 
@@ -17,19 +21,18 @@ public class Delay: NSObject {
         var immutable:Any?
         
         init(_ object:Any?){
-            setObject(object)
-        }
-        
-        func setObject(_ object:Any?){
+            immutable = nil
             if let object = object{
                 if Mirror(reflecting: object).displayStyle == .class {
                     mutable = object as AnyObject
                 }
-            }else {
+            }
+            if mutable == nil{
                immutable = object
             }
         }
         
+
         func object()->Any?{
             if mutable != nil {
                 return mutable

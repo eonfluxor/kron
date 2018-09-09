@@ -6,7 +6,12 @@
 //  Copyright © 2018 eonflux. All rights reserved.
 //
 
+
+#if os(OSX)
+import AppKit
+#else
 import UIKit
+#endif
 
 public typealias DelayKey = Any
 public typealias DelayClosure = (_ key:String,_ context:Any?)->Void
