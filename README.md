@@ -58,7 +58,13 @@ If you use [CocoaPods][] to manage your dependencies, simply add
 Kron to your `Podfile`:
 
 ```
-pod 'Delayed', '~> 1.2'
+pod 'Delayed', '~> 2.2.2'
+```
+
+And then import the module
+
+```
+import Delayed
 ```
    
    
