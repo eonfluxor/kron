@@ -65,6 +65,17 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:9kron_tvOS11KronClosurea">KronClosure</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:9kron_tvOS7KronKeya">KronKey</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -90,8 +101,8 @@
 <h3 id='why-kron' class='heading'>Why Kron?</h3>
 
 <ul>
-<li><p>Instead of returning a timer object, <strong>Kron</strong> manages the Timer instances internally through a [<code>KronKey</code> : <code>Timer</code>]  dictionary. This makes easy to call <strong>Kron</strong> from distant components or threads accesing the timers by their key value.</p></li>
-<li><p>The <code>KronKey</code> can be etiher a <code>String</code> struct or <code>AnyObject</code> instance.  If an object is passed the key is inferred from the object&rsquo;s pointer. Calling the methods with the same key causes all timer modes to be reset.</p></li>
+<li><p>Instead of returning a timer object, <strong>Kron</strong> manages the Timer instances internally through a [<code><a href="Typealiases.html#/s:9kron_tvOS7KronKeya">KronKey</a></code> : <code>Timer</code>]  dictionary. This makes easy to call <strong>Kron</strong> from distant components or threads accesing the timers by their key value.</p></li>
+<li><p>The <code><a href="Typealiases.html#/s:9kron_tvOS7KronKeya">KronKey</a></code> can be etiher a <code>String</code> struct or <code>AnyObject</code> instance.  If an object is passed the key is inferred from the object&rsquo;s pointer. Calling the methods with the same key causes all timer modes to be reset.</p></li>
 <li><p>As the intention is to facilitate calling <strong>Kron</strong> from distant implementations you can optional pass a context value <code>ctx</code>. A context can be <code>Any</code> struct or class instance and it&rsquo;s internally <strong><em>wrapped with a weak reference</em></strong>  to prevent retain cycles. The context is then optionally passed to the timeOut closure.</p></li>
 </ul>
 <h3 id='gist-samples' class='heading'>Gist samples</h3>

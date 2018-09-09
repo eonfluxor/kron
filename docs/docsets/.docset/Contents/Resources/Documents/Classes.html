@@ -66,6 +66,17 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:9kron_tvOS11KronClosurea">KronClosure</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:9kron_tvOS7KronKeya">KronKey</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -95,7 +106,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Kron offers 3 timer modes:</p>
+                        <p><strong>Kron</strong> is a <strong>NSTimer manager</strong> offering <strong>4 modes</strong> through a unified api. Kron takes care of the involved implementation of NSTimers while ensuring a proper memory management with no extra effort:</p>
+
+<ol>
+<li><code>Kron.debounce</code>: Calls immediatly and reject calls until time out elapses</li>
+<li><code>Kron.debounceLast</code>: As <code>debounce</code> but also performs the last call after time out</li>
+<li><code>Kron.idle</code>: Performs the last call after not being called during the timeout interval</li>
+<li><code>Kron.watchdog</code>: As <code>idle</code> but allowing to be canceled with <code>watchDogCancel</code></li>
+</ol>
 
                         <a href="Classes/Kron.html" class="slightly-smaller">See more</a>
                       </div>

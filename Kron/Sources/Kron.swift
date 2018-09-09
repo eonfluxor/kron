@@ -13,7 +13,12 @@ import Cocoa
 #endif
 
 
-/// Kron offers 3 timer modes:
+///**Kron** is a **NSTimer manager** offering **4 modes** through a unified api. Kron takes care of the involved implementation of NSTimers while ensuring a proper memory management with no extra effort:
+///
+///1. `Kron.debounce`: Calls immediatly and reject calls until time out elapses
+///1. `Kron.debounceLast`: As `debounce` but also performs the last call after time out
+///1. `Kron.idle`: Performs the last call after not being called during the timeout interval
+///1. `Kron.watchdog`: As `idle` but allowing to be canceled with `watchDogCancel`
 public class Kron: NSObject {
     
     class KronRef{

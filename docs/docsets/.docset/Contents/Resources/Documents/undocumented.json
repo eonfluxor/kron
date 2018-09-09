@@ -1,82 +1,82 @@
 {
   "warnings": [
     {
-      "file": "/Users/hassanvfx/projects/eonflux/Delay/Delay/Sources/DelayPublic.swift",
+      "file": "/Users/hassanvfx/projects/eonflux/Kron/Kron/Sources/KronAPI.swift",
+      "line": 15,
+      "symbol": "KronKey",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hassanvfx/projects/eonflux/Kron/Kron/Sources/KronAPI.swift",
       "line": 16,
-      "symbol": "DelayKey",
+      "symbol": "KronClosure",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hassanvfx/projects/eonflux/Delay/Delay/Sources/DelayPublic.swift",
-      "line": 17,
-      "symbol": "DelayClosure",
-      "symbol_kind": "source.lang.swift.decl.typealias",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/hassanvfx/projects/eonflux/Delay/Delay/Sources/DelayPublic.swift",
-      "line": 45,
-      "symbol": "Delay.debounce(_:key:ctx:action:)",
+      "file": "/Users/hassanvfx/projects/eonflux/Kron/Kron/Sources/KronAPI.swift",
+      "line": 44,
+      "symbol": "Kron.debounce(_:key:ctx:action:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hassanvfx/projects/eonflux/Delay/Delay/Sources/DelayPublic.swift",
-      "line": 65,
-      "symbol": "Delay.watchDog(_:key:ctx:action:)",
+      "file": "/Users/hassanvfx/projects/eonflux/Kron/Kron/Sources/KronAPI.swift",
+      "line": 64,
+      "symbol": "Kron.watchDog(_:key:ctx:action:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hassanvfx/projects/eonflux/Delay/Delay/Sources/DelayPublic.swift",
-      "line": 78,
-      "symbol": "Delay.watchDogCancel(key:)",
+      "file": "/Users/hassanvfx/projects/eonflux/Kron/Kron/Sources/KronAPI.swift",
+      "line": 77,
+      "symbol": "Kron.watchDogCancel(key:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hassanvfx/projects/eonflux/Delay/Delay/Sources/DelayPublic.swift",
-      "line": 86,
-      "symbol": "Delay.idle(_:key:ctx:action:)",
+      "file": "/Users/hassanvfx/projects/eonflux/Kron/Kron/Sources/KronAPI.swift",
+      "line": 85,
+      "symbol": "Kron.idle(_:key:ctx:action:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hassanvfx/projects/eonflux/Delay/Delay/Sources/DelayPublic.swift",
-      "line": 104,
-      "symbol": "Delay.debounceLast(_:key:ctx:action:)",
+      "file": "/Users/hassanvfx/projects/eonflux/Kron/Kron/Sources/KronAPI.swift",
+      "line": 103,
+      "symbol": "Kron.debounceLast(_:key:ctx:action:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hassanvfx/projects/eonflux/Delay/Delay/Sources/DelayPublic.swift",
-      "line": 118,
-      "symbol": "Delay.debounce(_:key:ctx:_:)",
+      "file": "/Users/hassanvfx/projects/eonflux/Kron/Kron/Sources/KronAPI.swift",
+      "line": 117,
+      "symbol": "Kron.debounce(_:key:ctx:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hassanvfx/projects/eonflux/Delay/Delay/Sources/DelayPublic.swift",
-      "line": 137,
-      "symbol": "Delay.watchDog(_:key:ctx:_:)",
+      "file": "/Users/hassanvfx/projects/eonflux/Kron/Kron/Sources/KronAPI.swift",
+      "line": 136,
+      "symbol": "Kron.watchDog(_:key:ctx:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hassanvfx/projects/eonflux/Delay/Delay/Sources/DelayPublic.swift",
-      "line": 150,
-      "symbol": "Delay.watchDogCancel(key:)",
+      "file": "/Users/hassanvfx/projects/eonflux/Kron/Kron/Sources/KronAPI.swift",
+      "line": 149,
+      "symbol": "Kron.watchDogCancel(key:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hassanvfx/projects/eonflux/Delay/Delay/Sources/DelayPublic.swift",
-      "line": 158,
-      "symbol": "Delay.idle(_:key:ctx:_:)",
+      "file": "/Users/hassanvfx/projects/eonflux/Kron/Kron/Sources/KronAPI.swift",
+      "line": 157,
+      "symbol": "Kron.idle(_:key:ctx:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/hassanvfx/projects/eonflux/Delay/Delay"
+  "source_directory": "/Users/hassanvfx/projects/eonflux/Kron/Kron"
 }
