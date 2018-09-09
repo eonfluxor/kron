@@ -135,6 +135,6 @@ You can also reach us at:
 
 ## About
 
-**Delay** was originally built by **Hassan Uriostegui** as an objective-C framework and evolved in many projects over the past 10 years.
+**Delay** was originally built by [Hassan Uriostegui](http://linkedin.com/in/hassanvfx) as an objective-C framework and evolved in many projects over the past 10 years.
 
 It's now released as a swift open source framework under the **Eonflux** collective. Check our other projects and join our *eon flux of innovaton* !
