@@ -74,7 +74,7 @@ extension Kron{
 extension Kron {
     
     /// Creates am `watchdog` timer.
-    /// Use `watchdogCancel` to early abort the timer.
+    /// Use `Kron.watchdogCancel` to early abort the timer.
     /// The function will be called after timeout.
     /// Timer will be reset if called again with the same `KronKey`
     ///
@@ -96,6 +96,9 @@ extension Kron {
             action)
     }
     
+    /// Used to cancel a watchdog timer
+    ///
+    /// - Parameter aKey: any active timer `KronKey`
     public static func watchDogCancel(key aKey:KronKey){
         watchdogTimer.watchDogCancel(key:aKey)
     }
