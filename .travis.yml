@@ -43,21 +43,3 @@ script:
   else
     xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build;
   fi
-# jobs:
-#   include:
-#   - stage: Pod lib lint
-#     script: pod lib lint --verbose --allow-warnings
-#   - stage: Deploy
-#     script: skip
-#     before_deploy: carthage build --no-skip-current && carthage archive Delay
-#     deploy:
-#     - provider: releases
-#       api_key:
-#         secure: FSIvrLX/x7Y/D3FFIMZYwyvlrX+r7DOJbp0SSd4rIuIW8Cwrwcef3NDbjzqolG+l/kxDuiS80m+n+M6PxMiAbfjwP7a8JyWvMnZzTpoPaN9Otubj0Q/MFTU0RIEB51ECLE/v6xRcK/tVhc7uvcCZh1O+5F2hBq8Wiopo9ajiabN6UEAeNwIUWkwCxB8N2uclfHj3Yn03ZqMp2W8WLmG0fRYThlAHaleRo1fnO2DC83rkicfhuzjrqghPni8Th8COQHVQh+Cma3R+k/X6o6Gj1tTuAQlxH4Buk7Jxfk86h9vdnCNmKuuE2CYfmDDDKpauydHTSq7ap+JruinMfRZo3XqNm7U5ev+o9ic0PexTRLpov5i8tKZ5RYSXCpsF/XydeZYyyDV+9P7+uK42SgCZjvVjpmAqurIB1FFId14EH0CBWoJUWSA4elRaUE0iHkN+ivufvCGq9vemDGaJb0QfQLEuSKAo9Bhedl/mhGBlcDLwFFmGSvyOy4AiC6yplr9Ykae8rHwTEY/HU1B5i6R/7qYXhdiNOI5ImXSqGWYn9+fJIz8FwLI4U4WwsVN6SeXz/5B2+a6+rfn1i+liTgSKfH/BN+CsepHzXrT/0uP31XHx8oBNUECIB+GoExgs3EOmpRBWUnjNTGE1JwgE2SUpjcESRzig02yu0SvUmNHdrJs=
-#       file:
-#       - Delay.framework.zip
-#       skip_cleanup: true
-#       overwrite: true
-#       on:
-#         repo: RahulKatariya/SwiftDelayTemplate
-#         tags: true
