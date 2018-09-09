@@ -6,10 +6,10 @@
 //  Copyright © 2018 eonflux. All rights reserved.
 //
 
-#if os(macOS)
-import AppKit
-#else
+#if os(iOS) || os(tvOS) || os(watchOS)
 import UIKit
+#else
+import Cocoa
 #endif
 
 
