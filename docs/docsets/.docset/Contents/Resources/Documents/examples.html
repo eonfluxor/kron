@@ -119,9 +119,11 @@ Delay.wachtDogCancel("ApiResponse")
 </code></pre>
 <h3 id='satic-vs-instance' class='heading'>Satic vs Instance</h3>
 
-<p>You can use the provided static functions. Internally the class manages 3 singletons to prevent key collisions between the three different modes:</p>
+<p>You can use the provided static functions. Internally <strong>Delay</strong> manages 4 singletons to prevent key collisions between the different modes:</p>
 <pre class="highlight plaintext"><code>//Debouncer
 Delay.debounce
+
+//Debouncing Last
 Delay.debounceLast
 
 //Idle
@@ -131,9 +133,9 @@ Delay.idle
 Delay.watchdog
 </code></pre>
 
-<p>Optionally you can instantiate Delay:</p>
-<pre class="highlight plaintext"><code>let delay = Delay()
-delay.debounce( ...
+<p>Optionally you can instantiate <strong>Delay</strong> to manage your own keyspace in that given intance.</p>
+<pre class="highlight plaintext"><code>let myDelay = Delay()
+myDelay( ...
 </code></pre>
 
           </div>

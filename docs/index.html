@@ -78,21 +78,22 @@
 <img src="https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20Linux-lightgrey.svg" alt="platforms"></p>
 <h1 id='what-is-delay' class='heading'>What is Delay?</h1>
 
-<p>Delay is a Manager offering 4 convenient Timer modes through a friendly interface. Delay takes care of the invovled NSTimer implementation and lifecycle. </p>
+<p><strong>Delay</strong> is a Manager offering 4 convenient Timer modes through a friendly interface. Delay takes care of the involved NSTimer (aka Timer) implementation and lifecycle. </p>
 
 <ol>
-<li><code>debounce</code> Calls immediatly and reject calls until time out elapses</li>
-<li><code>debounceLast</code> As <code>debounce</code> but also performs the last call after time out</li>
-<li><code>idle</code> Performs the last call after not being called during the timeout interval</li>
-<li><code>watchdog</code> As <code>idle</code> but allowing to be canceled with <code>watchDogCancel</code></li>
+<li><code>debounce</code>: Calls immediatly and reject calls until time out elapses</li>
+<li><code>debounceLast</code>: As <code>debounce</code> but also performs the last call after time out</li>
+<li><code>idle</code>: Performs the last call after not being called during the timeout interval</li>
+<li><code>watchdog</code>: As <code>idle</code> but allowing to be canceled with <code>watchDogCancel</code></li>
 </ol>
 <h3 id='why-delay' class='heading'>Why Delay?</h3>
 
-<p>Instead of returning a timer instance, Delay manages the Timer instances internally through a <code>DelayKey</code> -&gt; <code>Timer</code> dictionary. This makes easy to call delay from distant components or threads accesing the timers by their key value.</p>
-
-<p>The <code>DelayKey</code> can be etiher an <code>String</code> struct or <code>AnyObject</code> instance.  If an object is passed the key is inferred from the object&rsquo;s pointer.</p>
-
-<p>As the intention is to facilitate calling delay from distant implementations you can optional pass a context <code>ctx</code> value. A context can be <code>Any</code> struct or class instance and it&rsquo;s internally wrapped with a weak reference to prevent retain cycles. The context is then optionally passed to the timeOut closure.</p>
+<ul>
+<li>Instead of returning a timer instance, <strong>Delay</strong> manages the Timer instances internally through a <code>DelayKey</code> -&gt; <code>Timer</code> dictionary. This makes easy to call <strong>Delay</strong> from distant components or threads accesing the timers by their key value.</li>
+<li>The <code>DelayKey</code> can be etiher an <code>String</code> struct or <code>AnyObject</code> instance.  If an object is passed the key is inferred from the object&rsquo;s pointer. Calling the methods with the same key causes all timer modes to be reset.</li>
+<li>As the intention is to facilitate calling <strong>Delay</strong> from distant implementations you can optional pass a context value <code>ctx</code>. A context can be <code>Any</code> struct or class instance and it&rsquo;s internally wrapped with a weak reference to prevent retain cycles. The context is then optionally passed to the timeOut closure.</li>
+</ul>
+<h3 id='gist-samples' class='heading'>Gist samples</h3>
 <pre class="highlight plaintext"><code>Delay.idle(1, key:"updateUI"){ (key,ctx) in
             //
 }
@@ -113,7 +114,7 @@ Delay.idle(1, key:self.currentModel){ (key,ctx) in
 delay to your <code>Podfile</code>:</p>
 <pre class="highlight plaintext"><code>pod 'delay', '~&gt; 3.0'
 </code></pre>
-<h2 id='examples' class='heading'>Examples</h2>
+<h2 id='more-examples' class='heading'>More Examples</h2>
 
 <p>Please review the test units for exhaustive implementation samples.</p>
 
@@ -160,9 +161,11 @@ Delay.wachtDogCancel("ApiResponse")
 </code></pre>
 <h3 id='satic-vs-instance' class='heading'>Satic vs Instance</h3>
 
-<p>You can use the provided static functions. Internally the class manages 3 singletons to prevent key collisions between the three different modes:</p>
+<p>You can use the provided static functions. Internally <strong>Delay</strong> manages 4 singletons to prevent key collisions between the different modes:</p>
 <pre class="highlight plaintext"><code>//Debouncer
 Delay.debounce
+
+//Debouncing Last
 Delay.debounceLast
 
 //Idle
@@ -172,13 +175,22 @@ Delay.idle
 Delay.watchdog
 </code></pre>
 
-<p>Optionally you can instantiate Delay:</p>
-<pre class="highlight plaintext"><code>let delay = Delay()
-delay.debounce( ...
+<p>Optionally you can instantiate <strong>Delay</strong> to manage your own keyspace in that given intance.</p>
+<pre class="highlight plaintext"><code>let myDelay = Delay()
+myDelay( ...
 </code></pre>
 <h2 id='have-a-question' class='heading'>Have a question?</h2>
 
-<p>If you need any help, please visit our [GitHub issues][]. Feel free to file an issue if you do not manage to find any solution from the archives.</p>
+<p>If you need any help, please visit our GitHub issues. Feel free to file an issue if you do not manage to find any solution from the archives.</p>
+
+<p>You can also reach us at: </p>
+
+<p><code>eonfluxor@gmail.com</code></p>
+<h2 id='about-the-authors' class='heading'>About the authors</h2>
+
+<p><strong>Delay</strong> was originally built by <strong>Hassan Uriostegui</strong> as an objective-C framework and used in many projects over the past 10 years.</p>
+
+<p>It&rsquo;s now released as open source framework under the <strong>Eonflux</strong> collective. Check our other projects and join our <em>eon flux of innovaton</em> !</p>
 
           </div>
         </section>
