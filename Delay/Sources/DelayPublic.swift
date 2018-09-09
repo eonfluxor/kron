@@ -1,6 +1,6 @@
 //
-//  DelayPublic.swift
-//  Delay
+//  KronPublic.swift
+//  Kron
 //
 //  Created by hassan uriostegui on 9/8/18.
 //  Copyright © 2018 eonflux. All rights reserved.
@@ -12,12 +12,12 @@ import UIKit
 import Cocoa
 #endif
 
-public typealias DelayKey = Any
-public typealias DelayClosure = (_ key:String,_ context:Any?)->Void
+public typealias KronKey = Any
+public typealias KronClosure = (_ key:String,_ context:Any?)->Void
 
 
 //MARK: - Static Debouncer
-extension Delay{
+extension Kron{
     
     /// Manages a `debounce` and idle `idle` timer.
     /// The function will debounce actions as defined in `interval`
@@ -30,9 +30,9 @@ extension Delay{
     ///   - action: closure called on timeout
     public static func debounceLast(
         _ interval:Double,
-        key aKey:DelayKey,
+        key aKey:KronKey,
         ctx:Any? = nil,
-        action:@escaping DelayClosure){
+        action:@escaping KronClosure){
         
         debounceLastTimer.debounceLast(
             interval,
@@ -43,9 +43,9 @@ extension Delay{
     
     public static func debounce(
         _ interval:Double,
-        key aKey:DelayKey,
+        key aKey:KronKey,
         ctx:Any? = nil,
-        action:@escaping DelayClosure){
+        action:@escaping KronClosure){
         
         debounceTimer.debounce(
             interval,
@@ -59,13 +59,13 @@ extension Delay{
 
 
 // MARK: - Static Watchdog
-extension Delay {
+extension Kron {
     
     public static func watchDog(
         _ interval:Double,
-        key aKey:DelayKey,
+        key aKey:KronKey,
         ctx:Any? = nil,
-        action:@escaping DelayClosure){
+        action:@escaping KronClosure){
         
         watchdogTimer.watchDog(
             interval,
@@ -74,19 +74,19 @@ extension Delay {
             action)
     }
     
-    public static func watchDogCancel(key aKey:DelayKey){
+    public static func watchDogCancel(key aKey:KronKey){
         watchdogTimer.watchDogCancel(key:aKey)
     }
     
 }
 
 // MARK: - Static Idle Timeout
-extension Delay{
+extension Kron{
     public static func idle(
         _ interval:Double,
-        key aKey:DelayKey,
+        key aKey:KronKey,
         ctx:Any? = nil,
-        action:@escaping DelayClosure){
+        action:@escaping KronClosure){
         
         idleTimer.idle(
             interval,
@@ -98,13 +98,13 @@ extension Delay{
 
 
 //MARK: - Instance Debouncer
-extension Delay{
+extension Kron{
     
     public func debounceLast(
         _ interval:Double,
-        key aKey:DelayKey,
+        key aKey:KronKey,
         ctx:Any? = nil,
-        action:@escaping DelayClosure){
+        action:@escaping KronClosure){
         
         let key = self.key(aKey)
         let debounceKey = "debounce.\(key)"
@@ -116,9 +116,9 @@ extension Delay{
     
     public func debounce(
         _ interval:Double,
-        key aKey:DelayKey,
+        key aKey:KronKey,
         ctx:Any? = nil,
-        _ action:@escaping DelayClosure){
+        _ action:@escaping KronClosure){
         
         _timer(aKey,
                interval,
@@ -131,13 +131,13 @@ extension Delay{
 
 
 //MARK: - Instance Watchdog
-extension Delay{
+extension Kron{
     
     public func watchDog(
         _ interval:Double,
-        key aKey:DelayKey,
+        key aKey:KronKey,
         ctx:Any? = nil,
-        _ action:@escaping DelayClosure){
+        _ action:@escaping KronClosure){
         
         _timer(aKey,
                interval,
@@ -146,19 +146,19 @@ extension Delay{
                anAction: action)
     }
     
-    public func watchDogCancel(key aKey:DelayKey){
+    public func watchDogCancel(key aKey:KronKey){
         cancelTimer(aKey)
     }
 }
 
 
 //MARK: - Instance Idle Timeout
-extension Delay{
+extension Kron{
     public func idle(
         _ interval:Double,
-        key aKey:DelayKey,
+        key aKey:KronKey,
         ctx:Any? = nil,
-        _ action:@escaping DelayClosure){
+        _ action:@escaping KronClosure){
         
         _timer(aKey,
                interval,

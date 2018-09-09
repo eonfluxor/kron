@@ -1,6 +1,6 @@
 //
-//  Delay.swift
-//  Delay
+//  Kron.swift
+//  Kron
 //
 //  Created by hassan uriostegui on 9/7/18.
 //  Copyright © 2018 eonflux. All rights reserved.
@@ -13,10 +13,10 @@ import Cocoa
 #endif
 
 
-/// Delay offers 3 timer modes: 
-public class Delay: NSObject {
+/// Kron offers 3 timer modes:
+public class Kron: NSObject {
     
-    class DelayRef{
+    class KronRef{
         weak var mutable:AnyObject?
         var immutable:Any?
         
@@ -45,13 +45,13 @@ public class Delay: NSObject {
         }
     }
     
-    struct DelayJob{
+    struct KronJob{
         let key:String = ""
-        let action:DelayClosure?
-        let ctx:DelayRef
+        let action:KronClosure?
+        let ctx:KronRef
     }
     
-    enum DelayMode{
+    enum KronMode{
         case debounce
         case idle
     }
@@ -68,18 +68,18 @@ public class Delay: NSObject {
     
     // MARK: SINGLETONS
     
-    static let debounceLastTimer = Delay()
-    static let idleTimer = Delay()
-    static let debounceTimer = Delay()
-    static let watchdogTimer = Delay()
+    static let debounceLastTimer = Kron()
+    static let idleTimer = Kron()
+    static let debounceTimer = Kron()
+    static let watchdogTimer = Kron()
     
     //MARK: - Core
     
-    func _timer(_ aKey:DelayKey,
+    func _timer(_ aKey:KronKey,
                             _ interval:Double,
-                            mode:DelayMode,
+                            mode:KronMode,
                             ctx:Any?,
-                            anAction:@escaping DelayClosure){
+                            anAction:@escaping KronClosure){
         
         
         let key = self.key(aKey)
@@ -99,8 +99,8 @@ public class Delay: NSObject {
             cancelTimer(key)
         }
         
-        let ref = DelayRef(ctx)
-        let job = DelayJob(action: action, ctx: ref)
+        let ref = KronRef(ctx)
+        let job = KronJob(action: action, ctx: ref)
         
         let timer = Timer(timeInterval: TimeInterval(interval), target: self, selector: #selector(timerTick), userInfo: job, repeats: false)
         self.timers[key] = timer
@@ -115,7 +115,7 @@ public class Delay: NSObject {
         
         // TODO: sync this with self
         
-        let job = timer.userInfo! as! DelayJob
+        let job = timer.userInfo! as! KronJob
         
         let key = job.key
         self.takeTimer(key)
@@ -131,7 +131,7 @@ public class Delay: NSObject {
     
     
     @discardableResult
-    func cancelTimer(_ aKey:DelayKey)->Bool{
+    func cancelTimer(_ aKey:KronKey)->Bool{
         
         var result = true
         
@@ -153,7 +153,7 @@ public class Delay: NSObject {
 }
 
 //MARK: Map
-extension Delay{
+extension Kron{
 
     func key(_ key:Any)->String{
         if ((key as? String) != nil) {
@@ -170,7 +170,7 @@ extension Delay{
     
     
     @discardableResult
-    func takeTimer(_ aKey:DelayKey)->Timer?{
+    func takeTimer(_ aKey:KronKey)->Timer?{
         //TODO: WE NEED TO MAKE THIS ATOMIC IN RELATION TO THE SETTER
         
         let key = self.key(aKey)

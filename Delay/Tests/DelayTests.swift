@@ -1,6 +1,6 @@
 //
-//  DelayTests.swift
-//  DelayTests
+//  KronTests.swift
+//  KronTests
 //
 //  Created by hassan uriostegui on 9/7/18.
 //  Copyright © 2018 eonflux. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class DelayTests: XCTestCase {
+class KronTests: XCTestCase {
     
     
     func testIdleWithContext() {
@@ -19,13 +19,13 @@ class DelayTests: XCTestCase {
         
         let context:Int = 90
         
-        Delay.idle(1, key:"test", ctx: context){ (key,ctx) in
+        Kron.idle(1, key:"test", ctx: context){ (key,ctx) in
             expectation2.fulfill()
         }
-        Delay.idle(1, key:"test", ctx: context){ (key,ctx) in
+        Kron.idle(1, key:"test", ctx: context){ (key,ctx) in
             expectation2.fulfill()
         }
-        Delay.idle(1, key:"test", ctx: context){ (key,ctx) in
+        Kron.idle(1, key:"test", ctx: context){ (key,ctx) in
             expectation.fulfill()
             XCTAssert((ctx as! Int) == 90)
         }
@@ -43,11 +43,11 @@ class DelayTests: XCTestCase {
         
         let context:Int = 90
         
-        Delay.debounce(1, key:"test", ctx: context){ (key,ctx) in
+        Kron.debounce(1, key:"test", ctx: context){ (key,ctx) in
             expectation.fulfill()
             XCTAssert((ctx as! Int) == 90)
         }
-        Delay.debounce(1, key:"test", ctx: context){ (key,ctx) in
+        Kron.debounce(1, key:"test", ctx: context){ (key,ctx) in
             expectation2.fulfill()
         }
         
@@ -63,13 +63,13 @@ class DelayTests: XCTestCase {
         ignore.isInverted = true
         
         
-        Delay.debounceLast(1, key:"test"){ (key,ctx) in
+        Kron.debounceLast(1, key:"test"){ (key,ctx) in
             expectation.fulfill()
         }
-        Delay.debounceLast(1, key:"test"){ (key,ctx) in
+        Kron.debounceLast(1, key:"test"){ (key,ctx) in
             ignore.fulfill()
         }
-        Delay.debounceLast(1, key:"test"){ (key,ctx) in
+        Kron.debounceLast(1, key:"test"){ (key,ctx) in
             expectation2.fulfill()
         }
         
@@ -81,7 +81,7 @@ class DelayTests: XCTestCase {
         let expectation = self.expectation(description: "execute once")
         let ref:NSDictionary = ["foo":"bar"]
         
-        Delay.watchDog(1, key:"test",ctx:ref){ (key,ctx) in
+        Kron.watchDog(1, key:"test",ctx:ref){ (key,ctx) in
             expectation.fulfill()
             let aRef = ctx as? NSDictionary
             XCTAssert(ref == aRef)
@@ -96,11 +96,11 @@ class DelayTests: XCTestCase {
         expectation.isInverted = true
         
         
-        Delay.watchDog(1, key:"test"){ (key,ctx) in
+        Kron.watchDog(1, key:"test"){ (key,ctx) in
             expectation.fulfill()
         }
         
-        Delay.watchDogCancel(key:"test")
+        Kron.watchDogCancel(key:"test")
         waitForExpectations(timeout: 2, handler: nil)
     }
     
@@ -113,13 +113,13 @@ class DelayTests: XCTestCase {
         let context:Int = 90
         let ref:[String:Any] = [:]
         
-        Delay.idle(1, key:ref, ctx: context){ (key,ctx) in
+        Kron.idle(1, key:ref, ctx: context){ (key,ctx) in
             expectation2.fulfill()
         }
-        Delay.idle(1, key:ref, ctx: context){ (key,ctx) in
+        Kron.idle(1, key:ref, ctx: context){ (key,ctx) in
             expectation2.fulfill()
         }
-        Delay.idle(1, key:ref, ctx: context){ (key,ctx) in
+        Kron.idle(1, key:ref, ctx: context){ (key,ctx) in
             expectation.fulfill()
             XCTAssert((ctx as! Int) == 90)
         }
@@ -135,7 +135,7 @@ class DelayTests: XCTestCase {
         
         var ref:NSObject? = NSObject()
         print(CFGetRetainCount(ref))
-        Delay.idle(1, key:"test", ctx: ref){ (key,ctx) in
+        Kron.idle(1, key:"test", ctx: ref){ (key,ctx) in
             print("reatin on closure \(CFGetRetainCount(ctx as CFTypeRef)))")
         
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0 ) {
