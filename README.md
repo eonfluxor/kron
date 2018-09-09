@@ -68,15 +68,16 @@ Please review the test units for exhaustive implementation samples.
 
 In all instances the timer will be reset by simply calling Kron with the same key. (See below `Static vs Instance` to learn more about the Static keyspace).
 
-1. **Idle Timer**
-    
+* **Idle Timer**
+
+
 ```
 Kron.idle(1, key:"keyStrokes"){ (key,ctx) in
       print("performed after 1 second of inactivity")
 }
 ```
-   
-1. **Debouncer**
+
+* **Debouncer**
 
 ```
 Kron.debounce(1, key:"Scroll"){ (key,ctx) in
@@ -84,7 +85,7 @@ Kron.debounce(1, key:"Scroll"){ (key,ctx) in
 }
 ```
 
-1. **Debouncer and perform last**
+* **Debouncer and perform last**
 
 ```
 Kron.debounceLast(1, key:"Scroll"){ (key,ctx) in
@@ -93,7 +94,7 @@ Kron.debounceLast(1, key:"Scroll"){ (key,ctx) in
 }
 ```
 
-1. **Watchdog**
+* **Watchdog**
 
 ```
 Kron.wachtDog(10, key:"ApiResponse"){ (key,ctx) in

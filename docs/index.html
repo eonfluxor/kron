@@ -83,10 +83,10 @@
         <section class="section">
           <div class="section-content">
             
-            <p><a href="#cocoapods"><img src="https://img.shields.io/cocoapods/v/kron.svg" alt="CocoaPods compatible"></a> 
+            <p><a href="#cocoapods"><img src="https://img.shields.io/cocoapods/v/Delayed.svg" alt="CocoaPods compatible"></a> 
 <a href="https://github.com/eonfluxor/delay/releases"><img src="https://img.shields.io/github/release/eonfluxor/kron.svg" alt="GitHub release"></a> 
 <img src="https://img.shields.io/badge/Swift-4.1-orange.svg" alt="Swift 4.0"> 
-<img src="https://img.shields.io/cocoapods/p/kron.svg" alt="platforms">
+<img src="https://img.shields.io/cocoapods/p/Delayed.svg" alt="platforms">
 <a href="https://travis-ci.org/eonfluxor/kron"><img src="https://travis-ci.org/eonfluxor/kron.svg?branch=master" alt="Build Status"></a></p>
 <h1 id='what-is-kron' class='heading'>What is Kron?</h1>
 
@@ -137,34 +137,34 @@ Kron to your <code>Podfile</code>:</p>
 
 <p>In all instances the timer will be reset by simply calling Kron with the same key. (See below <code>Static vs Instance</code> to learn more about the Static keyspace).</p>
 
-<ol>
+<ul>
 <li><strong>Idle Timer</strong></li>
-</ol>
+</ul>
 <pre class="highlight plaintext"><code>Kron.idle(1, key:"keyStrokes"){ (key,ctx) in
       print("performed after 1 second of inactivity")
 }
 </code></pre>
 
-<ol>
+<ul>
 <li><strong>Debouncer</strong></li>
-</ol>
+</ul>
 <pre class="highlight plaintext"><code>Kron.debounce(1, key:"Scroll"){ (key,ctx) in
       print("performed immediately and again no sooner than 1 second")
 }
 </code></pre>
 
-<ol>
+<ul>
 <li><strong>Debouncer and perform last</strong></li>
-</ol>
+</ul>
 <pre class="highlight plaintext"><code>Kron.debounceLast(1, key:"Scroll"){ (key,ctx) in
       print("performed immediately and again no sooner than 1 second")
       print("also performs the last call after 1 second of inactivity")
 }
 </code></pre>
 
-<ol>
+<ul>
 <li><strong>Watchdog</strong></li>
-</ol>
+</ul>
 <pre class="highlight plaintext"><code>Kron.wachtDog(10, key:"ApiResponse"){ (key,ctx) in
       print("performed  after 10 seconds unless canceled")
 
