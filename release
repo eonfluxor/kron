@@ -1,5 +1,0 @@
-cd Delay
-jazzy
-git add .
-git commit -am 'updated docs'
-git push origin

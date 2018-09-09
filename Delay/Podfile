@@ -1,0 +1,41 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Delay-iOS' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Delay-iOS
+
+  target 'Delay-iOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'Delay-OSX' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Delay-OSX
+
+  target 'Delay-OSXTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'Delay-tvOS' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Delay-tvOS
+
+  target 'Delay-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
