@@ -17,7 +17,7 @@
 * Instead of returning a timer object, **Delay** manages the Timer instances internally through a [`DelayKey` : `Timer`]  dictionary. This makes easy to call **Delay** from distant components or threads accesing the timers by their key value.
 
 
-* The `DelayKey` can be etiher an `String` struct or `AnyObject` instance.  If an object is passed the key is inferred from the object's pointer. Calling the methods with the same key causes all timer modes to be reset.
+* The `DelayKey` can be etiher a `String` struct or `AnyObject` instance.  If an object is passed the key is inferred from the object's pointer. Calling the methods with the same key causes all timer modes to be reset.
 
 
 * As the intention is to facilitate calling **Delay** from distant implementations you can optional pass a context value `ctx`. A context can be `Any` struct or class instance and it's internally ***wrapped with a weak reference***  to prevent retain cycles. The context is then optionally passed to the timeOut closure.
