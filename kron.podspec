@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint delay.podspec' to ensure this is a
+#  Be sure to run `pod spec lint Kron.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "delay"
-  s.version      = "1.1.0"
+  s.name         = "kron"
+  s.version      = "1.2.0"
   s.summary      = "Timers made easy. (debounce, idle, watchdog and more!)"
 
   # This description is used to generate tags and improve search results.
@@ -25,22 +25,22 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  Delay is a NSTimer manager offering 4 modes through a unified api. Delay takes care of the involved implementation of NSTimers while ensuring a proper memory management with no extra effort:
+  Kron is a NSTimer manager offering 4 modes through a unified api. Kron takes care of the involved implementation of NSTimers while ensuring a proper memory management with no extra effort:
 
-  Delay.debounce: Calls immediatly and reject calls until time out elapses
-  Delay.debounceLast: As debounce but also performs the last call after time out
-  Delay.idle: Performs the last call after not being called during the timeout interval
-  Delay.watchdog: As idle but allowing to be canceled with watchDogCancel
-  Why Delay?
+  Kron.debounce: Calls immediatly and reject calls until time out elapses
+  Kron.debounceLast: As debounce but also performs the last call after time out
+  Kron.idle: Performs the last call after not being called during the timeout interval
+  Kron.watchdog: As idle but allowing to be canceled with watchDogCancel
+  Why Kron?
 
-  Instead of returning a timer object, Delay manages the Timer instances internally through a [DelayKey : Timer] dictionary. This makes easy to call Delay from distant components or threads accesing the timers by their key value.
+  Instead of returning a timer object, Kron manages the Timer instances internally through a [KronKey : Timer] dictionary. This makes easy to call Kron from distant components or threads accesing the timers by their key value.
 
-  The DelayKey can be etiher a String struct or AnyObject instance. If an object is passed the key is inferred from the object's pointer. Calling the methods with the same key causes all timer modes to be reset.
+  The KronKey can be etiher a String struct or AnyObject instance. If an object is passed the key is inferred from the object's pointer. Calling the methods with the same key causes all timer modes to be reset.
 
-  As the intention is to facilitate calling Delay from distant implementations you can optional pass a context value ctx. A context can be Any struct or class instance and it's internally wrapped with a weak reference to prevent retain cycles. The context is then optionally passed to the timeOut closure.
+  As the intention is to facilitate calling Kron from distant implementations you can optional pass a context value ctx. A context can be Any struct or class instance and it's internally wrapped with a weak reference to prevent retain cycles. The context is then optionally passed to the timeOut closure.
   DESC
 
-  s.homepage     = "https://github.com/eonfluxor/delay"
+  s.homepage     = "https://github.com/eonfluxor/kron"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -89,7 +89,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/eonfluxor/delay.git", :tag => "v#{s.version}" }
+  s.source       = { :git => "https://github.com/eonfluxor/kron.git"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -100,7 +100,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files = 'Delay/Sources/**/*.swift'
+  s.source_files = 'Kron/Sources/**/*.swift'
   s.swift_version = '4.1'
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

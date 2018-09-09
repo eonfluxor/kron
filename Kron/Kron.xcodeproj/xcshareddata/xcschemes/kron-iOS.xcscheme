@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2603923E2144A518004AD7B8"
-               BuildableName = "Delay_tvOS.framework"
-               BlueprintName = "Delay-tvOS"
-               ReferencedContainer = "container:Delay.xcodeproj">
+               BlueprintIdentifier = "265655032145B02D00003C13"
+               BuildableName = "kron_iOS.framework"
+               BlueprintName = "kron-iOS"
+               ReferencedContainer = "container:Kron.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -26,26 +26,27 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      codeCoverageEnabled = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "260392462144A518004AD7B8"
-               BuildableName = "Delay-tvOSTests.xctest"
-               BlueprintName = "Delay-tvOSTests"
-               ReferencedContainer = "container:Delay.xcodeproj">
+               BlueprintIdentifier = "2656550B2145B02D00003C13"
+               BuildableName = "kron-iOSTests.xctest"
+               BlueprintName = "kron-iOSTests"
+               ReferencedContainer = "container:Kron.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2603923E2144A518004AD7B8"
-            BuildableName = "Delay_tvOS.framework"
-            BlueprintName = "Delay-tvOS"
-            ReferencedContainer = "container:Delay.xcodeproj">
+            BlueprintIdentifier = "265655032145B02D00003C13"
+            BuildableName = "kron_iOS.framework"
+            BlueprintName = "kron-iOS"
+            ReferencedContainer = "container:Kron.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -64,10 +65,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2603923E2144A518004AD7B8"
-            BuildableName = "Delay_tvOS.framework"
-            BlueprintName = "Delay-tvOS"
-            ReferencedContainer = "container:Delay.xcodeproj">
+            BlueprintIdentifier = "265655032145B02D00003C13"
+            BuildableName = "kron_iOS.framework"
+            BlueprintName = "kron-iOS"
+            ReferencedContainer = "container:Kron.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -82,10 +83,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2603923E2144A518004AD7B8"
-            BuildableName = "Delay_tvOS.framework"
-            BlueprintName = "Delay-tvOS"
-            ReferencedContainer = "container:Delay.xcodeproj">
+            BlueprintIdentifier = "265655032145B02D00003C13"
+            BuildableName = "kron_iOS.framework"
+            BlueprintName = "kron-iOS"
+            ReferencedContainer = "container:Kron.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

@@ -1,0 +1,1054 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		265654F12145B01300003C13 /* kron_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265654E82145B01300003C13 /* kron_tvOS.framework */; };
+		265654F82145B01300003C13 /* kron_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 265654EA2145B01300003C13 /* kron_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2656550D2145B02D00003C13 /* kron_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265655042145B02D00003C13 /* kron_iOS.framework */; };
+		265655142145B02D00003C13 /* kron_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 265655062145B02D00003C13 /* kron_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		265655292145B03B00003C13 /* kron_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265655202145B03B00003C13 /* kron_macOS.framework */; };
+		265655302145B03B00003C13 /* kron_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 265655222145B03B00003C13 /* kron_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		265655372145B04200003C13 /* Kron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392572144A67F004AD7B8 /* Kron.swift */; };
+		265655382145B04300003C13 /* Kron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392572144A67F004AD7B8 /* Kron.swift */; };
+		265655392145B04400003C13 /* Kron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392572144A67F004AD7B8 /* Kron.swift */; };
+		2656553A2145B04400003C13 /* Kron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392572144A67F004AD7B8 /* Kron.swift */; };
+		2656553B2145B04500003C13 /* Kron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392572144A67F004AD7B8 /* Kron.swift */; };
+		2656553C2145B04500003C13 /* Kron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392572144A67F004AD7B8 /* Kron.swift */; };
+		2656553D2145B04900003C13 /* KronAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392582144A67F004AD7B8 /* KronAPI.swift */; };
+		2656553E2145B04A00003C13 /* KronAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392582144A67F004AD7B8 /* KronAPI.swift */; };
+		2656553F2145B04A00003C13 /* KronAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392582144A67F004AD7B8 /* KronAPI.swift */; };
+		265655402145B04B00003C13 /* KronAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392582144A67F004AD7B8 /* KronAPI.swift */; };
+		265655412145B04C00003C13 /* KronAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392582144A67F004AD7B8 /* KronAPI.swift */; };
+		265655422145B04C00003C13 /* KronAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392582144A67F004AD7B8 /* KronAPI.swift */; };
+		265655432145B06600003C13 /* KronTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392682144A68A004AD7B8 /* KronTests.swift */; };
+		265655442145B06700003C13 /* KronTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392682144A68A004AD7B8 /* KronTests.swift */; };
+		265655452145B06700003C13 /* KronTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260392682144A68A004AD7B8 /* KronTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		265654F22145B01300003C13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 268D4DD5214466A000C0B35F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 265654E72145B01300003C13;
+			remoteInfo = "kron-tvOS";
+		};
+		2656550E2145B02D00003C13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 268D4DD5214466A000C0B35F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 265655032145B02D00003C13;
+			remoteInfo = "kron-iOS";
+		};
+		2656552A2145B03B00003C13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 268D4DD5214466A000C0B35F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2656551F2145B03B00003C13;
+			remoteInfo = "kron-macOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D8382B5B59BF2521E5685FD /* Pods-Delay-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delay-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delay-tvOSTests/Pods-Delay-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1903E043AF328116E0BD2D26 /* Pods_Delay_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delay_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A9016976C47149ED12D07B8 /* Pods-Delay-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delay-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delay-tvOS/Pods-Delay-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		1ADF8150BD724FE740FE69CA /* Pods-Delay-OSXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delay-OSXTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delay-OSXTests/Pods-Delay-OSXTests.release.xcconfig"; sourceTree = "<group>"; };
+		1F31D3D6EBB6C85C6958D37D /* Pods-Delay-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delay-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delay-iOS/Pods-Delay-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		20252BA9765BCA8C07F1E898 /* Pods-Delay-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delay-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delay-iOSTests/Pods-Delay-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		260392572144A67F004AD7B8 /* Kron.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kron.swift; sourceTree = "<group>"; };
+		260392582144A67F004AD7B8 /* KronAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KronAPI.swift; sourceTree = "<group>"; };
+		2603925A2144A67F004AD7B8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		260392682144A68A004AD7B8 /* KronTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KronTests.swift; sourceTree = "<group>"; };
+		260392692144A68A004AD7B8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		265654E82145B01300003C13 /* kron_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = kron_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		265654EA2145B01300003C13 /* kron_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kron_tvOS.h; sourceTree = "<group>"; };
+		265654EB2145B01300003C13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		265654F02145B01300003C13 /* kron-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kron-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		265654F72145B01300003C13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		265655042145B02D00003C13 /* kron_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = kron_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		265655062145B02D00003C13 /* kron_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kron_iOS.h; sourceTree = "<group>"; };
+		265655072145B02D00003C13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2656550C2145B02D00003C13 /* kron-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kron-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		265655132145B02D00003C13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		265655202145B03B00003C13 /* kron_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = kron_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		265655222145B03B00003C13 /* kron_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kron_macOS.h; sourceTree = "<group>"; };
+		265655232145B03B00003C13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		265655282145B03B00003C13 /* kron-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kron-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2656552F2145B03B00003C13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		323262AAACD9FFB43A9338E7 /* Pods_Delay_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delay_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59D0A0255D535F5BE82A19EC /* Pods-Delay-OSXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delay-OSXTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delay-OSXTests/Pods-Delay-OSXTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8B57B8A7E035DB55BCAF4875 /* Pods_Delay_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delay_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CE721BA2DF7ECF95DC16FA3 /* Pods_Delay_OSXTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delay_OSXTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FAEA2A515035A09723040D7 /* Pods-Delay-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delay-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delay-iOS/Pods-Delay-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		9B1CCFFFAF6483EC66249CEB /* Pods_Delay_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delay_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1766F759146E57CF8515369 /* Pods-Delay-OSX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delay-OSX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delay-OSX/Pods-Delay-OSX.debug.xcconfig"; sourceTree = "<group>"; };
+		A467BC5BF01ED99F414FEAB0 /* Pods-Delay-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delay-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delay-iOSTests/Pods-Delay-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		E6E41A5385050AF8625DC880 /* Pods-Delay-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delay-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delay-tvOS/Pods-Delay-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		E886690C0348C1097B10C95B /* Pods-Delay-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delay-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delay-tvOSTests/Pods-Delay-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED90E16F6B741CC37517DE2C /* Pods_Delay_tvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delay_tvOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEDF20C916F107F94F8A63BB /* Pods-Delay-OSX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delay-OSX.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delay-OSX/Pods-Delay-OSX.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		265654E42145B01300003C13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265654ED2145B01300003C13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				265654F12145B01300003C13 /* kron_tvOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265655002145B02D00003C13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265655092145B02D00003C13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2656550D2145B02D00003C13 /* kron_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2656551C2145B03B00003C13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265655252145B03B00003C13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				265655292145B03B00003C13 /* kron_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		260392562144A67F004AD7B8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				260392572144A67F004AD7B8 /* Kron.swift */,
+				260392582144A67F004AD7B8 /* KronAPI.swift */,
+				2603925A2144A67F004AD7B8 /* Info.plist */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		260392672144A68A004AD7B8 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				260392682144A68A004AD7B8 /* KronTests.swift */,
+				260392692144A68A004AD7B8 /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		265654E92145B01300003C13 /* kron-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				265654EA2145B01300003C13 /* kron_tvOS.h */,
+				265654EB2145B01300003C13 /* Info.plist */,
+			);
+			path = "kron-tvOS";
+			sourceTree = "<group>";
+		};
+		265654F42145B01300003C13 /* kron-tvOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				265654F72145B01300003C13 /* Info.plist */,
+			);
+			path = "kron-tvOSTests";
+			sourceTree = "<group>";
+		};
+		265655052145B02D00003C13 /* kron-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				265655062145B02D00003C13 /* kron_iOS.h */,
+				265655072145B02D00003C13 /* Info.plist */,
+			);
+			path = "kron-iOS";
+			sourceTree = "<group>";
+		};
+		265655102145B02D00003C13 /* kron-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				265655132145B02D00003C13 /* Info.plist */,
+			);
+			path = "kron-iOSTests";
+			sourceTree = "<group>";
+		};
+		265655212145B03B00003C13 /* kron-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				265655222145B03B00003C13 /* kron_macOS.h */,
+				265655232145B03B00003C13 /* Info.plist */,
+			);
+			path = "kron-macOS";
+			sourceTree = "<group>";
+		};
+		2656552C2145B03B00003C13 /* kron-macOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				2656552F2145B03B00003C13 /* Info.plist */,
+			);
+			path = "kron-macOSTests";
+			sourceTree = "<group>";
+		};
+		268D4DD4214466A000C0B35F = {
+			isa = PBXGroup;
+			children = (
+				260392562144A67F004AD7B8 /* Sources */,
+				260392672144A68A004AD7B8 /* Tests */,
+				265654E92145B01300003C13 /* kron-tvOS */,
+				265654F42145B01300003C13 /* kron-tvOSTests */,
+				265655052145B02D00003C13 /* kron-iOS */,
+				265655102145B02D00003C13 /* kron-iOSTests */,
+				265655212145B03B00003C13 /* kron-macOS */,
+				2656552C2145B03B00003C13 /* kron-macOSTests */,
+				268D4DDF214466A000C0B35F /* Products */,
+				7B2AFA659321C1227F976548 /* Pods */,
+				9957B2093327F88D16422F6E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		268D4DDF214466A000C0B35F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				265654E82145B01300003C13 /* kron_tvOS.framework */,
+				265654F02145B01300003C13 /* kron-tvOSTests.xctest */,
+				265655042145B02D00003C13 /* kron_iOS.framework */,
+				2656550C2145B02D00003C13 /* kron-iOSTests.xctest */,
+				265655202145B03B00003C13 /* kron_macOS.framework */,
+				265655282145B03B00003C13 /* kron-macOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B2AFA659321C1227F976548 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1766F759146E57CF8515369 /* Pods-Delay-OSX.debug.xcconfig */,
+				EEDF20C916F107F94F8A63BB /* Pods-Delay-OSX.release.xcconfig */,
+				59D0A0255D535F5BE82A19EC /* Pods-Delay-OSXTests.debug.xcconfig */,
+				1ADF8150BD724FE740FE69CA /* Pods-Delay-OSXTests.release.xcconfig */,
+				1F31D3D6EBB6C85C6958D37D /* Pods-Delay-iOS.debug.xcconfig */,
+				8FAEA2A515035A09723040D7 /* Pods-Delay-iOS.release.xcconfig */,
+				20252BA9765BCA8C07F1E898 /* Pods-Delay-iOSTests.debug.xcconfig */,
+				A467BC5BF01ED99F414FEAB0 /* Pods-Delay-iOSTests.release.xcconfig */,
+				1A9016976C47149ED12D07B8 /* Pods-Delay-tvOS.debug.xcconfig */,
+				E6E41A5385050AF8625DC880 /* Pods-Delay-tvOS.release.xcconfig */,
+				0D8382B5B59BF2521E5685FD /* Pods-Delay-tvOSTests.debug.xcconfig */,
+				E886690C0348C1097B10C95B /* Pods-Delay-tvOSTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9957B2093327F88D16422F6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B1CCFFFAF6483EC66249CEB /* Pods_Delay_OSX.framework */,
+				8CE721BA2DF7ECF95DC16FA3 /* Pods_Delay_OSXTests.framework */,
+				323262AAACD9FFB43A9338E7 /* Pods_Delay_iOS.framework */,
+				8B57B8A7E035DB55BCAF4875 /* Pods_Delay_iOSTests.framework */,
+				1903E043AF328116E0BD2D26 /* Pods_Delay_tvOS.framework */,
+				ED90E16F6B741CC37517DE2C /* Pods_Delay_tvOSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		265654E52145B01300003C13 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				265654F82145B01300003C13 /* kron_tvOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265655012145B02D00003C13 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				265655142145B02D00003C13 /* kron_iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2656551D2145B03B00003C13 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				265655302145B03B00003C13 /* kron_macOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		265654E72145B01300003C13 /* kron-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 265654F92145B01300003C13 /* Build configuration list for PBXNativeTarget "kron-tvOS" */;
+			buildPhases = (
+				265654E32145B01300003C13 /* Sources */,
+				265654E42145B01300003C13 /* Frameworks */,
+				265654E52145B01300003C13 /* Headers */,
+				265654E62145B01300003C13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "kron-tvOS";
+			productName = "kron-tvOS";
+			productReference = 265654E82145B01300003C13 /* kron_tvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		265654EF2145B01300003C13 /* kron-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 265654FC2145B01300003C13 /* Build configuration list for PBXNativeTarget "kron-tvOSTests" */;
+			buildPhases = (
+				265654EC2145B01300003C13 /* Sources */,
+				265654ED2145B01300003C13 /* Frameworks */,
+				265654EE2145B01300003C13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				265654F32145B01300003C13 /* PBXTargetDependency */,
+			);
+			name = "kron-tvOSTests";
+			productName = "kron-tvOSTests";
+			productReference = 265654F02145B01300003C13 /* kron-tvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		265655032145B02D00003C13 /* kron-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 265655152145B02D00003C13 /* Build configuration list for PBXNativeTarget "kron-iOS" */;
+			buildPhases = (
+				265654FF2145B02D00003C13 /* Sources */,
+				265655002145B02D00003C13 /* Frameworks */,
+				265655012145B02D00003C13 /* Headers */,
+				265655022145B02D00003C13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "kron-iOS";
+			productName = "kron-iOS";
+			productReference = 265655042145B02D00003C13 /* kron_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2656550B2145B02D00003C13 /* kron-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 265655182145B02D00003C13 /* Build configuration list for PBXNativeTarget "kron-iOSTests" */;
+			buildPhases = (
+				265655082145B02D00003C13 /* Sources */,
+				265655092145B02D00003C13 /* Frameworks */,
+				2656550A2145B02D00003C13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2656550F2145B02D00003C13 /* PBXTargetDependency */,
+			);
+			name = "kron-iOSTests";
+			productName = "kron-iOSTests";
+			productReference = 2656550C2145B02D00003C13 /* kron-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2656551F2145B03B00003C13 /* kron-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 265655312145B03B00003C13 /* Build configuration list for PBXNativeTarget "kron-macOS" */;
+			buildPhases = (
+				2656551B2145B03B00003C13 /* Sources */,
+				2656551C2145B03B00003C13 /* Frameworks */,
+				2656551D2145B03B00003C13 /* Headers */,
+				2656551E2145B03B00003C13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "kron-macOS";
+			productName = "kron-macOS";
+			productReference = 265655202145B03B00003C13 /* kron_macOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		265655272145B03B00003C13 /* kron-macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 265655342145B03B00003C13 /* Build configuration list for PBXNativeTarget "kron-macOSTests" */;
+			buildPhases = (
+				265655242145B03B00003C13 /* Sources */,
+				265655252145B03B00003C13 /* Frameworks */,
+				265655262145B03B00003C13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2656552B2145B03B00003C13 /* PBXTargetDependency */,
+			);
+			name = "kron-macOSTests";
+			productName = "kron-macOSTests";
+			productReference = 265655282145B03B00003C13 /* kron-macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		268D4DD5214466A000C0B35F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = eonflux;
+				TargetAttributes = {
+					265654E72145B01300003C13 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					265654EF2145B01300003C13 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					265655032145B02D00003C13 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					2656550B2145B02D00003C13 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					2656551F2145B03B00003C13 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					265655272145B03B00003C13 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 268D4DD8214466A000C0B35F /* Build configuration list for PBXProject "Kron" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 268D4DD4214466A000C0B35F;
+			productRefGroup = 268D4DDF214466A000C0B35F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				265654E72145B01300003C13 /* kron-tvOS */,
+				265654EF2145B01300003C13 /* kron-tvOSTests */,
+				265655032145B02D00003C13 /* kron-iOS */,
+				2656550B2145B02D00003C13 /* kron-iOSTests */,
+				2656551F2145B03B00003C13 /* kron-macOS */,
+				265655272145B03B00003C13 /* kron-macOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		265654E62145B01300003C13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265654EE2145B01300003C13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265655022145B02D00003C13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2656550A2145B02D00003C13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2656551E2145B03B00003C13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265655262145B03B00003C13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		265654E32145B01300003C13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2656553D2145B04900003C13 /* KronAPI.swift in Sources */,
+				265655372145B04200003C13 /* Kron.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265654EC2145B01300003C13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				265655452145B06700003C13 /* KronTests.swift in Sources */,
+				265655382145B04300003C13 /* Kron.swift in Sources */,
+				2656553E2145B04A00003C13 /* KronAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265654FF2145B02D00003C13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2656553F2145B04A00003C13 /* KronAPI.swift in Sources */,
+				265655392145B04400003C13 /* Kron.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265655082145B02D00003C13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				265655442145B06700003C13 /* KronTests.swift in Sources */,
+				2656553A2145B04400003C13 /* Kron.swift in Sources */,
+				265655402145B04B00003C13 /* KronAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2656551B2145B03B00003C13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				265655412145B04C00003C13 /* KronAPI.swift in Sources */,
+				2656553B2145B04500003C13 /* Kron.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265655242145B03B00003C13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				265655432145B06600003C13 /* KronTests.swift in Sources */,
+				2656553C2145B04500003C13 /* Kron.swift in Sources */,
+				265655422145B04C00003C13 /* KronAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		265654F32145B01300003C13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 265654E72145B01300003C13 /* kron-tvOS */;
+			targetProxy = 265654F22145B01300003C13 /* PBXContainerItemProxy */;
+		};
+		2656550F2145B02D00003C13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 265655032145B02D00003C13 /* kron-iOS */;
+			targetProxy = 2656550E2145B02D00003C13 /* PBXContainerItemProxy */;
+		};
+		2656552B2145B03B00003C13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2656551F2145B03B00003C13 /* kron-macOS */;
+			targetProxy = 2656552A2145B03B00003C13 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		265654FA2145B01300003C13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "kron-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.kron-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		265654FB2145B01300003C13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "kron-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.kron-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
+		265654FD2145B01300003C13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "kron-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.kron-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		265654FE2145B01300003C13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "kron-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.kron-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
+		265655162145B02D00003C13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "kron-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.kron-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		265655172145B02D00003C13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "kron-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.kron-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		265655192145B02D00003C13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "kron-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.kron-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2656551A2145B02D00003C13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "kron-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.kron-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		265655322145B03B00003C13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "kron-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.kron-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		265655332145B03B00003C13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "kron-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.kron-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		265655352145B03B00003C13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "kron-macOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.kron-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		265655362145B03B00003C13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "kron-macOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "eonflux.kron-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		268D4DF0214466A100C0B35F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		268D4DF1214466A100C0B35F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		265654F92145B01300003C13 /* Build configuration list for PBXNativeTarget "kron-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				265654FA2145B01300003C13 /* Debug */,
+				265654FB2145B01300003C13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		265654FC2145B01300003C13 /* Build configuration list for PBXNativeTarget "kron-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				265654FD2145B01300003C13 /* Debug */,
+				265654FE2145B01300003C13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		265655152145B02D00003C13 /* Build configuration list for PBXNativeTarget "kron-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				265655162145B02D00003C13 /* Debug */,
+				265655172145B02D00003C13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		265655182145B02D00003C13 /* Build configuration list for PBXNativeTarget "kron-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				265655192145B02D00003C13 /* Debug */,
+				2656551A2145B02D00003C13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		265655312145B03B00003C13 /* Build configuration list for PBXNativeTarget "kron-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				265655322145B03B00003C13 /* Debug */,
+				265655332145B03B00003C13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		265655342145B03B00003C13 /* Build configuration list for PBXNativeTarget "kron-macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				265655352145B03B00003C13 /* Debug */,
+				265655362145B03B00003C13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		268D4DD8214466A000C0B35F /* Build configuration list for PBXProject "Kron" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				268D4DF0214466A100C0B35F /* Debug */,
+				268D4DF1214466A100C0B35F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 268D4DD5214466A000C0B35F /* Project object */;
+}
