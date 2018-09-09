@@ -7,253 +7,271 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0CB84196B9A042DC182719EE48A0B4BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC0E9850E102760A0993631966EBEDF /* Foundation.framework */; };
-		0E44A812F6F01EBFB8707ED6A6D91795 /* Pods-Delay-OSXTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 506251979B8ECCFB0735692BA9854FE6 /* Pods-Delay-OSXTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		240C490D1EF3CED25136F0FF340C905C /* Pods-Delay-OSX-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A5B7BE786DDF32DDDCD528AA068B0C /* Pods-Delay-OSX-dummy.m */; };
-		4CEE49A399AD532B73799BAD4ACDAC7C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48233FC070FA1CADC1C3A92C3D3948A1 /* Cocoa.framework */; };
-		5268903B821F66232923847F0A298116 /* Pods-Delay-tvOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB42B21A8CF7E0100C973131BF3ABAEE /* Pods-Delay-tvOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55C256C7D69E40146080B343FF634FB7 /* Pods-Delay-OSXTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE45F691D44C6CA6B26B8276AD01F18 /* Pods-Delay-OSXTests-dummy.m */; };
-		5A805A759C2529F579D6FB1690B6655D /* Pods-Delay-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1149E41357AFB5B21C67FB3C80F1FF05 /* Pods-Delay-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6F97040328065ABD4B2F5987894DACE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431D334C455E16522AD0E41506C7B4D1 /* Foundation.framework */; };
-		90A1A12C96C138A043798B7F50CA395F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC0E9850E102760A0993631966EBEDF /* Foundation.framework */; };
-		95B38991E4B33AF256EEFE0E23B9B335 /* Pods-Delay-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0E35ADE7E19CF20E3274843603FCED /* Pods-Delay-iOS-dummy.m */; };
-		AE0207E3CFB401270580E97144EFE965 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431D334C455E16522AD0E41506C7B4D1 /* Foundation.framework */; };
-		B1644A8FD8AF00D139C5A667DA22413E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48233FC070FA1CADC1C3A92C3D3948A1 /* Cocoa.framework */; };
-		CAC084361107A7547A98BE90BAC9A9AB /* Pods-Delay-iOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C3E40F655794E0FB3E4D15127910B06A /* Pods-Delay-iOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CD211CCE9E89E459B72EB357BD07DF4E /* Pods-Delay-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 23A8959F03C9C5B8F0268151816F6563 /* Pods-Delay-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D274072B1DDEA1AE2BD0C05216F669E8 /* Pods-Delay-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C58D95897E294192DD3274C4304BB28 /* Pods-Delay-tvOS-dummy.m */; };
-		E77898CFF82E1F3E05CA7A2DBD83E7A1 /* Pods-Delay-OSX-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A4A1DCB518F802FAA38D4E7572371FA /* Pods-Delay-OSX-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF5FE883D9BA22D569AB32B0B3ABB745 /* Pods-Delay-tvOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E11BB3E35D11B5C3C1E36559E479CC9F /* Pods-Delay-tvOSTests-dummy.m */; };
-		F5F750A9E8B75935CCBCA909AB4B94D3 /* Pods-Delay-iOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 108B4702CB526FB06A333A27CA188762 /* Pods-Delay-iOSTests-dummy.m */; };
+		00ECDBCFF5FB297AD758AB666E15B53F /* Pods-kron-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B3F04BF464FAFFBDAFF422A3D011DFA /* Pods-kron-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		040B3C15596E5228CC7200809EA07CDF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48233FC070FA1CADC1C3A92C3D3948A1 /* Cocoa.framework */; };
+		225E9401C37BA0C62C278FBCFA7DE632 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC0E9850E102760A0993631966EBEDF /* Foundation.framework */; };
+		39E5B762FC3F3B8192722F2557BC8C02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431D334C455E16522AD0E41506C7B4D1 /* Foundation.framework */; };
+		3F3E6339B09EFCD245A8884324201F75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC0E9850E102760A0993631966EBEDF /* Foundation.framework */; };
+		5062CAA531E2F4F09615E46A5DA13E21 /* Pods-kron-iOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CC71FA989833DAEB2044B4D114E32A7 /* Pods-kron-iOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		567534D54CE0001509E367C983BA0CBB /* Pods-kron-macOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 20267156B1F334343E626954ED0F65C1 /* Pods-kron-macOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67BB65409BC3432138D4E4ADF571325A /* Pods-kron-tvOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 16787936602E470F07E0661637EBA80F /* Pods-kron-tvOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EA38F95376F0FB99844FE860D791CAD /* Pods-kron-tvOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6943D68287A50FC4B72B291394EC4E20 /* Pods-kron-tvOSTests-dummy.m */; };
+		9879C1729DC1149505D9EC9EE1BAF720 /* Pods-kron-macOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F798640E670C322B52F00B5E1879DB0 /* Pods-kron-macOSTests-dummy.m */; };
+		B83A8F8BEC90ED0A7E1A0BC83E2B9995 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431D334C455E16522AD0E41506C7B4D1 /* Foundation.framework */; };
+		C32715D011453549764CDF4638525C2F /* Pods-kron-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B25E41BE01E46E6A89B6BF00E381A822 /* Pods-kron-macOS-dummy.m */; };
+		CE3CA003A41F4AC712B57F1DF51951B5 /* Pods-kron-iOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA2551DD291339B90EFD25AEB2C617D /* Pods-kron-iOSTests-dummy.m */; };
+		DE7A5AC6680A64E8F244BDC51A2C121F /* Pods-kron-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BAC825B91F647893982B0E75A2EAD052 /* Pods-kron-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC5DFAA40CE89DA478750A433C82F11C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48233FC070FA1CADC1C3A92C3D3948A1 /* Cocoa.framework */; };
+		F54FF727D5BB223FDD6E1F7EC4F8D185 /* Pods-kron-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BDDC1566A7C792477E9196890F24883D /* Pods-kron-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F60C2C40B6150F8DA4DBEFA541A2CF14 /* Pods-kron-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D367A844222A958F12F249B8A08BCA8A /* Pods-kron-iOS-dummy.m */; };
+		FF8DAAD54D68759C2E7D63149CFEEE44 /* Pods-kron-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 749D28B401772F532BF6F317573D4C64 /* Pods-kron-tvOS-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7AEC7DC43E1751C5231A5A5F6541ED6B /* PBXContainerItemProxy */ = {
+		26BA979978A55B53E47C68C2AD80B241 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AFA32CF09A948D6EDD6FF484C981E3C7;
-			remoteInfo = "Pods-Delay-iOS";
+			remoteGlobalIDString = 89B0F84F9503291CF956D15738991BBF;
+			remoteInfo = "Pods-kron-tvOS";
 		};
-		BA260531DC598F65832AF3B8F170C719 /* PBXContainerItemProxy */ = {
+		4832C1B3FE3864FA22D0EE221DD692C8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9BB894DC468D03B7F557EA45EE9E5A4E;
-			remoteInfo = "Pods-Delay-OSX";
+			remoteGlobalIDString = 12EEED2F832AAB86E38ABE1276384443;
+			remoteInfo = "Pods-kron-macOS";
 		};
-		F2DE639A72F900A1C95EFEFF79827005 /* PBXContainerItemProxy */ = {
+		5431ACA8D36DC6640D6EBBCFF8D88AE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B6D0F2299C98CD6B10CA749B97BB3A9C;
-			remoteInfo = "Pods-Delay-tvOS";
+			remoteGlobalIDString = 23F609B4A621F52F3CDEB44F5C77869C;
+			remoteInfo = "Pods-kron-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04F06D273C61AB9FC76B7D31ACDACBBB /* Pods-Delay-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Delay-tvOS.modulemap"; sourceTree = "<group>"; };
-		07A675B2FFEF2B7135830B299AA83783 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0C0E29DE1A32C8498F9A64A206FCB5D0 /* Pods-Delay-OSX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Delay-OSX.debug.xcconfig"; sourceTree = "<group>"; };
-		0ECD12F858203235826EB6F2CD6025CB /* Pods-Delay-OSXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Delay-OSXTests.debug.xcconfig"; sourceTree = "<group>"; };
-		0EEAB2AAD0CD62B6FCC7304D30C91FCB /* Pods_Delay_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Delay_iOSTests.framework; path = "Pods-Delay-iOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F418E55904604159464C83838794A24 /* Pods-Delay-tvOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Delay-tvOSTests-resources.sh"; sourceTree = "<group>"; };
-		108B4702CB526FB06A333A27CA188762 /* Pods-Delay-iOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Delay-iOSTests-dummy.m"; sourceTree = "<group>"; };
-		1149E41357AFB5B21C67FB3C80F1FF05 /* Pods-Delay-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Delay-tvOS-umbrella.h"; sourceTree = "<group>"; };
-		11D968C774FC3EBA1D3DF4FC27BC11F9 /* Pods-Delay-OSXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Delay-OSXTests.release.xcconfig"; sourceTree = "<group>"; };
-		11DD671A2ED84DDE271551FB53CC9CCB /* Pods-Delay-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Delay-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		160716695BF0CBC4A144DCF30D9F0221 /* Pods-Delay-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Delay-iOS-resources.sh"; sourceTree = "<group>"; };
-		166DB5D6B3F3B4C9B54D4C0652311FD8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1891BAB170C5B9AE1F3F006BD82A24AD /* Pods-Delay-OSX-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Delay-OSX-acknowledgements.plist"; sourceTree = "<group>"; };
-		222EE18FF2F91A0B9660DC25B253B7BB /* Pods_Delay_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Delay_tvOS.framework; path = "Pods-Delay-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		23A8959F03C9C5B8F0268151816F6563 /* Pods-Delay-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Delay-iOS-umbrella.h"; sourceTree = "<group>"; };
-		26D938E1B399CF7C5A3AD8BE0117F6FD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		291380D4125B55BA82EA5EF7AC95DDB7 /* Pods-Delay-iOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Delay-iOSTests-frameworks.sh"; sourceTree = "<group>"; };
-		2D0E35ADE7E19CF20E3274843603FCED /* Pods-Delay-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Delay-iOS-dummy.m"; sourceTree = "<group>"; };
-		2D4D248FA1A86B78F1763D3185EA3A95 /* Pods_Delay_tvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Delay_tvOSTests.framework; path = "Pods-Delay-tvOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		315C16962637A3B504F448DD6558388A /* Pods-Delay-OSX-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Delay-OSX-acknowledgements.markdown"; sourceTree = "<group>"; };
+		02939EF4A76C8C2F554AFCC0901F8260 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		059A63BF46F965ADE6FF37100BB50EB8 /* Pods-kron-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-kron-iOS.modulemap"; sourceTree = "<group>"; };
+		05E195CEDC4491A09F436BD511F8F939 /* Pods-kron-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-kron-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0945F37B46E49E99248F68B07D3B9E1C /* Pods-kron-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-kron-macOS.modulemap"; sourceTree = "<group>"; };
+		0B3F04BF464FAFFBDAFF422A3D011DFA /* Pods-kron-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-kron-macOS-umbrella.h"; sourceTree = "<group>"; };
+		0ECFD8E60EEDC44910DBC46AEC7761C1 /* Pods-kron-tvOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-kron-tvOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1283182412DB73507FFD4657C3552026 /* Pods-kron-macOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-kron-macOS-resources.sh"; sourceTree = "<group>"; };
+		1516E849C3F3B53B88BC21B8DE24F444 /* Pods-kron-macOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-kron-macOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		16787936602E470F07E0661637EBA80F /* Pods-kron-tvOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-kron-tvOSTests-umbrella.h"; sourceTree = "<group>"; };
+		1D089A2D86F370153B2729A0EBD1094B /* Pods-kron-macOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-kron-macOSTests-resources.sh"; sourceTree = "<group>"; };
+		20267156B1F334343E626954ED0F65C1 /* Pods-kron-macOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-kron-macOSTests-umbrella.h"; sourceTree = "<group>"; };
+		23492457C0652E5410EAE22E68E7AC84 /* Pods-kron-iOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-kron-iOSTests-resources.sh"; sourceTree = "<group>"; };
+		2780A04B4FA8297487E74ACCB8C7E77F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BC1F04DF62AC45CA58D9B8F3B59A736 /* Pods-kron-iOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-kron-iOSTests-frameworks.sh"; sourceTree = "<group>"; };
+		2E6B14D42F93986FE51A6068E64727E4 /* Pods-kron-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-kron-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		2F1B0534B6F5C5F7091E5CEF1BA13171 /* Pods-kron-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kron-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		35894F87D636EE1438F519B598BAA9B1 /* Pods-kron-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kron-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		359F827ED6EC2F5041EB7CCCD952640C /* Pods_kron_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_kron_iOS.framework; path = "Pods-kron-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		38C430342C2852F62B48B9C3E9DC1D20 /* Pods_kron_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_kron_iOSTests.framework; path = "Pods-kron-iOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BEBFEEAB0EFD24C1CC2E6940A124741 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		429961E3A75141B2658A6B75F13B698E /* Pods-kron-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-kron-tvOS-resources.sh"; sourceTree = "<group>"; };
 		431D334C455E16522AD0E41506C7B4D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		45FC82C7D9E2861F3C0CAFEB99708DD5 /* Pods_Delay_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Delay_OSX.framework; path = "Pods-Delay-OSX.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48233FC070FA1CADC1C3A92C3D3948A1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		49E3681C37CD6A60FFCE54B3763C10D5 /* Pods-Delay-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Delay-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		4A8DAB5F92AEF1D5DD2C9EEDD9F5615A /* Pods-Delay-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Delay-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		4CC0E9850E102760A0993631966EBEDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		506251979B8ECCFB0735692BA9854FE6 /* Pods-Delay-OSXTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Delay-OSXTests-umbrella.h"; sourceTree = "<group>"; };
-		5171337F50968EC4FAEB24629EE6E484 /* Pods-Delay-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Delay-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		51DD9E0B054A0529A94739F86B5A4F95 /* Pods-Delay-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Delay-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		55928F429621D1F47D8B7F1322B6A985 /* Pods-Delay-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Delay-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		5C58D95897E294192DD3274C4304BB28 /* Pods-Delay-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Delay-tvOS-dummy.m"; sourceTree = "<group>"; };
-		5CFA7E15259DF8A288C0ACEDA8422AAA /* Pods-Delay-tvOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Delay-tvOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		678E43E39C9DFA54CD9A01B3509F2C53 /* Pods-Delay-OSX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Delay-OSX.release.xcconfig"; sourceTree = "<group>"; };
-		69D98545AADCCCEE64E1AA68605B3A8E /* Pods-Delay-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Delay-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6D0514EA5C6037736E83421807EA5A77 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		792F10A2A29AAA8BC29C5F5EE28ACE87 /* Pods_Delay_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Delay_iOS.framework; path = "Pods-Delay-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7AD65B923FFA80EBE23363410F575223 /* Pods-Delay-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Delay-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		82E4053232E3EA520AA390B921A59413 /* Pods-Delay-tvOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Delay-tvOSTests.modulemap"; sourceTree = "<group>"; };
-		890B22C90870AA64AA33F4CDAE6A2780 /* Pods-Delay-iOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Delay-iOSTests-resources.sh"; sourceTree = "<group>"; };
+		4D7C84FC347A44B0E3EC91D829C0DC36 /* Pods-kron-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-kron-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		5186E8CAD2A7752DE4BE228C161302D7 /* Pods-kron-macOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-kron-macOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		535C3F7ACBAAEB5D4B4AFEE80D21EAA8 /* Pods-kron-tvOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-kron-tvOSTests-frameworks.sh"; sourceTree = "<group>"; };
+		5BEB0DD754CB275737B5521D301AAA34 /* Pods-kron-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kron-macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		5F798640E670C322B52F00B5E1879DB0 /* Pods-kron-macOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-kron-macOSTests-dummy.m"; sourceTree = "<group>"; };
+		6383B3D63E8F862EB3569FDB5D7B2D3A /* Pods-kron-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-kron-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6943D68287A50FC4B72B291394EC4E20 /* Pods-kron-tvOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-kron-tvOSTests-dummy.m"; sourceTree = "<group>"; };
+		700BB4B5E31433A5A1786D30E4A01880 /* Pods-kron-iOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-kron-iOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		749D28B401772F532BF6F317573D4C64 /* Pods-kron-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-kron-tvOS-dummy.m"; sourceTree = "<group>"; };
+		7CF791EF27694CD4AD565CFB00251B5C /* Pods-kron-macOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-kron-macOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		7F32E89E82A4373270A50F4A4967A1CB /* Pods-kron-macOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-kron-macOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		850C1314A48EAD3AB956274FEF60F096 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D4BEAEE60383927CB1B2769591AFDF3 /* Pods-kron-macOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-kron-macOSTests-frameworks.sh"; sourceTree = "<group>"; };
+		8DA2551DD291339B90EFD25AEB2C617D /* Pods-kron-iOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-kron-iOSTests-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		98A30ACDE4736B87D8CA25ED31C6C505 /* Pods-Delay-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Delay-tvOS-resources.sh"; sourceTree = "<group>"; };
-		98A5B7BE786DDF32DDDCD528AA068B0C /* Pods-Delay-OSX-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Delay-OSX-dummy.m"; sourceTree = "<group>"; };
-		9945A41BB038ED318B4F7F2CE8FCF801 /* Pods-Delay-OSXTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Delay-OSXTests.modulemap"; sourceTree = "<group>"; };
-		9A2E398BD3A05F213F3F939694A189B2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A4A1DCB518F802FAA38D4E7572371FA /* Pods-Delay-OSX-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Delay-OSX-umbrella.h"; sourceTree = "<group>"; };
-		9B1A8363A9E03D3B214CFE05001FEB3B /* Pods-Delay-tvOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Delay-tvOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A049AC6A25E0E945A65724F8C967DEA5 /* Pods-Delay-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Delay-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		ACB2B2DD08524ABA45B6CC5C0A50D802 /* Pods-Delay-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Delay-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		BB42B21A8CF7E0100C973131BF3ABAEE /* Pods-Delay-tvOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Delay-tvOSTests-umbrella.h"; sourceTree = "<group>"; };
-		C2104F777C01500CB6FF24E0A80EDB75 /* Pods-Delay-OSXTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Delay-OSXTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C3E40F655794E0FB3E4D15127910B06A /* Pods-Delay-iOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Delay-iOSTests-umbrella.h"; sourceTree = "<group>"; };
-		C7195E5380BB3402C92DC3B7D5F0CAA8 /* Pods-Delay-iOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Delay-iOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C75AE1204B8FC9DD5AFCE463515627FE /* Pods_Delay_OSXTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Delay_OSXTests.framework; path = "Pods-Delay-OSXTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB7984B2F1390A8F9180AC780CABEDDE /* Pods-Delay-OSXTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Delay-OSXTests-resources.sh"; sourceTree = "<group>"; };
-		CF149798A242A2CEF2646883DD49B721 /* Pods-Delay-OSXTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Delay-OSXTests-frameworks.sh"; sourceTree = "<group>"; };
-		D65BFBAB94C794CC778FBDC2A712330A /* Pods-Delay-OSX-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Delay-OSX-resources.sh"; sourceTree = "<group>"; };
-		D97EF8A388FE5BC873C7131E67E6F8D6 /* Pods-Delay-tvOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Delay-tvOSTests-frameworks.sh"; sourceTree = "<group>"; };
-		DF1219BDDF299539A46B9DC6D89C4047 /* Pods-Delay-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Delay-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E11BB3E35D11B5C3C1E36559E479CC9F /* Pods-Delay-tvOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Delay-tvOSTests-dummy.m"; sourceTree = "<group>"; };
-		E2D729D6C7E1EAA301EBED53099AA275 /* Pods-Delay-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Delay-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E7DFB4A13E1599FDD4787CAF9B4C521C /* Pods-Delay-iOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Delay-iOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		F4284CFED182028883D0E0800F0A4C7F /* Pods-Delay-OSX.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Delay-OSX.modulemap"; sourceTree = "<group>"; };
-		F8277D824598B5D8BA440BCDBBD100AD /* Pods-Delay-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Delay-iOS.modulemap"; sourceTree = "<group>"; };
-		F94D212600A4029CC5F2204FFC30AAF6 /* Pods-Delay-iOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Delay-iOSTests.modulemap"; sourceTree = "<group>"; };
-		FD1C04166BE0A70DE0D12D062B60ED2C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDE45F691D44C6CA6B26B8276AD01F18 /* Pods-Delay-OSXTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Delay-OSXTests-dummy.m"; sourceTree = "<group>"; };
-		FFDE95D9986647408529562327A347CB /* Pods-Delay-OSXTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Delay-OSXTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9522C42CD05700AC6CE084C10979C6B9 /* Pods-kron-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kron-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		976006078776DDA73E8FCDB58ADB63D3 /* Pods-kron-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-kron-iOS-resources.sh"; sourceTree = "<group>"; };
+		9CC71FA989833DAEB2044B4D114E32A7 /* Pods-kron-iOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-kron-iOSTests-umbrella.h"; sourceTree = "<group>"; };
+		9F0C003CA15E272BFFBCB7E8C862CB41 /* Pods-kron-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kron-macOS.release.xcconfig"; sourceTree = "<group>"; };
+		A23148EBE830EA97CF00445A60AF7214 /* Pods-kron-iOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-kron-iOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A292DA720942970CB076269ADC9EFDD5 /* Pods-kron-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kron-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		A5106E7ADA83B25845786713476E78F0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A86B0BD055E25C4443A7C9ECB136D8D6 /* Pods-kron-macOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-kron-macOSTests.modulemap"; sourceTree = "<group>"; };
+		ACD4A34FBA7E4E130376A129E7EC4780 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2041632E285AB8D155C0A53DD997034 /* Pods_kron_tvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_kron_tvOSTests.framework; path = "Pods-kron-tvOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B25E41BE01E46E6A89B6BF00E381A822 /* Pods-kron-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-kron-macOS-dummy.m"; sourceTree = "<group>"; };
+		B294FFDBE3AF0D52071C17BF4D4539D0 /* Pods-kron-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kron-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		B7EC40F1E100BB55A63BA8DF2CA87EA2 /* Pods-kron-tvOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-kron-tvOSTests.modulemap"; sourceTree = "<group>"; };
+		B9639C10B7409D9B9D1EF14824CC8D5F /* Pods-kron-macOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kron-macOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BAC825B91F647893982B0E75A2EAD052 /* Pods-kron-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-kron-iOS-umbrella.h"; sourceTree = "<group>"; };
+		BDDC1566A7C792477E9196890F24883D /* Pods-kron-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-kron-tvOS-umbrella.h"; sourceTree = "<group>"; };
+		BE7BE7D6114BDE660E7D1414D18F1326 /* Pods_kron_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_kron_tvOS.framework; path = "Pods-kron-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE45942494897F9F8944E36DAA37D9D5 /* Pods-kron-tvOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-kron-tvOSTests-resources.sh"; sourceTree = "<group>"; };
+		D367A844222A958F12F249B8A08BCA8A /* Pods-kron-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-kron-iOS-dummy.m"; sourceTree = "<group>"; };
+		D9E5C544C05C2B732CDC18F8E47BD13D /* Pods-kron-iOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-kron-iOSTests.modulemap"; sourceTree = "<group>"; };
+		DD9F1CEE38CE427C918E87B41704A91F /* Pods-kron-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-kron-tvOS.modulemap"; sourceTree = "<group>"; };
+		E501012298431C7C6A16E2D99845E3C0 /* Pods-kron-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kron-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E6A2D7C0B25F0E871D05F85AF934334F /* Pods-kron-tvOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-kron-tvOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E82CDB2BCD2122789B102E358C8D98B8 /* Pods-kron-macOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kron-macOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		EAD53C1B4FFF24C4878BAE98A9BEFFDE /* Pods-kron-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kron-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC862D70C85AE6F5D9A7A72FCEA75A68 /* Pods_kron_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_kron_macOS.framework; path = "Pods-kron-macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F080A7B4403C2B37BD0C8314296B60C0 /* Pods-kron-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kron-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		F1B9317C35017C7728E07A0F00E7BE83 /* Pods_kron_macOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_kron_macOSTests.framework; path = "Pods-kron-macOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		08DA19DEBAD88DFF69973ADCC0C7B1ED /* Frameworks */ = {
+		1835754C3AA4E400FABA20A49EC4B21B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CEE49A399AD532B73799BAD4ACDAC7C /* Cocoa.framework in Frameworks */,
+				3F3E6339B09EFCD245A8884324201F75 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52ADDFFBB88D2E4197B5263ABB07878C /* Frameworks */ = {
+		7C7C417DD49A411F5F6ACFA31F133CB6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CB84196B9A042DC182719EE48A0B4BC /* Foundation.framework in Frameworks */,
+				040B3C15596E5228CC7200809EA07CDF /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		922450EDA3E8679989CF35D9CA475B85 /* Frameworks */ = {
+		B7703596615AB14438F88AAD42093D7D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE0207E3CFB401270580E97144EFE965 /* Foundation.framework in Frameworks */,
+				39E5B762FC3F3B8192722F2557BC8C02 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A74A0C07F3CCC300DD30FA2FC893CC09 /* Frameworks */ = {
+		BB27351E45CA2A107A611662AD0436E7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90A1A12C96C138A043798B7F50CA395F /* Foundation.framework in Frameworks */,
+				B83A8F8BEC90ED0A7E1A0BC83E2B9995 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADFE13C0ED61780D494C8B6A64D9292D /* Frameworks */ = {
+		C5C7F2DA8E17C4C9F1083CDC30FEC0FE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1644A8FD8AF00D139C5A667DA22413E /* Cocoa.framework in Frameworks */,
+				225E9401C37BA0C62C278FBCFA7DE632 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F7AC6932BFA3D8F2B6BB6B276F934296 /* Frameworks */ = {
+		E6C95297279D43206F7125D7642D74C7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F97040328065ABD4B2F5987894DACE7 /* Foundation.framework in Frameworks */,
+				EC5DFAA40CE89DA478750A433C82F11C /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2235866E466EE6E46B14F08E6F8DAD60 /* Pods-Delay-tvOSTests */ = {
+		0586CE7326B4CBE03704005626052ACA /* Pods-kron-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				07A675B2FFEF2B7135830B299AA83783 /* Info.plist */,
-				82E4053232E3EA520AA390B921A59413 /* Pods-Delay-tvOSTests.modulemap */,
-				9B1A8363A9E03D3B214CFE05001FEB3B /* Pods-Delay-tvOSTests-acknowledgements.markdown */,
-				5CFA7E15259DF8A288C0ACEDA8422AAA /* Pods-Delay-tvOSTests-acknowledgements.plist */,
-				E11BB3E35D11B5C3C1E36559E479CC9F /* Pods-Delay-tvOSTests-dummy.m */,
-				D97EF8A388FE5BC873C7131E67E6F8D6 /* Pods-Delay-tvOSTests-frameworks.sh */,
-				0F418E55904604159464C83838794A24 /* Pods-Delay-tvOSTests-resources.sh */,
-				BB42B21A8CF7E0100C973131BF3ABAEE /* Pods-Delay-tvOSTests-umbrella.h */,
-				E2D729D6C7E1EAA301EBED53099AA275 /* Pods-Delay-tvOSTests.debug.xcconfig */,
-				7AD65B923FFA80EBE23363410F575223 /* Pods-Delay-tvOSTests.release.xcconfig */,
+				850C1314A48EAD3AB956274FEF60F096 /* Info.plist */,
+				D9E5C544C05C2B732CDC18F8E47BD13D /* Pods-kron-iOSTests.modulemap */,
+				A23148EBE830EA97CF00445A60AF7214 /* Pods-kron-iOSTests-acknowledgements.markdown */,
+				700BB4B5E31433A5A1786D30E4A01880 /* Pods-kron-iOSTests-acknowledgements.plist */,
+				8DA2551DD291339B90EFD25AEB2C617D /* Pods-kron-iOSTests-dummy.m */,
+				2BC1F04DF62AC45CA58D9B8F3B59A736 /* Pods-kron-iOSTests-frameworks.sh */,
+				23492457C0652E5410EAE22E68E7AC84 /* Pods-kron-iOSTests-resources.sh */,
+				9CC71FA989833DAEB2044B4D114E32A7 /* Pods-kron-iOSTests-umbrella.h */,
+				E501012298431C7C6A16E2D99845E3C0 /* Pods-kron-iOSTests.debug.xcconfig */,
+				EAD53C1B4FFF24C4878BAE98A9BEFFDE /* Pods-kron-iOSTests.release.xcconfig */,
 			);
-			name = "Pods-Delay-tvOSTests";
-			path = "Target Support Files/Pods-Delay-tvOSTests";
+			name = "Pods-kron-iOSTests";
+			path = "Target Support Files/Pods-kron-iOSTests";
 			sourceTree = "<group>";
 		};
-		26B90A0F812AE6B986ADFFBC9FF4AB6B /* Pods-Delay-tvOS */ = {
+		0F6AD131C93C0C424F94D5638F89AA37 /* Pods-kron-tvOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				9A2E398BD3A05F213F3F939694A189B2 /* Info.plist */,
-				04F06D273C61AB9FC76B7D31ACDACBBB /* Pods-Delay-tvOS.modulemap */,
-				51DD9E0B054A0529A94739F86B5A4F95 /* Pods-Delay-tvOS-acknowledgements.markdown */,
-				55928F429621D1F47D8B7F1322B6A985 /* Pods-Delay-tvOS-acknowledgements.plist */,
-				5C58D95897E294192DD3274C4304BB28 /* Pods-Delay-tvOS-dummy.m */,
-				98A30ACDE4736B87D8CA25ED31C6C505 /* Pods-Delay-tvOS-resources.sh */,
-				1149E41357AFB5B21C67FB3C80F1FF05 /* Pods-Delay-tvOS-umbrella.h */,
-				ACB2B2DD08524ABA45B6CC5C0A50D802 /* Pods-Delay-tvOS.debug.xcconfig */,
-				49E3681C37CD6A60FFCE54B3763C10D5 /* Pods-Delay-tvOS.release.xcconfig */,
+				02939EF4A76C8C2F554AFCC0901F8260 /* Info.plist */,
+				B7EC40F1E100BB55A63BA8DF2CA87EA2 /* Pods-kron-tvOSTests.modulemap */,
+				E6A2D7C0B25F0E871D05F85AF934334F /* Pods-kron-tvOSTests-acknowledgements.markdown */,
+				0ECFD8E60EEDC44910DBC46AEC7761C1 /* Pods-kron-tvOSTests-acknowledgements.plist */,
+				6943D68287A50FC4B72B291394EC4E20 /* Pods-kron-tvOSTests-dummy.m */,
+				535C3F7ACBAAEB5D4B4AFEE80D21EAA8 /* Pods-kron-tvOSTests-frameworks.sh */,
+				CE45942494897F9F8944E36DAA37D9D5 /* Pods-kron-tvOSTests-resources.sh */,
+				16787936602E470F07E0661637EBA80F /* Pods-kron-tvOSTests-umbrella.h */,
+				2F1B0534B6F5C5F7091E5CEF1BA13171 /* Pods-kron-tvOSTests.debug.xcconfig */,
+				9522C42CD05700AC6CE084C10979C6B9 /* Pods-kron-tvOSTests.release.xcconfig */,
 			);
-			name = "Pods-Delay-tvOS";
-			path = "Target Support Files/Pods-Delay-tvOS";
+			name = "Pods-kron-tvOSTests";
+			path = "Target Support Files/Pods-kron-tvOSTests";
 			sourceTree = "<group>";
 		};
-		45F244E7AAF7C6D098FAEA99725D1070 /* Targets Support Files */ = {
+		27E3832450241B31F2D4A48F4B3C580D /* Pods-kron-macOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				8FBABA700AE0861E6AA6A61706F94795 /* Pods-Delay-iOS */,
-				645F74FDFC7293399F3DE9D6FE8A97C2 /* Pods-Delay-iOSTests */,
-				67FDE6618389063F0FA458E410830195 /* Pods-Delay-OSX */,
-				DDD955326B0A912B15658803623D16A8 /* Pods-Delay-OSXTests */,
-				26B90A0F812AE6B986ADFFBC9FF4AB6B /* Pods-Delay-tvOS */,
-				2235866E466EE6E46B14F08E6F8DAD60 /* Pods-Delay-tvOSTests */,
+				A5106E7ADA83B25845786713476E78F0 /* Info.plist */,
+				A86B0BD055E25C4443A7C9ECB136D8D6 /* Pods-kron-macOSTests.modulemap */,
+				1516E849C3F3B53B88BC21B8DE24F444 /* Pods-kron-macOSTests-acknowledgements.markdown */,
+				7CF791EF27694CD4AD565CFB00251B5C /* Pods-kron-macOSTests-acknowledgements.plist */,
+				5F798640E670C322B52F00B5E1879DB0 /* Pods-kron-macOSTests-dummy.m */,
+				8D4BEAEE60383927CB1B2769591AFDF3 /* Pods-kron-macOSTests-frameworks.sh */,
+				1D089A2D86F370153B2729A0EBD1094B /* Pods-kron-macOSTests-resources.sh */,
+				20267156B1F334343E626954ED0F65C1 /* Pods-kron-macOSTests-umbrella.h */,
+				B9639C10B7409D9B9D1EF14824CC8D5F /* Pods-kron-macOSTests.debug.xcconfig */,
+				E82CDB2BCD2122789B102E358C8D98B8 /* Pods-kron-macOSTests.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Pods-kron-macOSTests";
+			path = "Target Support Files/Pods-kron-macOSTests";
 			sourceTree = "<group>";
 		};
-		645F74FDFC7293399F3DE9D6FE8A97C2 /* Pods-Delay-iOSTests */ = {
+		49D50876F7426D67D9352849CA6E6606 /* Pods-kron-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				26D938E1B399CF7C5A3AD8BE0117F6FD /* Info.plist */,
-				F94D212600A4029CC5F2204FFC30AAF6 /* Pods-Delay-iOSTests.modulemap */,
-				C7195E5380BB3402C92DC3B7D5F0CAA8 /* Pods-Delay-iOSTests-acknowledgements.markdown */,
-				E7DFB4A13E1599FDD4787CAF9B4C521C /* Pods-Delay-iOSTests-acknowledgements.plist */,
-				108B4702CB526FB06A333A27CA188762 /* Pods-Delay-iOSTests-dummy.m */,
-				291380D4125B55BA82EA5EF7AC95DDB7 /* Pods-Delay-iOSTests-frameworks.sh */,
-				890B22C90870AA64AA33F4CDAE6A2780 /* Pods-Delay-iOSTests-resources.sh */,
-				C3E40F655794E0FB3E4D15127910B06A /* Pods-Delay-iOSTests-umbrella.h */,
-				DF1219BDDF299539A46B9DC6D89C4047 /* Pods-Delay-iOSTests.debug.xcconfig */,
-				11DD671A2ED84DDE271551FB53CC9CCB /* Pods-Delay-iOSTests.release.xcconfig */,
+				2780A04B4FA8297487E74ACCB8C7E77F /* Info.plist */,
+				059A63BF46F965ADE6FF37100BB50EB8 /* Pods-kron-iOS.modulemap */,
+				6383B3D63E8F862EB3569FDB5D7B2D3A /* Pods-kron-iOS-acknowledgements.markdown */,
+				2E6B14D42F93986FE51A6068E64727E4 /* Pods-kron-iOS-acknowledgements.plist */,
+				D367A844222A958F12F249B8A08BCA8A /* Pods-kron-iOS-dummy.m */,
+				976006078776DDA73E8FCDB58ADB63D3 /* Pods-kron-iOS-resources.sh */,
+				BAC825B91F647893982B0E75A2EAD052 /* Pods-kron-iOS-umbrella.h */,
+				F080A7B4403C2B37BD0C8314296B60C0 /* Pods-kron-iOS.debug.xcconfig */,
+				35894F87D636EE1438F519B598BAA9B1 /* Pods-kron-iOS.release.xcconfig */,
 			);
-			name = "Pods-Delay-iOSTests";
-			path = "Target Support Files/Pods-Delay-iOSTests";
+			name = "Pods-kron-iOS";
+			path = "Target Support Files/Pods-kron-iOS";
 			sourceTree = "<group>";
 		};
-		67FDE6618389063F0FA458E410830195 /* Pods-Delay-OSX */ = {
+		5EFC750BE051713232E1EDFDDF3A9BF4 /* Pods-kron-macOS */ = {
 			isa = PBXGroup;
 			children = (
-				6D0514EA5C6037736E83421807EA5A77 /* Info.plist */,
-				F4284CFED182028883D0E0800F0A4C7F /* Pods-Delay-OSX.modulemap */,
-				315C16962637A3B504F448DD6558388A /* Pods-Delay-OSX-acknowledgements.markdown */,
-				1891BAB170C5B9AE1F3F006BD82A24AD /* Pods-Delay-OSX-acknowledgements.plist */,
-				98A5B7BE786DDF32DDDCD528AA068B0C /* Pods-Delay-OSX-dummy.m */,
-				D65BFBAB94C794CC778FBDC2A712330A /* Pods-Delay-OSX-resources.sh */,
-				9A4A1DCB518F802FAA38D4E7572371FA /* Pods-Delay-OSX-umbrella.h */,
-				0C0E29DE1A32C8498F9A64A206FCB5D0 /* Pods-Delay-OSX.debug.xcconfig */,
-				678E43E39C9DFA54CD9A01B3509F2C53 /* Pods-Delay-OSX.release.xcconfig */,
+				ACD4A34FBA7E4E130376A129E7EC4780 /* Info.plist */,
+				0945F37B46E49E99248F68B07D3B9E1C /* Pods-kron-macOS.modulemap */,
+				7F32E89E82A4373270A50F4A4967A1CB /* Pods-kron-macOS-acknowledgements.markdown */,
+				5186E8CAD2A7752DE4BE228C161302D7 /* Pods-kron-macOS-acknowledgements.plist */,
+				B25E41BE01E46E6A89B6BF00E381A822 /* Pods-kron-macOS-dummy.m */,
+				1283182412DB73507FFD4657C3552026 /* Pods-kron-macOS-resources.sh */,
+				0B3F04BF464FAFFBDAFF422A3D011DFA /* Pods-kron-macOS-umbrella.h */,
+				5BEB0DD754CB275737B5521D301AAA34 /* Pods-kron-macOS.debug.xcconfig */,
+				9F0C003CA15E272BFFBCB7E8C862CB41 /* Pods-kron-macOS.release.xcconfig */,
 			);
-			name = "Pods-Delay-OSX";
-			path = "Target Support Files/Pods-Delay-OSX";
+			name = "Pods-kron-macOS";
+			path = "Target Support Files/Pods-kron-macOS";
+			sourceTree = "<group>";
+		};
+		7BAAF50CDF459EF4699E371059A5552E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				359F827ED6EC2F5041EB7CCCD952640C /* Pods_kron_iOS.framework */,
+				38C430342C2852F62B48B9C3E9DC1D20 /* Pods_kron_iOSTests.framework */,
+				EC862D70C85AE6F5D9A7A72FCEA75A68 /* Pods_kron_macOS.framework */,
+				F1B9317C35017C7728E07A0F00E7BE83 /* Pods_kron_macOSTests.framework */,
+				BE7BE7D6114BDE660E7D1414D18F1326 /* Pods_kron_tvOS.framework */,
+				B2041632E285AB8D155C0A53DD997034 /* Pods_kron_tvOSTests.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -261,39 +279,9 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				E9474CE87C6AA9A851AEC24006206CAA /* Frameworks */,
-				9290CB7C67478D83BF1E5FC71A921926 /* Products */,
-				45F244E7AAF7C6D098FAEA99725D1070 /* Targets Support Files */,
+				7BAAF50CDF459EF4699E371059A5552E /* Products */,
+				C1FF67D51A2C5F89C9421A129D6F3517 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		8FBABA700AE0861E6AA6A61706F94795 /* Pods-Delay-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				FD1C04166BE0A70DE0D12D062B60ED2C /* Info.plist */,
-				F8277D824598B5D8BA440BCDBBD100AD /* Pods-Delay-iOS.modulemap */,
-				69D98545AADCCCEE64E1AA68605B3A8E /* Pods-Delay-iOS-acknowledgements.markdown */,
-				4A8DAB5F92AEF1D5DD2C9EEDD9F5615A /* Pods-Delay-iOS-acknowledgements.plist */,
-				2D0E35ADE7E19CF20E3274843603FCED /* Pods-Delay-iOS-dummy.m */,
-				160716695BF0CBC4A144DCF30D9F0221 /* Pods-Delay-iOS-resources.sh */,
-				23A8959F03C9C5B8F0268151816F6563 /* Pods-Delay-iOS-umbrella.h */,
-				5171337F50968EC4FAEB24629EE6E484 /* Pods-Delay-iOS.debug.xcconfig */,
-				A049AC6A25E0E945A65724F8C967DEA5 /* Pods-Delay-iOS.release.xcconfig */,
-			);
-			name = "Pods-Delay-iOS";
-			path = "Target Support Files/Pods-Delay-iOS";
-			sourceTree = "<group>";
-		};
-		9290CB7C67478D83BF1E5FC71A921926 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				792F10A2A29AAA8BC29C5F5EE28ACE87 /* Pods_Delay_iOS.framework */,
-				0EEAB2AAD0CD62B6FCC7304D30C91FCB /* Pods_Delay_iOSTests.framework */,
-				45FC82C7D9E2861F3C0CAFEB99708DD5 /* Pods_Delay_OSX.framework */,
-				C75AE1204B8FC9DD5AFCE463515627FE /* Pods_Delay_OSXTests.framework */,
-				222EE18FF2F91A0B9660DC25B253B7BB /* Pods_Delay_tvOS.framework */,
-				2D4D248FA1A86B78F1763D3185EA3A95 /* Pods_Delay_tvOSTests.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		A92424381BD60E468F098B2B23A5EECB /* OS X */ = {
@@ -320,22 +308,34 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		DDD955326B0A912B15658803623D16A8 /* Pods-Delay-OSXTests */ = {
+		C1FF67D51A2C5F89C9421A129D6F3517 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				166DB5D6B3F3B4C9B54D4C0652311FD8 /* Info.plist */,
-				9945A41BB038ED318B4F7F2CE8FCF801 /* Pods-Delay-OSXTests.modulemap */,
-				C2104F777C01500CB6FF24E0A80EDB75 /* Pods-Delay-OSXTests-acknowledgements.markdown */,
-				FFDE95D9986647408529562327A347CB /* Pods-Delay-OSXTests-acknowledgements.plist */,
-				FDE45F691D44C6CA6B26B8276AD01F18 /* Pods-Delay-OSXTests-dummy.m */,
-				CF149798A242A2CEF2646883DD49B721 /* Pods-Delay-OSXTests-frameworks.sh */,
-				CB7984B2F1390A8F9180AC780CABEDDE /* Pods-Delay-OSXTests-resources.sh */,
-				506251979B8ECCFB0735692BA9854FE6 /* Pods-Delay-OSXTests-umbrella.h */,
-				0ECD12F858203235826EB6F2CD6025CB /* Pods-Delay-OSXTests.debug.xcconfig */,
-				11D968C774FC3EBA1D3DF4FC27BC11F9 /* Pods-Delay-OSXTests.release.xcconfig */,
+				49D50876F7426D67D9352849CA6E6606 /* Pods-kron-iOS */,
+				0586CE7326B4CBE03704005626052ACA /* Pods-kron-iOSTests */,
+				5EFC750BE051713232E1EDFDDF3A9BF4 /* Pods-kron-macOS */,
+				27E3832450241B31F2D4A48F4B3C580D /* Pods-kron-macOSTests */,
+				C5208BA8E7CCA37A0DFCADE53DA87D7D /* Pods-kron-tvOS */,
+				0F6AD131C93C0C424F94D5638F89AA37 /* Pods-kron-tvOSTests */,
 			);
-			name = "Pods-Delay-OSXTests";
-			path = "Target Support Files/Pods-Delay-OSXTests";
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C5208BA8E7CCA37A0DFCADE53DA87D7D /* Pods-kron-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				3BEBFEEAB0EFD24C1CC2E6940A124741 /* Info.plist */,
+				DD9F1CEE38CE427C918E87B41704A91F /* Pods-kron-tvOS.modulemap */,
+				05E195CEDC4491A09F436BD511F8F939 /* Pods-kron-tvOS-acknowledgements.markdown */,
+				4D7C84FC347A44B0E3EC91D829C0DC36 /* Pods-kron-tvOS-acknowledgements.plist */,
+				749D28B401772F532BF6F317573D4C64 /* Pods-kron-tvOS-dummy.m */,
+				429961E3A75141B2658A6B75F13B698E /* Pods-kron-tvOS-resources.sh */,
+				BDDC1566A7C792477E9196890F24883D /* Pods-kron-tvOS-umbrella.h */,
+				A292DA720942970CB076269ADC9EFDD5 /* Pods-kron-tvOS.debug.xcconfig */,
+				B294FFDBE3AF0D52071C17BF4D4539D0 /* Pods-kron-tvOS.release.xcconfig */,
+			);
+			name = "Pods-kron-tvOS";
+			path = "Target Support Files/Pods-kron-tvOS";
 			sourceTree = "<group>";
 		};
 		E9474CE87C6AA9A851AEC24006206CAA /* Frameworks */ = {
@@ -351,166 +351,166 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1DB7AE413A0F90CD5D353431B9F487DC /* Headers */ = {
+		51E52D6BF65A2609BDBA75CAC23F21BD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAC084361107A7547A98BE90BAC9A9AB /* Pods-Delay-iOSTests-umbrella.h in Headers */,
+				67BB65409BC3432138D4E4ADF571325A /* Pods-kron-tvOSTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		685085A8228728E0C478E2A1287C9D01 /* Headers */ = {
+		52D310FBA87841E04F73D96D0436DA8D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A805A759C2529F579D6FB1690B6655D /* Pods-Delay-tvOS-umbrella.h in Headers */,
+				567534D54CE0001509E367C983BA0CBB /* Pods-kron-macOSTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C4EF963BB79B52D04919A9E86F2B16E /* Headers */ = {
+		A5778DB29C6521A8EB8ACFF8F3FF222C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5268903B821F66232923847F0A298116 /* Pods-Delay-tvOSTests-umbrella.h in Headers */,
+				F54FF727D5BB223FDD6E1F7EC4F8D185 /* Pods-kron-tvOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9D0200CEE0BF028BE463A0821DAB5E00 /* Headers */ = {
+		A79E1275E3253301E062A96D843658BF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD211CCE9E89E459B72EB357BD07DF4E /* Pods-Delay-iOS-umbrella.h in Headers */,
+				00ECDBCFF5FB297AD758AB666E15B53F /* Pods-kron-macOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C227B74C4E48D37C95BDCCEDA3CA7544 /* Headers */ = {
+		B8723547DD8226711D6A8319F51E5AB1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E44A812F6F01EBFB8707ED6A6D91795 /* Pods-Delay-OSXTests-umbrella.h in Headers */,
+				DE7A5AC6680A64E8F244BDC51A2C121F /* Pods-kron-iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE043004E1F264A4748843B57F9322BA /* Headers */ = {
+		F8F35DF0C7EA767E359E593E7B540FB9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E77898CFF82E1F3E05CA7A2DBD83E7A1 /* Pods-Delay-OSX-umbrella.h in Headers */,
+				5062CAA531E2F4F09615E46A5DA13E21 /* Pods-kron-iOSTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4B84A0F11E2C22F1FBDD9CB9B78C5151 /* Pods-Delay-iOSTests */ = {
+		12EEED2F832AAB86E38ABE1276384443 /* Pods-kron-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0EE955B4EF5AA17105D7DD4132D46207 /* Build configuration list for PBXNativeTarget "Pods-Delay-iOSTests" */;
+			buildConfigurationList = 18B18FA4CC87ED48F8055FA65FB602AB /* Build configuration list for PBXNativeTarget "Pods-kron-macOS" */;
 			buildPhases = (
-				1DB7AE413A0F90CD5D353431B9F487DC /* Headers */,
-				FC58F53077D3BB6578D24CB4C8707247 /* Sources */,
-				F7AC6932BFA3D8F2B6BB6B276F934296 /* Frameworks */,
-				286E41C14843AF2C8C0321CA720BCCD8 /* Resources */,
+				A79E1275E3253301E062A96D843658BF /* Headers */,
+				2DA7D362EE21688670E43FC988E74C3B /* Sources */,
+				7C7C417DD49A411F5F6ACFA31F133CB6 /* Frameworks */,
+				E74DF5308016C51C90D18FBF02735CB2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				70CAFE633FF4A411DBB0422123E08A9C /* PBXTargetDependency */,
 			);
-			name = "Pods-Delay-iOSTests";
-			productName = "Pods-Delay-iOSTests";
-			productReference = 0EEAB2AAD0CD62B6FCC7304D30C91FCB /* Pods_Delay_iOSTests.framework */;
+			name = "Pods-kron-macOS";
+			productName = "Pods-kron-macOS";
+			productReference = EC862D70C85AE6F5D9A7A72FCEA75A68 /* Pods_kron_macOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7198871EF2DBBDA1012E0BC1FF705E39 /* Pods-Delay-OSXTests */ = {
+		156850D0DFFE5969E3C82BA2BEF61C5D /* Pods-kron-macOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 955D9A4AC9F1FA3094998F1909020BB6 /* Build configuration list for PBXNativeTarget "Pods-Delay-OSXTests" */;
+			buildConfigurationList = C8AB82D48C85EC21349D9BDD12466B7A /* Build configuration list for PBXNativeTarget "Pods-kron-macOSTests" */;
 			buildPhases = (
-				C227B74C4E48D37C95BDCCEDA3CA7544 /* Headers */,
-				9EA33093EAB24F897B4D8DEC3D663C45 /* Sources */,
-				ADFE13C0ED61780D494C8B6A64D9292D /* Frameworks */,
-				7ADB3F97DAA958673D0B48CFC0B5E433 /* Resources */,
+				52D310FBA87841E04F73D96D0436DA8D /* Headers */,
+				99B8B03E32472E866DA6B789CC5FFE67 /* Sources */,
+				E6C95297279D43206F7125D7642D74C7 /* Frameworks */,
+				EB0C28DBC46BD61B72FDC775551DC778 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				844C37326CE536F0A477BE70BBD41928 /* PBXTargetDependency */,
+				16670926BAC1EF6458E94B20452B4224 /* PBXTargetDependency */,
 			);
-			name = "Pods-Delay-OSXTests";
-			productName = "Pods-Delay-OSXTests";
-			productReference = C75AE1204B8FC9DD5AFCE463515627FE /* Pods_Delay_OSXTests.framework */;
+			name = "Pods-kron-macOSTests";
+			productName = "Pods-kron-macOSTests";
+			productReference = F1B9317C35017C7728E07A0F00E7BE83 /* Pods_kron_macOSTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9BB894DC468D03B7F557EA45EE9E5A4E /* Pods-Delay-OSX */ = {
+		23F609B4A621F52F3CDEB44F5C77869C /* Pods-kron-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC05EA7F4F4E056195B9A270351F8930 /* Build configuration list for PBXNativeTarget "Pods-Delay-OSX" */;
+			buildConfigurationList = 226E87F656114E4CF0EE7D461948736F /* Build configuration list for PBXNativeTarget "Pods-kron-iOS" */;
 			buildPhases = (
-				CE043004E1F264A4748843B57F9322BA /* Headers */,
-				B40C06C3E10C45E921B658FECA4ADBD1 /* Sources */,
-				08DA19DEBAD88DFF69973ADCC0C7B1ED /* Frameworks */,
-				915D2A297FFCB6EC8C898F0944490CBE /* Resources */,
+				B8723547DD8226711D6A8319F51E5AB1 /* Headers */,
+				0E06B6F319E67551AD461C0F60B00130 /* Sources */,
+				B7703596615AB14438F88AAD42093D7D /* Frameworks */,
+				82B157C5A6BE51868ECD0A7476A9038F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-Delay-OSX";
-			productName = "Pods-Delay-OSX";
-			productReference = 45FC82C7D9E2861F3C0CAFEB99708DD5 /* Pods_Delay_OSX.framework */;
+			name = "Pods-kron-iOS";
+			productName = "Pods-kron-iOS";
+			productReference = 359F827ED6EC2F5041EB7CCCD952640C /* Pods_kron_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		AFA32CF09A948D6EDD6FF484C981E3C7 /* Pods-Delay-iOS */ = {
+		3DD420BAB41F22F940EF88FCBC7BF11D /* Pods-kron-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F34450DD2BD1069B7D22D9DE7D77AC7D /* Build configuration list for PBXNativeTarget "Pods-Delay-iOS" */;
+			buildConfigurationList = 3EFEA196F4AFE90BD647E3BE1D639A4F /* Build configuration list for PBXNativeTarget "Pods-kron-tvOSTests" */;
 			buildPhases = (
-				9D0200CEE0BF028BE463A0821DAB5E00 /* Headers */,
-				222474013EE4125A0BE0EA6020804FBE /* Sources */,
-				922450EDA3E8679989CF35D9CA475B85 /* Frameworks */,
-				1DFA750F474B9EDA280A83B91188BCFC /* Resources */,
+				51E52D6BF65A2609BDBA75CAC23F21BD /* Headers */,
+				119B3247AE1965314106B25E113766E1 /* Sources */,
+				C5C7F2DA8E17C4C9F1083CDC30FEC0FE /* Frameworks */,
+				291E7B4287643E1498885AD1F56E5F84 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AA9BF39FFE18D012FFFE89AE8F6EA04D /* PBXTargetDependency */,
 			);
-			name = "Pods-Delay-iOS";
-			productName = "Pods-Delay-iOS";
-			productReference = 792F10A2A29AAA8BC29C5F5EE28ACE87 /* Pods_Delay_iOS.framework */;
+			name = "Pods-kron-tvOSTests";
+			productName = "Pods-kron-tvOSTests";
+			productReference = B2041632E285AB8D155C0A53DD997034 /* Pods_kron_tvOSTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B6D0F2299C98CD6B10CA749B97BB3A9C /* Pods-Delay-tvOS */ = {
+		89B0F84F9503291CF956D15738991BBF /* Pods-kron-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 333540D1F349B5A446B773243F661AFA /* Build configuration list for PBXNativeTarget "Pods-Delay-tvOS" */;
+			buildConfigurationList = 0A36E249D43B5945E8245F495A486B04 /* Build configuration list for PBXNativeTarget "Pods-kron-tvOS" */;
 			buildPhases = (
-				685085A8228728E0C478E2A1287C9D01 /* Headers */,
-				44261E0D2310A1FAA0687BFE1D48ADC5 /* Sources */,
-				52ADDFFBB88D2E4197B5263ABB07878C /* Frameworks */,
-				49015F86B133C605481E56A11EE9E99B /* Resources */,
+				A5778DB29C6521A8EB8ACFF8F3FF222C /* Headers */,
+				C65FB7FBDA3C1D365CD985C8B03635F1 /* Sources */,
+				1835754C3AA4E400FABA20A49EC4B21B /* Frameworks */,
+				32825A08F40BD7930880CDCF3D984216 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-Delay-tvOS";
-			productName = "Pods-Delay-tvOS";
-			productReference = 222EE18FF2F91A0B9660DC25B253B7BB /* Pods_Delay_tvOS.framework */;
+			name = "Pods-kron-tvOS";
+			productName = "Pods-kron-tvOS";
+			productReference = BE7BE7D6114BDE660E7D1414D18F1326 /* Pods_kron_tvOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		BCD9D1F2527815AE4883980ACB5B9D52 /* Pods-Delay-tvOSTests */ = {
+		B4E8D11BE8055B781AAF7860985F2C65 /* Pods-kron-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F89E391DD718E0073316F5F0E07857FD /* Build configuration list for PBXNativeTarget "Pods-Delay-tvOSTests" */;
+			buildConfigurationList = B922EE0DF76606CA13554EF5F730B38C /* Build configuration list for PBXNativeTarget "Pods-kron-iOSTests" */;
 			buildPhases = (
-				8C4EF963BB79B52D04919A9E86F2B16E /* Headers */,
-				669327817A0D854F49E34A3504B6B6DC /* Sources */,
-				A74A0C07F3CCC300DD30FA2FC893CC09 /* Frameworks */,
-				33250675E032986AF3D8CBE215ADCFE3 /* Resources */,
+				F8F35DF0C7EA767E359E593E7B540FB9 /* Headers */,
+				CBFC8C35DB2873C4654693C4F085F8A6 /* Sources */,
+				BB27351E45CA2A107A611662AD0436E7 /* Frameworks */,
+				755CB9434B88C7F670D80E5804BE60DB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				EAC3B37EE3FA08618EF6DC343C144A16 /* PBXTargetDependency */,
+				001BCBC690854832634B206671A256F5 /* PBXTargetDependency */,
 			);
-			name = "Pods-Delay-tvOSTests";
-			productName = "Pods-Delay-tvOSTests";
-			productReference = 2D4D248FA1A86B78F1763D3185EA3A95 /* Pods_Delay_tvOSTests.framework */;
+			name = "Pods-kron-iOSTests";
+			productName = "Pods-kron-iOSTests";
+			productReference = 38C430342C2852F62B48B9C3E9DC1D20 /* Pods_kron_iOSTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -530,57 +530,57 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 9290CB7C67478D83BF1E5FC71A921926 /* Products */;
+			productRefGroup = 7BAAF50CDF459EF4699E371059A5552E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AFA32CF09A948D6EDD6FF484C981E3C7 /* Pods-Delay-iOS */,
-				4B84A0F11E2C22F1FBDD9CB9B78C5151 /* Pods-Delay-iOSTests */,
-				9BB894DC468D03B7F557EA45EE9E5A4E /* Pods-Delay-OSX */,
-				7198871EF2DBBDA1012E0BC1FF705E39 /* Pods-Delay-OSXTests */,
-				B6D0F2299C98CD6B10CA749B97BB3A9C /* Pods-Delay-tvOS */,
-				BCD9D1F2527815AE4883980ACB5B9D52 /* Pods-Delay-tvOSTests */,
+				23F609B4A621F52F3CDEB44F5C77869C /* Pods-kron-iOS */,
+				B4E8D11BE8055B781AAF7860985F2C65 /* Pods-kron-iOSTests */,
+				12EEED2F832AAB86E38ABE1276384443 /* Pods-kron-macOS */,
+				156850D0DFFE5969E3C82BA2BEF61C5D /* Pods-kron-macOSTests */,
+				89B0F84F9503291CF956D15738991BBF /* Pods-kron-tvOS */,
+				3DD420BAB41F22F940EF88FCBC7BF11D /* Pods-kron-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1DFA750F474B9EDA280A83B91188BCFC /* Resources */ = {
+		291E7B4287643E1498885AD1F56E5F84 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		286E41C14843AF2C8C0321CA720BCCD8 /* Resources */ = {
+		32825A08F40BD7930880CDCF3D984216 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		33250675E032986AF3D8CBE215ADCFE3 /* Resources */ = {
+		755CB9434B88C7F670D80E5804BE60DB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		49015F86B133C605481E56A11EE9E99B /* Resources */ = {
+		82B157C5A6BE51868ECD0A7476A9038F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7ADB3F97DAA958673D0B48CFC0B5E433 /* Resources */ = {
+		E74DF5308016C51C90D18FBF02735CB2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		915D2A297FFCB6EC8C898F0944490CBE /* Resources */ = {
+		EB0C28DBC46BD61B72FDC775551DC778 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -590,152 +590,116 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		222474013EE4125A0BE0EA6020804FBE /* Sources */ = {
+		0E06B6F319E67551AD461C0F60B00130 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95B38991E4B33AF256EEFE0E23B9B335 /* Pods-Delay-iOS-dummy.m in Sources */,
+				F60C2C40B6150F8DA4DBEFA541A2CF14 /* Pods-kron-iOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		44261E0D2310A1FAA0687BFE1D48ADC5 /* Sources */ = {
+		119B3247AE1965314106B25E113766E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D274072B1DDEA1AE2BD0C05216F669E8 /* Pods-Delay-tvOS-dummy.m in Sources */,
+				6EA38F95376F0FB99844FE860D791CAD /* Pods-kron-tvOSTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		669327817A0D854F49E34A3504B6B6DC /* Sources */ = {
+		2DA7D362EE21688670E43FC988E74C3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF5FE883D9BA22D569AB32B0B3ABB745 /* Pods-Delay-tvOSTests-dummy.m in Sources */,
+				C32715D011453549764CDF4638525C2F /* Pods-kron-macOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9EA33093EAB24F897B4D8DEC3D663C45 /* Sources */ = {
+		99B8B03E32472E866DA6B789CC5FFE67 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55C256C7D69E40146080B343FF634FB7 /* Pods-Delay-OSXTests-dummy.m in Sources */,
+				9879C1729DC1149505D9EC9EE1BAF720 /* Pods-kron-macOSTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B40C06C3E10C45E921B658FECA4ADBD1 /* Sources */ = {
+		C65FB7FBDA3C1D365CD985C8B03635F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				240C490D1EF3CED25136F0FF340C905C /* Pods-Delay-OSX-dummy.m in Sources */,
+				FF8DAAD54D68759C2E7D63149CFEEE44 /* Pods-kron-tvOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC58F53077D3BB6578D24CB4C8707247 /* Sources */ = {
+		CBFC8C35DB2873C4654693C4F085F8A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5F750A9E8B75935CCBCA909AB4B94D3 /* Pods-Delay-iOSTests-dummy.m in Sources */,
+				CE3CA003A41F4AC712B57F1DF51951B5 /* Pods-kron-iOSTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		70CAFE633FF4A411DBB0422123E08A9C /* PBXTargetDependency */ = {
+		001BCBC690854832634B206671A256F5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-Delay-iOS";
-			target = AFA32CF09A948D6EDD6FF484C981E3C7 /* Pods-Delay-iOS */;
-			targetProxy = 7AEC7DC43E1751C5231A5A5F6541ED6B /* PBXContainerItemProxy */;
+			name = "Pods-kron-iOS";
+			target = 23F609B4A621F52F3CDEB44F5C77869C /* Pods-kron-iOS */;
+			targetProxy = 5431ACA8D36DC6640D6EBBCFF8D88AE1 /* PBXContainerItemProxy */;
 		};
-		844C37326CE536F0A477BE70BBD41928 /* PBXTargetDependency */ = {
+		16670926BAC1EF6458E94B20452B4224 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-Delay-OSX";
-			target = 9BB894DC468D03B7F557EA45EE9E5A4E /* Pods-Delay-OSX */;
-			targetProxy = BA260531DC598F65832AF3B8F170C719 /* PBXContainerItemProxy */;
+			name = "Pods-kron-macOS";
+			target = 12EEED2F832AAB86E38ABE1276384443 /* Pods-kron-macOS */;
+			targetProxy = 4832C1B3FE3864FA22D0EE221DD692C8 /* PBXContainerItemProxy */;
 		};
-		EAC3B37EE3FA08618EF6DC343C144A16 /* PBXTargetDependency */ = {
+		AA9BF39FFE18D012FFFE89AE8F6EA04D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-Delay-tvOS";
-			target = B6D0F2299C98CD6B10CA749B97BB3A9C /* Pods-Delay-tvOS */;
-			targetProxy = F2DE639A72F900A1C95EFEFF79827005 /* PBXContainerItemProxy */;
+			name = "Pods-kron-tvOS";
+			target = 89B0F84F9503291CF956D15738991BBF /* Pods-kron-tvOS */;
+			targetProxy = 26BA979978A55B53E47C68C2AD80B241 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0BE810EE03551CDFF1612527C81E3966 /* Release */ = {
+		2287C04F07E86511A584ED49187B600A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49E3681C37CD6A60FFCE54B3763C10D5 /* Pods-Delay-tvOS.release.xcconfig */;
+			baseConfigurationReference = 9F0C003CA15E272BFFBCB7E8C862CB41 /* Pods-kron-macOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Delay-tvOS/Info.plist";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-kron-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Delay-tvOS/Pods-Delay-tvOS.modulemap";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-kron-macOS/Pods-kron-macOS.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = appletvos;
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.4;
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		2C692896A4BD73890E4F99D3DF497685 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2D729D6C7E1EAA301EBED53099AA275 /* Pods-Delay-tvOSTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Delay-tvOSTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Delay-tvOSTests/Pods-Delay-tvOSTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.4;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		2C9AD8D79093FDBF77E239BA668A5DF1 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -797,6 +761,158 @@
 				TVOS_DEPLOYMENT_TARGET = 11.4;
 			};
 			name = Release;
+		};
+		3D85EC8B45FB03E58C250D4304D72042 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E82CDB2BCD2122789B102E358C8D98B8 /* Pods-kron-macOSTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-kron-macOSTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-kron-macOSTests/Pods-kron-macOSTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3F3D63551BFDBE13FD10E2980CC071BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F080A7B4403C2B37BD0C8314296B60C0 /* Pods-kron-iOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-kron-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-kron-iOS/Pods-kron-iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4AAB850D017E4EEC96FAFE94DCCBD4CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E501012298431C7C6A16E2D99845E3C0 /* Pods-kron-iOSTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-kron-iOSTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-kron-iOSTests/Pods-kron-iOSTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5324DBB52575C441B119871B9A44E19F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A292DA720942970CB076269ADC9EFDD5 /* Pods-kron-tvOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-kron-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-kron-tvOS/Pods-kron-tvOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		5CAC671AF18C56F1E574AACCA27B8574 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -864,9 +980,9 @@
 			};
 			name = Debug;
 		};
-		74AF991227863CBD24CBA34CC57DCF4A /* Debug */ = {
+		63AEED44CCA29A4DB0D24E12FD2381BC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF1219BDDF299539A46B9DC6D89C4047 /* Pods-Delay-iOSTests.debug.xcconfig */;
+			baseConfigurationReference = 35894F87D636EE1438F519B598BAA9B1 /* Pods-kron-iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -879,7 +995,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Delay-iOSTests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-kron-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -888,7 +1004,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Delay-iOSTests/Pods-Delay-iOSTests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-kron-iOS/Pods-kron-iOS.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -897,14 +1013,15 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		A894BC5F199AEC038151BA20524BE575 /* Release */ = {
+		7B1C7813EF102606B2B28A9E99C5C01D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11D968C774FC3EBA1D3DF4FC27BC11F9 /* Pods-Delay-OSXTests.release.xcconfig */;
+			baseConfigurationReference = B9639C10B7409D9B9D1EF14824CC8D5F /* Pods-kron-macOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -919,7 +1036,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-Delay-OSXTests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-kron-macOSTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -928,7 +1045,7 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MODULEMAP_FILE = "Target Support Files/Pods-Delay-OSXTests/Pods-Delay-OSXTests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-kron-macOSTests/Pods-kron-macOSTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -939,11 +1056,11 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		A8B3F4FB14A0EB10CEEB8762665C02C1 /* Release */ = {
+		8B327D1F773631EF5A39C9B6A6A1D746 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7AD65B923FFA80EBE23363410F575223 /* Pods-Delay-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 9522C42CD05700AC6CE084C10979C6B9 /* Pods-kron-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -955,7 +1072,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Delay-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-kron-tvOSTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -963,7 +1080,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Delay-tvOSTests/Pods-Delay-tvOSTests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-kron-tvOSTests/Pods-kron-tvOSTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -979,9 +1096,9 @@
 			};
 			name = Release;
 		};
-		A8F6E9CD23CB7C82E62028123A42DF5B /* Debug */ = {
+		A53CC9D3AAE82C35E1999C8C8DE0DB47 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACB2B2DD08524ABA45B6CC5C0A50D802 /* Pods-Delay-tvOS.debug.xcconfig */;
+			baseConfigurationReference = B294FFDBE3AF0D52071C17BF4D4539D0 /* Pods-kron-tvOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -993,7 +1110,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Delay-tvOS/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-kron-tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1001,7 +1118,45 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Delay-tvOS/Pods-Delay-tvOS.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-kron-tvOS/Pods-kron-tvOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B379DCD8D9FA27226972134C24942640 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F1B0534B6F5C5F7091E5CEF1BA13171 /* Pods-kron-tvOSTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-kron-tvOSTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-kron-tvOSTests/Pods-kron-tvOSTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1016,9 +1171,9 @@
 			};
 			name = Debug;
 		};
-		BD32142477808733DB1AC2A17E3C48EB /* Release */ = {
+		D71A33CFA5A0C1AB50AD6B0C2193D204 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A049AC6A25E0E945A65724F8C967DEA5 /* Pods-Delay-iOS.release.xcconfig */;
+			baseConfigurationReference = EAD53C1B4FFF24C4878BAE98A9BEFFDE /* Pods-kron-iOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1031,7 +1186,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Delay-iOS/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-kron-iOSTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1040,7 +1195,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Delay-iOS/Pods-Delay-iOS.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-kron-iOSTests/Pods-kron-iOSTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1055,47 +1210,9 @@
 			};
 			name = Release;
 		};
-		D866871A3C8B5572CF2F46256248C37C /* Debug */ = {
+		EB48C4CCE4EC1CABEB7418D25AB7FB48 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5171337F50968EC4FAEB24629EE6E484 /* Pods-Delay-iOS.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Delay-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Delay-iOS/Pods-Delay-iOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F04F05EF81C8C9282D527786C5B4A5C1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0ECD12F858203235826EB6F2CD6025CB /* Pods-Delay-OSXTests.debug.xcconfig */;
+			baseConfigurationReference = 5BEB0DD754CB275737B5521D301AAA34 /* Pods-kron-macOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1110,7 +1227,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-Delay-OSXTests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-kron-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1119,7 +1236,7 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MODULEMAP_FILE = "Target Support Files/Pods-Delay-OSXTests/Pods-Delay-OSXTests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-kron-macOS/Pods-kron-macOS.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1131,132 +1248,33 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		F05EFD63034915FD9E6228990A14AC4F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11DD671A2ED84DDE271551FB53CC9CCB /* Pods-Delay-iOSTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Delay-iOSTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Delay-iOSTests/Pods-Delay-iOSTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F103E8B98E0DCC3896BC2FCD8084D887 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C0E29DE1A32C8498F9A64A206FCB5D0 /* Pods-Delay-OSX.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-Delay-OSX/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MODULEMAP_FILE = "Target Support Files/Pods-Delay-OSX/Pods-Delay-OSX.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F4F8B0BB196DF63D3532D85835F55704 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 678E43E39C9DFA54CD9A01B3509F2C53 /* Pods-Delay-OSX.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-Delay-OSX/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MODULEMAP_FILE = "Target Support Files/Pods-Delay-OSX/Pods-Delay-OSX.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0EE955B4EF5AA17105D7DD4132D46207 /* Build configuration list for PBXNativeTarget "Pods-Delay-iOSTests" */ = {
+		0A36E249D43B5945E8245F495A486B04 /* Build configuration list for PBXNativeTarget "Pods-kron-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				74AF991227863CBD24CBA34CC57DCF4A /* Debug */,
-				F05EFD63034915FD9E6228990A14AC4F /* Release */,
+				5324DBB52575C441B119871B9A44E19F /* Debug */,
+				A53CC9D3AAE82C35E1999C8C8DE0DB47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18B18FA4CC87ED48F8055FA65FB602AB /* Build configuration list for PBXNativeTarget "Pods-kron-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB48C4CCE4EC1CABEB7418D25AB7FB48 /* Debug */,
+				2287C04F07E86511A584ED49187B600A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		226E87F656114E4CF0EE7D461948736F /* Build configuration list for PBXNativeTarget "Pods-kron-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F3D63551BFDBE13FD10E2980CC071BA /* Debug */,
+				63AEED44CCA29A4DB0D24E12FD2381BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1270,47 +1288,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		333540D1F349B5A446B773243F661AFA /* Build configuration list for PBXNativeTarget "Pods-Delay-tvOS" */ = {
+		3EFEA196F4AFE90BD647E3BE1D639A4F /* Build configuration list for PBXNativeTarget "Pods-kron-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A8F6E9CD23CB7C82E62028123A42DF5B /* Debug */,
-				0BE810EE03551CDFF1612527C81E3966 /* Release */,
+				B379DCD8D9FA27226972134C24942640 /* Debug */,
+				8B327D1F773631EF5A39C9B6A6A1D746 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		955D9A4AC9F1FA3094998F1909020BB6 /* Build configuration list for PBXNativeTarget "Pods-Delay-OSXTests" */ = {
+		B922EE0DF76606CA13554EF5F730B38C /* Build configuration list for PBXNativeTarget "Pods-kron-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F04F05EF81C8C9282D527786C5B4A5C1 /* Debug */,
-				A894BC5F199AEC038151BA20524BE575 /* Release */,
+				4AAB850D017E4EEC96FAFE94DCCBD4CF /* Debug */,
+				D71A33CFA5A0C1AB50AD6B0C2193D204 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC05EA7F4F4E056195B9A270351F8930 /* Build configuration list for PBXNativeTarget "Pods-Delay-OSX" */ = {
+		C8AB82D48C85EC21349D9BDD12466B7A /* Build configuration list for PBXNativeTarget "Pods-kron-macOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F103E8B98E0DCC3896BC2FCD8084D887 /* Debug */,
-				F4F8B0BB196DF63D3532D85835F55704 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F34450DD2BD1069B7D22D9DE7D77AC7D /* Build configuration list for PBXNativeTarget "Pods-Delay-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D866871A3C8B5572CF2F46256248C37C /* Debug */,
-				BD32142477808733DB1AC2A17E3C48EB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F89E391DD718E0073316F5F0E07857FD /* Build configuration list for PBXNativeTarget "Pods-Delay-tvOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2C692896A4BD73890E4F99D3DF497685 /* Debug */,
-				A8B3F4FB14A0EB10CEEB8762665C02C1 /* Release */,
+				7B1C7813EF102606B2B28A9E99C5C01D /* Debug */,
+				3D85EC8B45FB03E58C250D4304D72042 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

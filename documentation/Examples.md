@@ -3,12 +3,12 @@
 
 Please review the test units for exhaustive implementation samples.
 
-In all instances the timer will be reset by simply calling delay with the same key. (See below `Static vs Instance` to learn more about the Static keyspace).
-
+In all instances the timer will be reset by simply calling Kron with the same key. (See below `Static vs Instance` to learn more about the Static keyspace).
+Kron
 1. **Idle Timer**
     
 ```
-Delay.idle(1, key:"keyStrokes"){ (key,ctx) in
+Kron.idle(1, key:"keyStrokes"){ (key,ctx) in
       print("performed after 1 second of inactivity")
 }
 ```
@@ -16,7 +16,7 @@ Delay.idle(1, key:"keyStrokes"){ (key,ctx) in
 1. **Debouncer**
 
 ```
-Delay.debounce(1, key:"Scroll"){ (key,ctx) in
+Kron.debounce(1, key:"Scroll"){ (key,ctx) in
       print("performed immediately and again no sooner than 1 second")
 }
 ```
@@ -24,7 +24,7 @@ Delay.debounce(1, key:"Scroll"){ (key,ctx) in
 1. **Debouncer and perform last**
 
 ```
-Delay.debounceLast(1, key:"Scroll"){ (key,ctx) in
+Kron.debounceLast(1, key:"Scroll"){ (key,ctx) in
       print("performed immediately and again no sooner than 1 second")
       print("also performs the last call after 1 second of inactivity")
 }
@@ -33,7 +33,7 @@ Delay.debounceLast(1, key:"Scroll"){ (key,ctx) in
 1. **Watchdog**
 
 ```
-Delay.wachtDog(10, key:"ApiResponse"){ (key,ctx) in
+Kron.wachtDog(10, key:"ApiResponse"){ (key,ctx) in
       print("performed  after 10 seconds unless canceled")
 
 }
@@ -41,31 +41,31 @@ Delay.wachtDog(10, key:"ApiResponse"){ (key,ctx) in
 ...
 
 // Called somewhere else to abort the timeOut
-Delay.wachtDogCancel("ApiResponse")
+Kron.wachtDogCancel("ApiResponse")
 
 ```
 
 ### Satic vs Instance
 
-You can use the provided static functions. Internally **Delay** manages 4 singletons to prevent key collisions between the different modes:
+You can use the provided static functions. Internally **Kron** manages 4 singletons to prevent key collisions between the different modes:
 
 ```
 //Debouncer
-Delay.debounce
+Kron.debounce
 
 //Debouncing Last
-Delay.debounceLast
+Kron.debounceLast
 
 //Idle
-Delay.idle
+Kron.idle
 
 //Watchdog
-Delay.watchdog
+Kron.watchdog
 ```
 
-Optionally you can instantiate **Delay** to manage your own keyspace in that given intance.
+Optionally you can instantiate **Kron** to manage your own keyspace in that given intance.
 
 ```
-let myDelay = Delay()
-myDelay( ...
+let myKron = Kron()
+myKron( ...
 ```

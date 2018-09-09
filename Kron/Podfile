@@ -1,39 +1,39 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'Delay-iOS' do
+target 'kron-iOS' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for Delay-iOS
+  # Pods for kron-iOS
 
-  target 'Delay-iOSTests' do
+  target 'kron-iOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
 end
 
-target 'Delay-OSX' do
+target 'kron-macOS' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for Delay-OSX
+  # Pods for kron-macOS
 
-  target 'Delay-OSXTests' do
+  target 'kron-macOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
 end
 
-target 'Delay-tvOS' do
+target 'kron-tvOS' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for Delay-tvOS
+  # Pods for kron-tvOS
 
-  target 'Delay-tvOSTests' do
+  target 'kron-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
