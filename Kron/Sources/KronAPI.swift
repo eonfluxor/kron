@@ -12,7 +12,7 @@ import UIKit
 import Cocoa
 #endif
 
-/// Used to inderectly store and access the Timer instance.
+/// Used to inderectly store and access the Timer instance. It can be an `String` or `AnyClass`. Instance references are internally wrapped with optional weak pointers
 public typealias KronKey = Any
 /// Defines the closure to be performed on timeout.
 public typealias KronClosure = (_ key:String,_ context:Any?)->Void
@@ -74,7 +74,7 @@ extension Kron{
 extension Kron {
     
     /// Creates am `watchdog` timer.
-    /// Use `Kron.watchdogCancel` to early abort the timer.
+    /// Use `watchdogCancel` to early abort the timer.
     /// The function will be called after timeout.
     /// Timer will be reset if called again with the same `KronKey`
     ///
