@@ -4,21 +4,22 @@
 ![platforms](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20Linux-lightgrey.svg)
 
 # What is Delay?
-Delay is a Manager offering 4 convenient Timer modes through a friendly interface. Delay takes care of the invovled NSTimer implementation and lifecycle. 
+**Delay** is a Manager offering 4 convenient Timer modes through a friendly interface. Delay takes care of the involved NSTimer (aka Timer) implementation and lifecycle. 
 
-1. `debounce` Calls immediatly and reject calls until time out elapses
-1. `debounceLast` As `debounce` but also performs the last call after time out
-1. `idle` Performs the last call after not being called during the timeout interval
-1. `watchdog` As `idle` but allowing to be canceled with `watchDogCancel`
+1. `debounce`: Calls immediatly and reject calls until time out elapses
+1. `debounceLast`: As `debounce` but also performs the last call after time out
+1. `idle`: Performs the last call after not being called during the timeout interval
+1. `watchdog`: As `idle` but allowing to be canceled with `watchDogCancel`
 
 ### Why Delay?
 
-Instead of returning a timer instance, Delay manages the Timer instances internally through a `DelayKey` -> `Timer` dictionary. This makes easy to call delay from distant components or threads accesing the timers by their key value.
+* 
+Instead of returning a timer instance, **Delay** manages the Timer instances internally through a `DelayKey` -> `Timer` dictionary. This makes easy to call **Delay** from distant components or threads accesing the timers by their key value.
+* The `DelayKey` can be etiher an `String` struct or `AnyObject` instance.  If an object is passed the key is inferred from the object's pointer. Calling the methods with the same key causes all timer modes to be reset.
+* As the intention is to facilitate calling **Delay** from distant implementations you can optional pass a context value `ctx`. A context can be `Any` struct or class instance and it's internally wrapped with a weak reference to prevent retain cycles. The context is then optionally passed to the timeOut closure.
 
-The `DelayKey` can be etiher an `String` struct or `AnyObject` instance.  If an object is passed the key is inferred from the object's pointer.
 
-As the intention is to facilitate calling delay from distant implementations you can optional pass a context `ctx` value. A context can be `Any` struct or class instance and it's internally wrapped with a weak reference to prevent retain cycles. The context is then optionally passed to the timeOut closure.
-
+### Gist samples
 
 ```
 Delay.idle(1, key:"updateUI"){ (key,ctx) in
@@ -55,7 +56,7 @@ delay to your `Podfile`:
 pod 'delay', '~> 3.0'
 ```
    
-## Examples
+## More Examples
 
 Please review the test units for exhaustive implementation samples.
 
@@ -103,11 +104,13 @@ Delay.wachtDogCancel("ApiResponse")
 
 ### Satic vs Instance
 
-You can use the provided static functions. Internally the class manages 3 singletons to prevent key collisions between the three different modes:
+You can use the provided static functions. Internally **Delay** manages 4 singletons to prevent key collisions between the different modes:
 
 ```
 //Debouncer
 Delay.debounce
+
+//Debouncing Last
 Delay.debounceLast
 
 //Idle
@@ -117,12 +120,22 @@ Delay.idle
 Delay.watchdog
 ```
 
-Optionally you can instantiate Delay:
+Optionally you can instantiate **Delay** to manage your own keyspace in that given intance.
 
 ```
-let delay = Delay()
-delay.debounce( ...
+let myDelay = Delay()
+myDelay( ...
 ```
 
 ## Have a question?
-If you need any help, please visit our [GitHub issues][]. Feel free to file an issue if you do not manage to find any solution from the archives.
+If you need any help, please visit our GitHub issues. Feel free to file an issue if you do not manage to find any solution from the archives.
+
+You can also reach us at: 
+
+`eonfluxor@gmail.com `
+
+## About the authors
+
+**Delay** was originally built by **Hassan Uriostegui** as an objective-C framework and used in many projects over the past 10 years.
+
+It's now released as open source framework under the **Eonflux** collective. Check our other projects and join our *eon flux of innovaton* !

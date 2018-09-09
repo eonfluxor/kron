@@ -1,5 +1,6 @@
 ## Examples
 
+
 Please review the test units for exhaustive implementation samples.
 
 In all instances the timer will be reset by simply calling delay with the same key. (See below `Static vs Instance` to learn more about the Static keyspace).
@@ -46,11 +47,13 @@ Delay.wachtDogCancel("ApiResponse")
 
 ### Satic vs Instance
 
-You can use the provided static functions. Internally the class manages 3 singletons to prevent key collisions between the three different modes:
+You can use the provided static functions. Internally **Delay** manages 4 singletons to prevent key collisions between the different modes:
 
 ```
 //Debouncer
 Delay.debounce
+
+//Debouncing Last
 Delay.debounceLast
 
 //Idle
@@ -60,9 +63,9 @@ Delay.idle
 Delay.watchdog
 ```
 
-Optionally you can instantiate Delay:
+Optionally you can instantiate **Delay** to manage your own keyspace in that given intance.
 
 ```
-let delay = Delay()
-delay.debounce( ...
+let myDelay = Delay()
+myDelay( ...
 ```
