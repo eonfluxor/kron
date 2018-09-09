@@ -2,6 +2,7 @@
 [![GitHub release](https://img.shields.io/github/release/eonfluxor/delay.svg)](https://github.com/eonfluxor/delay/releases) 
 ![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg) 
 ![platforms](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20Linux-lightgrey.svg)
+[![Build Status](https://travis-ci.org/eonfluxor/delay.svg?branch=master)](https://travis-ci.org/eonfluxor/delay)
 
 # What is Delay?
 **Delay** is a **NSTimer manager** offering **4 modes** through a unified api. Delay takes care of the involved implementation of NSTimers while ensuring a proper memory management with no extra effort:
