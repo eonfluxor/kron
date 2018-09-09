@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "kron"
+  s.name         = "Kron"
   s.version      = "1.2.3"
   s.summary      = "Timers made easy. (debounce, idle, watchdog and more!)"
 
