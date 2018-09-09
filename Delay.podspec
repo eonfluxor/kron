@@ -1,6 +1,7 @@
 Pod::Spec.new do |s|
 s.name         = "Delay"
 s.version      = "1.0.0"
+s.swift_version  = "4"
 s.summary      = "MyFramework with a Car to track miles."
 s.homepage     = "https://github.com/eonfluxor/delay"
 s.license      = "MIT"
