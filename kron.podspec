@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "kron"
-  s.version      = "1.2.1"
+  s.version      = "1.2.2"
   s.summary      = "Timers made easy. (debounce, idle, watchdog and more!)"
 
   # This description is used to generate tags and improve search results.
