@@ -61,7 +61,7 @@
             <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/Delay.html">Delay</a>
+                <a class="nav-group-task-link" href="Classes/Kron.html">Kron</a>
               </li>
             </ul>
           </li>
@@ -72,39 +72,40 @@
         <section class="section">
           <div class="section-content">
             
-            <p><a href="#cocoapods"><img src="https://img.shields.io/cocoapods/v/delay.svg" alt="CocoaPods compatible"></a> 
-<a href="https://github.com/eonfluxor/delay/releases"><img src="https://img.shields.io/github/release/eonfluxor/delay.svg" alt="GitHub release"></a> 
-<img src="https://img.shields.io/badge/Swift-4.0-orange.svg" alt="Swift 4.0"> 
-<img src="https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20Linux-lightgrey.svg" alt="platforms"></p>
-<h1 id='what-is-delay' class='heading'>What is Delay?</h1>
+            <p><a href="#cocoapods"><img src="https://img.shields.io/cocoapods/v/kron.svg" alt="CocoaPods compatible"></a> 
+<a href="https://github.com/eonfluxor/delay/releases"><img src="https://img.shields.io/github/release/eonfluxor/kron.svg" alt="GitHub release"></a> 
+<img src="https://img.shields.io/badge/Swift-4.1-orange.svg" alt="Swift 4.0"> 
+<img src="https://img.shields.io/cocoapods/p/kron.svg" alt="platforms">
+<a href="https://travis-ci.org/eonfluxor/kron"><img src="https://travis-ci.org/eonfluxor/kron.svg?branch=master" alt="Build Status"></a></p>
+<h1 id='what-is-kron' class='heading'>What is Kron?</h1>
 
-<p><strong>Delay</strong> is a <strong>NSTimer manager</strong> offering <strong>4 modes</strong> through a unified api. Delay takes care of the involved implementation of NSTimers while ensuring a proper memory management with no extra effort:</p>
+<p><strong>Kron</strong> is a <strong>NSTimer manager</strong> offering <strong>4 modes</strong> through a unified api. Kron takes care of the involved implementation of NSTimers while ensuring a proper memory management with no extra effort:</p>
 
 <ol>
-<li><code>Delay.debounce</code>: Calls immediatly and reject calls until time out elapses</li>
-<li><code>Delay.debounceLast</code>: As <code>debounce</code> but also performs the last call after time out</li>
-<li><code>Delay.idle</code>: Performs the last call after not being called during the timeout interval</li>
-<li><code>Delay.watchdog</code>: As <code>idle</code> but allowing to be canceled with <code>watchDogCancel</code></li>
+<li><code>Kron.debounce</code>: Calls immediatly and reject calls until time out elapses</li>
+<li><code>Kron.debounceLast</code>: As <code>debounce</code> but also performs the last call after time out</li>
+<li><code>Kron.idle</code>: Performs the last call after not being called during the timeout interval</li>
+<li><code>Kron.watchdog</code>: As <code>idle</code> but allowing to be canceled with <code>watchDogCancel</code></li>
 </ol>
-<h3 id='why-delay' class='heading'>Why Delay?</h3>
+<h3 id='why-kron' class='heading'>Why Kron?</h3>
 
 <ul>
-<li><p>Instead of returning a timer object, <strong>Delay</strong> manages the Timer instances internally through a [<code>DelayKey</code> : <code>Timer</code>]  dictionary. This makes easy to call <strong>Delay</strong> from distant components or threads accesing the timers by their key value.</p></li>
-<li><p>The <code>DelayKey</code> can be etiher a <code>String</code> struct or <code>AnyObject</code> instance.  If an object is passed the key is inferred from the object&rsquo;s pointer. Calling the methods with the same key causes all timer modes to be reset.</p></li>
-<li><p>As the intention is to facilitate calling <strong>Delay</strong> from distant implementations you can optional pass a context value <code>ctx</code>. A context can be <code>Any</code> struct or class instance and it&rsquo;s internally <strong><em>wrapped with a weak reference</em></strong>  to prevent retain cycles. The context is then optionally passed to the timeOut closure.</p></li>
+<li><p>Instead of returning a timer object, <strong>Kron</strong> manages the Timer instances internally through a [<code>KronKey</code> : <code>Timer</code>]  dictionary. This makes easy to call <strong>Kron</strong> from distant components or threads accesing the timers by their key value.</p></li>
+<li><p>The <code>KronKey</code> can be etiher a <code>String</code> struct or <code>AnyObject</code> instance.  If an object is passed the key is inferred from the object&rsquo;s pointer. Calling the methods with the same key causes all timer modes to be reset.</p></li>
+<li><p>As the intention is to facilitate calling <strong>Kron</strong> from distant implementations you can optional pass a context value <code>ctx</code>. A context can be <code>Any</code> struct or class instance and it&rsquo;s internally <strong><em>wrapped with a weak reference</em></strong>  to prevent retain cycles. The context is then optionally passed to the timeOut closure.</p></li>
 </ul>
 <h3 id='gist-samples' class='heading'>Gist samples</h3>
-<pre class="highlight plaintext"><code>Delay.idle(1, key:"updateUI"){ (key,ctx) in
+<pre class="highlight plaintext"><code>Kron.idle(1, key:"updateUI"){ (key,ctx) in
             //
 }
 </code></pre>
 <pre class="highlight plaintext"><code>let context = 'userTap'
-Delay.idle(1, key:"updateUI", ctx: context){ (key,ctx) in
+Kron.idle(1, key:"updateUI", ctx: context){ (key,ctx) in
        print(ctx as! String) // userTap
 }
 </code></pre>
 <pre class="highlight plaintext"><code>//self.currentModel should be an AnyObject instance
-Delay.idle(1, key:self.currentModel){ (key,ctx) in
+Kron.idle(1, key:self.currentModel){ (key,ctx) in
             expectation2.fulfill()
 }
 </code></pre>
@@ -112,23 +113,23 @@ Delay.idle(1, key:self.currentModel){ (key,ctx) in
 
 <p>Self-generated documentation using jazzy and hosted in github available here:</p>
 
-<p><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/eonfluxor/delay/master/docs/index.html">Documentation</a></p>
+<p><a href="https://eonfluxor.github.io/kron/">Documentation</a></p>
 <h2 id='cocoapods' class='heading'>CocoaPods</h2>
 
 <p>If you use [CocoaPods][] to manage your dependencies, simply add
-delay to your <code>Podfile</code>:</p>
-<pre class="highlight plaintext"><code>pod 'delay', '~&gt; 3.0'
+Kron to your <code>Podfile</code>:</p>
+<pre class="highlight plaintext"><code>pod 'kron', '~&gt; 1.2'
 </code></pre>
 <h2 id='more-examples' class='heading'>More Examples</h2>
 
 <p>Please review the test units for exhaustive implementation samples.</p>
 
-<p>In all instances the timer will be reset by simply calling delay with the same key. (See below <code>Static vs Instance</code> to learn more about the Static keyspace).</p>
+<p>In all instances the timer will be reset by simply calling Kron with the same key. (See below <code>Static vs Instance</code> to learn more about the Static keyspace).</p>
 
 <ol>
 <li><strong>Idle Timer</strong></li>
 </ol>
-<pre class="highlight plaintext"><code>Delay.idle(1, key:"keyStrokes"){ (key,ctx) in
+<pre class="highlight plaintext"><code>Kron.idle(1, key:"keyStrokes"){ (key,ctx) in
       print("performed after 1 second of inactivity")
 }
 </code></pre>
@@ -136,7 +137,7 @@ delay to your <code>Podfile</code>:</p>
 <ol>
 <li><strong>Debouncer</strong></li>
 </ol>
-<pre class="highlight plaintext"><code>Delay.debounce(1, key:"Scroll"){ (key,ctx) in
+<pre class="highlight plaintext"><code>Kron.debounce(1, key:"Scroll"){ (key,ctx) in
       print("performed immediately and again no sooner than 1 second")
 }
 </code></pre>
@@ -144,7 +145,7 @@ delay to your <code>Podfile</code>:</p>
 <ol>
 <li><strong>Debouncer and perform last</strong></li>
 </ol>
-<pre class="highlight plaintext"><code>Delay.debounceLast(1, key:"Scroll"){ (key,ctx) in
+<pre class="highlight plaintext"><code>Kron.debounceLast(1, key:"Scroll"){ (key,ctx) in
       print("performed immediately and again no sooner than 1 second")
       print("also performs the last call after 1 second of inactivity")
 }
@@ -153,7 +154,7 @@ delay to your <code>Podfile</code>:</p>
 <ol>
 <li><strong>Watchdog</strong></li>
 </ol>
-<pre class="highlight plaintext"><code>Delay.wachtDog(10, key:"ApiResponse"){ (key,ctx) in
+<pre class="highlight plaintext"><code>Kron.wachtDog(10, key:"ApiResponse"){ (key,ctx) in
       print("performed  after 10 seconds unless canceled")
 
 }
@@ -161,28 +162,28 @@ delay to your <code>Podfile</code>:</p>
 ...
 
 // Called somewhere else to abort the timeOut
-Delay.wachtDogCancel("ApiResponse")
+Kron.wachtDogCancel("ApiResponse")
 
 </code></pre>
 <h3 id='satic-vs-instance' class='heading'>Satic vs Instance</h3>
 
-<p>You can use the provided static functions. Internally <strong>Delay</strong> manages 4 singletons to prevent key collisions between the different modes:</p>
+<p>You can use the provided static functions. Internally <strong>Kron</strong> manages 4 singletons to prevent key collisions between the different modes:</p>
 <pre class="highlight plaintext"><code>//Debouncer
-Delay.debounce
+Kron.debounce
 
 //Debouncing Last
-Delay.debounceLast
+Kron.debounceLast
 
 //Idle
-Delay.idle
+Kron.idle
 
 //Watchdog
-Delay.watchdog
+Kron.watchdog
 </code></pre>
 
-<p>Optionally you can instantiate <strong>Delay</strong> to manage your own keyspace in that given intance.</p>
-<pre class="highlight plaintext"><code>let myDelay = Delay()
-myDelay( ...
+<p>Optionally you can instantiate <strong>Kron</strong> to manage your own keyspace in that given intance.</p>
+<pre class="highlight plaintext"><code>let myKron = Kron()
+myKron( ...
 </code></pre>
 <h2 id='have-a-question' class='heading'>Have a question?</h2>
 
@@ -193,7 +194,7 @@ myDelay( ...
 <p><code>eonfluxor@gmail.com</code></p>
 <h2 id='about' class='heading'>About</h2>
 
-<p><strong>Delay</strong> was originally built by <a href="http://linkedin.com/in/hassanvfx">Hassan Uriostegui</a> as an objective-C framework. It&rsquo;s now released as a swift open source framework under the <strong>Eonflux</strong> collective. Check our other projects and join our <em>eon flux of innovaton</em> !</p>
+<p><strong>Kron</strong> was originally built by <a href="http://linkedin.com/in/hassanvfx">Hassan Uriostegui</a> as an objective-C framework. It&rsquo;s now released as a swift open source framework under the <strong>Eonflux</strong> collective. Check our other projects and join our <em>eon flux of innovaton</em> !</p>
 
           </div>
         </section>

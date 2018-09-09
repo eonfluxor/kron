@@ -61,7 +61,7 @@
             <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/Delay.html">Delay</a>
+                <a class="nav-group-task-link" href="Classes/Kron.html">Kron</a>
               </li>
             </ul>
           </li>
@@ -76,12 +76,13 @@
 
 <p>Please review the test units for exhaustive implementation samples.</p>
 
-<p>In all instances the timer will be reset by simply calling delay with the same key. (See below <code>Static vs Instance</code> to learn more about the Static keyspace).</p>
+<p>In all instances the timer will be reset by simply calling Kron with the same key. (See below <code>Static vs Instance</code> to learn more about the Static keyspace).
+Kron</p>
 
 <ol>
 <li><strong>Idle Timer</strong></li>
 </ol>
-<pre class="highlight plaintext"><code>Delay.idle(1, key:"keyStrokes"){ (key,ctx) in
+<pre class="highlight plaintext"><code>Kron.idle(1, key:"keyStrokes"){ (key,ctx) in
       print("performed after 1 second of inactivity")
 }
 </code></pre>
@@ -89,7 +90,7 @@
 <ol>
 <li><strong>Debouncer</strong></li>
 </ol>
-<pre class="highlight plaintext"><code>Delay.debounce(1, key:"Scroll"){ (key,ctx) in
+<pre class="highlight plaintext"><code>Kron.debounce(1, key:"Scroll"){ (key,ctx) in
       print("performed immediately and again no sooner than 1 second")
 }
 </code></pre>
@@ -97,7 +98,7 @@
 <ol>
 <li><strong>Debouncer and perform last</strong></li>
 </ol>
-<pre class="highlight plaintext"><code>Delay.debounceLast(1, key:"Scroll"){ (key,ctx) in
+<pre class="highlight plaintext"><code>Kron.debounceLast(1, key:"Scroll"){ (key,ctx) in
       print("performed immediately and again no sooner than 1 second")
       print("also performs the last call after 1 second of inactivity")
 }
@@ -106,7 +107,7 @@
 <ol>
 <li><strong>Watchdog</strong></li>
 </ol>
-<pre class="highlight plaintext"><code>Delay.wachtDog(10, key:"ApiResponse"){ (key,ctx) in
+<pre class="highlight plaintext"><code>Kron.wachtDog(10, key:"ApiResponse"){ (key,ctx) in
       print("performed  after 10 seconds unless canceled")
 
 }
@@ -114,28 +115,28 @@
 ...
 
 // Called somewhere else to abort the timeOut
-Delay.wachtDogCancel("ApiResponse")
+Kron.wachtDogCancel("ApiResponse")
 
 </code></pre>
 <h3 id='satic-vs-instance' class='heading'>Satic vs Instance</h3>
 
-<p>You can use the provided static functions. Internally <strong>Delay</strong> manages 4 singletons to prevent key collisions between the different modes:</p>
+<p>You can use the provided static functions. Internally <strong>Kron</strong> manages 4 singletons to prevent key collisions between the different modes:</p>
 <pre class="highlight plaintext"><code>//Debouncer
-Delay.debounce
+Kron.debounce
 
 //Debouncing Last
-Delay.debounceLast
+Kron.debounceLast
 
 //Idle
-Delay.idle
+Kron.idle
 
 //Watchdog
-Delay.watchdog
+Kron.watchdog
 </code></pre>
 
-<p>Optionally you can instantiate <strong>Delay</strong> to manage your own keyspace in that given intance.</p>
-<pre class="highlight plaintext"><code>let myDelay = Delay()
-myDelay( ...
+<p>Optionally you can instantiate <strong>Kron</strong> to manage your own keyspace in that given intance.</p>
+<pre class="highlight plaintext"><code>let myKron = Kron()
+myKron( ...
 </code></pre>
 
           </div>
