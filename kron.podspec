@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "Kron"
   s.version      = "1.2.5"
-  s.summary      = "Timers made easy. (debounce, idle, watchdog and more!)"
+  s.summary      = "Timers made easy. (debounce, idle, watchdog and more!) "
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
