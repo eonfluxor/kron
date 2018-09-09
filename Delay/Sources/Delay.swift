@@ -6,7 +6,7 @@
 //  Copyright © 2018 eonflux. All rights reserved.
 //
 
-#if os(OSX)
+#if os(macOS)
 import AppKit
 #else
 import UIKit
