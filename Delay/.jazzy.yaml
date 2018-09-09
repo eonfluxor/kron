@@ -4,10 +4,10 @@
 #    - Examples
 # source_directory: Delay/
 output: ../docs
+readme: ../README.md
+documentation: ../Documentation/*.md
 theme: fullwidth 
 skip_undocumented: true
-readme: README.md
-documentation: ../Documentation/*.md
 hide_documentation_coverage: true
 #xcodebuild_arguments:
 #  - -workspace
