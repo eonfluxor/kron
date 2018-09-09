@@ -4,18 +4,23 @@
 ![platforms](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20Linux-lightgrey.svg)
 
 # What is Delay?
-**Delay** is a Manager offering 4 convenient Timer modes through a friendly interface. Delay takes care of the involved NSTimer (aka Timer) implementation and lifecycle. 
+**Delay** is a **NSTimer manager** offering **4 modes** through a unified api. Delay takes care of the involved implementation of NSTimers while ensuring a proper memory management with no extra effort:
 
-1. `debounce`: Calls immediatly and reject calls until time out elapses
-1. `debounceLast`: As `debounce` but also performs the last call after time out
-1. `idle`: Performs the last call after not being called during the timeout interval
-1. `watchdog`: As `idle` but allowing to be canceled with `watchDogCancel`
+1. `Delay.debounce`: Calls immediatly and reject calls until time out elapses
+1. `Delay.debounceLast`: As `debounce` but also performs the last call after time out
+1. `Delay.idle`: Performs the last call after not being called during the timeout interval
+1. `Delay.watchdog`: As `idle` but allowing to be canceled with `watchDogCancel`
 
 ### Why Delay?
 
-* Instead of returning a timer instance, **Delay** manages the Timer instances internally through a `DelayKey` -> `Timer` dictionary. This makes easy to call **Delay** from distant components or threads accesing the timers by their key value.
+
+* Instead of returning a timer object, **Delay** manages the Timer instances internally through a [`DelayKey` : `Timer`]  dictionary. This makes easy to call **Delay** from distant components or threads accesing the timers by their key value.
+
+
 * The `DelayKey` can be etiher an `String` struct or `AnyObject` instance.  If an object is passed the key is inferred from the object's pointer. Calling the methods with the same key causes all timer modes to be reset.
-* As the intention is to facilitate calling **Delay** from distant implementations you can optional pass a context value `ctx`. A context can be `Any` struct or class instance and it's internally wrapped with a weak reference to prevent retain cycles. The context is then optionally passed to the timeOut closure.
+
+
+* As the intention is to facilitate calling **Delay** from distant implementations you can optional pass a context value `ctx`. A context can be `Any` struct or class instance and it's internally ***wrapped with a weak reference***  to prevent retain cycles. The context is then optionally passed to the timeOut closure.
 
 
 ### Gist samples
