@@ -1,7 +1,7 @@
-[![CocoaPods compatible](https://img.shields.io/cocoapods/v/kron.svg)](#cocoapods) 
+[![CocoaPods compatible](https://img.shields.io/cocoapods/v/Delayed.svg)](#cocoapods) 
 [![GitHub release](https://img.shields.io/github/release/eonfluxor/kron.svg)](https://github.com/eonfluxor/delay/releases) 
 ![Swift 4.0](https://img.shields.io/badge/Swift-4.1-orange.svg) 
-![platforms](https://img.shields.io/cocoapods/p/kron.svg)
+![platforms](https://img.shields.io/cocoapods/p/Delayed.svg)
 [![Build Status](https://travis-ci.org/eonfluxor/kron.svg?branch=master)](https://travis-ci.org/eonfluxor/kron)
 
 # What is Kron?
