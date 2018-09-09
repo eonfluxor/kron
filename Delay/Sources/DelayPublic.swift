@@ -8,7 +8,7 @@
 
 #if os(iOS) || os(tvOS) || os(watchOS)
 import UIKit
-#else
+#elseif os(OSX) || os(macOS)
 import Cocoa
 #endif
 
