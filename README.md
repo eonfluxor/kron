@@ -58,8 +58,9 @@ If you use [CocoaPods][] to manage your dependencies, simply add
 Kron to your `Podfile`:
 
 ```
-pod 'kron', '~> 1.2'
+pod 'Delayed', '~> 1.2'
 ```
+   
    
 ## More Examples
 
