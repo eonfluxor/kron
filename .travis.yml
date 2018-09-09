@@ -1,31 +1,41 @@
-language: swift
+language: objective-c
 osx_image: xcode9.4
+branches:
+  only:
+  - master
+#  - develop
+#  - "/^X\\d+(.\\d+)?\\/S\\d+(.\\d+)?$/"
+#before_install:
+#- brew update
+#- brew install cookiecutter
+#- cookiecutter -c develop --no-input https://github.com/RahulKatariya/SwiftDelayTemplate
 env:
   global:
   - LC_CTYPE=en_US.UTF-8
   - LANG=en_US.UTF-8
   - WORKSPACE=Delay.xcworkspace
-  - IOS_SCHEME="Delay-iOS"
-  - IOS_SDK=iphonesimulator10.1
-  - OSX_SCHEME="Delay-OSX"
-  - OSX_SDK=macosx10.11
-  - TVOS_SCHEME="Delay-tvOS"
-  - TVOS_SDK=appletvsimulator9.1
+  - IOS_FRAMEWORK_SCHEME="Delay-iOS"
+  - OSX_FRAMEWORK_SCHEME="Delay-macOS"
+  - TVOS_FRAMEWORK_SCHEME="Delay-tvOS"
+  - WATCHOS_FRAMEWORK_SCHEME="Delay-watchOS"
   matrix:
-    - DESTINATION="OS=10.1,name=iPhone 5"         SCHEME="$IOS_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="NO"
-    - DESTINATION="arch=x86_64"                   SCHEME="$OSX_SCHEME"     SDK="$OSX_SDK"     RUN_TESTS="YES" POD_LINT="NO"
-    - DESTINATION="OS=10.1,name=Apple TV 1080p"   SCHEME="$TVOS_SCHEME"    SDK="$TVOS_SDK"    RUN_TESTS="YES" POD_LINT="NO"
-
+  - DESTINATION="OS=11.4,name=iPhone X"                   SCHEME="$IOS_FRAMEWORK_SCHEME"     RUN_TESTS="YES"
+  - DESTINATION="OS=10.3.1,name=iPhone 7 Plus"            SCHEME="$IOS_FRAMEWORK_SCHEME"     RUN_TESTS="YES"
+  - DESTINATION="OS=9.0,name=iPhone 6"                    SCHEME="$IOS_FRAMEWORK_SCHEME"     RUN_TESTS="YES"
+  - DESTINATION="OS=8.1,name=iPhone 5s"                   SCHEME="$IOS_FRAMEWORK_SCHEME"     RUN_TESTS="YES"
+  - DESTINATION="arch=x86_64"                             SCHEME="$OSX_FRAMEWORK_SCHEME"     RUN_TESTS="YES"
+  - DESTINATION="OS=11.4,name=Apple TV 4K (at 1080p)"     SCHEME="$TVOS_FRAMEWORK_SCHEME"    RUN_TESTS="YES"
+  - DESTINATION="OS=10.2,name=Apple TV 1080p"             SCHEME="$TVOS_FRAMEWORK_SCHEME"    RUN_TESTS="YES"
+  - DESTINATION="OS=9.0,name=Apple TV 1080p"              SCHEME="$TVOS_FRAMEWORK_SCHEME"    RUN_TESTS="YES"
+  - DESTINATION="OS=4.3,name=Apple Watch Series 2 - 42mm" SCHEME="$WATCHOS_FRAMEWORK_SCHEME" RUN_TESTS="NO"
+  - DESTINATION="OS=3.1,name=Apple Watch Series 2 - 42mm" SCHEME="$WATCHOS_FRAMEWORK_SCHEME" RUN_TESTS="NO"
+  - DESTINATION="OS=2.0,name=Apple Watch - 38mm"          SCHEME="$WATCHOS_FRAMEWORK_SCHEME" RUN_TESTS="NO"
 before_script:
 - cd Delay
-
 script:
 - set -o pipefail
 - xcodebuild -version
 - xcodebuild -showsdks
-
-  # Run tests
-
 - if [ $RUN_TESTS == "YES" ]; then
     xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES
   test;
@@ -37,8 +47,21 @@ script:
   else
     xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build;
   fi
-
-  # Run `pod lib lint` if specified
-  - if [ $POD_LINT == "YES" ]; then
-      pod lib lint --private --verbose;
-    fi
+# jobs:
+#   include:
+#   - stage: Pod lib lint
+#     script: pod lib lint --verbose --allow-warnings
+#   - stage: Deploy
+#     script: skip
+#     before_deploy: carthage build --no-skip-current && carthage archive Delay
+#     deploy:
+#     - provider: releases
+#       api_key:
+#         secure: FSIvrLX/x7Y/D3FFIMZYwyvlrX+r7DOJbp0SSd4rIuIW8Cwrwcef3NDbjzqolG+l/kxDuiS80m+n+M6PxMiAbfjwP7a8JyWvMnZzTpoPaN9Otubj0Q/MFTU0RIEB51ECLE/v6xRcK/tVhc7uvcCZh1O+5F2hBq8Wiopo9ajiabN6UEAeNwIUWkwCxB8N2uclfHj3Yn03ZqMp2W8WLmG0fRYThlAHaleRo1fnO2DC83rkicfhuzjrqghPni8Th8COQHVQh+Cma3R+k/X6o6Gj1tTuAQlxH4Buk7Jxfk86h9vdnCNmKuuE2CYfmDDDKpauydHTSq7ap+JruinMfRZo3XqNm7U5ev+o9ic0PexTRLpov5i8tKZ5RYSXCpsF/XydeZYyyDV+9P7+uK42SgCZjvVjpmAqurIB1FFId14EH0CBWoJUWSA4elRaUE0iHkN+ivufvCGq9vemDGaJb0QfQLEuSKAo9Bhedl/mhGBlcDLwFFmGSvyOy4AiC6yplr9Ykae8rHwTEY/HU1B5i6R/7qYXhdiNOI5ImXSqGWYn9+fJIz8FwLI4U4WwsVN6SeXz/5B2+a6+rfn1i+liTgSKfH/BN+CsepHzXrT/0uP31XHx8oBNUECIB+GoExgs3EOmpRBWUnjNTGE1JwgE2SUpjcESRzig02yu0SvUmNHdrJs=
+#       file:
+#       - Delay.framework.zip
+#       skip_cleanup: true
+#       overwrite: true
+#       on:
+#         repo: RahulKatariya/SwiftDelayTemplate
+#         tags: true
