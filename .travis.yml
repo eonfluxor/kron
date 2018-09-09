@@ -14,9 +14,9 @@ env:
   - LC_CTYPE=en_US.UTF-8
   - LANG=en_US.UTF-8
   - WORKSPACE=Kron.xcworkspace
-  - IOS_FRAMEWORK_SCHEME="Kron-iOS"
-  - OSX_FRAMEWORK_SCHEME="Kron-OSX"
-  - TVOS_FRAMEWORK_SCHEME="Kron-tvOS"
+  - IOS_FRAMEWORK_SCHEME="kron-iOS"
+  - OSX_FRAMEWORK_SCHEME="kron-OSX"
+  - TVOS_FRAMEWORK_SCHEME="kron-tvOS"
   matrix:
   - DESTINATION="OS=11.4,name=iPhone X"                   SCHEME="$IOS_FRAMEWORK_SCHEME"     RUN_TESTS="YES"
   - DESTINATION="arch=x86_64"                             SCHEME="$OSX_FRAMEWORK_SCHEME"     RUN_TESTS="YES"
