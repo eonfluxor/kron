@@ -6,7 +6,7 @@
 output: ../docs
 readme: ../README.md
 documentation: ../Documentation/*.md
-theme: fullwidth 
+theme: apple
 skip_undocumented: true
 hide_documentation_coverage: true
 #xcodebuild_arguments:
@@ -17,4 +17,3 @@ hide_documentation_coverage: true
 author: Eonflux - Hassan Uriostegui
 author_url: https://eonflux.io/
 github_url: https://github.com/eonfluxor/kron/
-#dash_url: http://eonflux.io/delay/docs/ReactiveSwift.xml
