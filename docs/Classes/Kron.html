@@ -540,6 +540,439 @@ Timer will be reset if called again with the same <code><a href="../Typealiases.
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Instance%20Debouncer"></a>
+                <a name="//apple_ref/swift/Section/Instance Debouncer" class="dashAnchor"></a>
+                <a href="#/Instance%20Debouncer">
+                  <h3 class="section-name">Instance Debouncer</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9kron_tvOS4KronC12debounceLastySd_yp3keyypSg3ctxyyp_AFtc6actiontF"></a>
+                    <a name="//apple_ref/swift/Method/debounceLast(_:key:ctx:action:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9kron_tvOS4KronC12debounceLastySd_yp3keyypSg3ctxyyp_AFtc6actiontF">debounceLast(_:key:ctx:action:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates both a <code>debounce</code> and idle <code>idle</code> timer.
+The function will debounce actions as defined in <code>interval</code>
+Additinally will ensure to perform the last call after timeout
+Timer will be reset if called again with the same <code><a href="../Typealiases.html#/s:9kron_tvOS7KronKeya">KronKey</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">debounceLast</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">interval</span><span class="p">:</span><span class="kt">Double</span><span class="p">,</span>
+    <span class="n">key</span> <span class="nv">aKey</span><span class="p">:</span><span class="kt"><a href="../Typealiases.html#/s:9kron_tvOS7KronKeya">KronKey</a></span><span class="p">,</span>
+    <span class="nv">ctx</span><span class="p">:</span><span class="kt">Any</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">action</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:9kron_tvOS11KronClosurea">KronClosure</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>interval</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the timeOut interval</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>an String or Class</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ctx</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>any Struct or Class. (Internally wraped as a weak reference)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>action</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>closure called on timeout</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9kron_tvOS4KronC8debounceySd_yp3keyypSg3ctxyyp_AFtctF"></a>
+                    <a name="//apple_ref/swift/Method/debounce(_:key:ctx:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9kron_tvOS4KronC8debounceySd_yp3keyypSg3ctxyyp_AFtctF">debounce(_:key:ctx:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code>debounce</code> timer.
+The function will debounce actions as defined in <code>interval</code>
+Timer will be reset if called again with the same <code><a href="../Typealiases.html#/s:9kron_tvOS7KronKeya">KronKey</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">debounce</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">interval</span><span class="p">:</span><span class="kt">Double</span><span class="p">,</span>
+    <span class="n">key</span> <span class="nv">aKey</span><span class="p">:</span><span class="kt"><a href="../Typealiases.html#/s:9kron_tvOS7KronKeya">KronKey</a></span><span class="p">,</span>
+    <span class="nv">ctx</span><span class="p">:</span><span class="kt">Any</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">action</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:9kron_tvOS11KronClosurea">KronClosure</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>interval</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the timeOut interval</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>an String or Class</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ctx</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>any Struct or Class. (Internally wraped as a weak reference)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>action</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>closure called on timeout</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Instance%20Watchdog"></a>
+                <a name="//apple_ref/swift/Section/Instance Watchdog" class="dashAnchor"></a>
+                <a href="#/Instance%20Watchdog">
+                  <h3 class="section-name">Instance Watchdog</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9kron_tvOS4KronC8watchDogySd_yp3keyypSg3ctxyyp_AFtctF"></a>
+                    <a name="//apple_ref/swift/Method/watchDog(_:key:ctx:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9kron_tvOS4KronC8watchDogySd_yp3keyypSg3ctxyyp_AFtctF">watchDog(_:key:ctx:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates am <code>watchdog</code> timer.
+Use <code>watchdogCancel</code> to early abort the timer.
+The function will be called after timeout.
+Timer will be reset if called again with the same <code><a href="../Typealiases.html#/s:9kron_tvOS7KronKeya">KronKey</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">watchDog</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">interval</span><span class="p">:</span><span class="kt">Double</span><span class="p">,</span>
+    <span class="n">key</span> <span class="nv">aKey</span><span class="p">:</span><span class="kt"><a href="../Typealiases.html#/s:9kron_tvOS7KronKeya">KronKey</a></span><span class="p">,</span>
+    <span class="nv">ctx</span><span class="p">:</span><span class="kt">Any</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">action</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:9kron_tvOS11KronClosurea">KronClosure</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>interval</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the timeOut interval</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>an String or Class</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ctx</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>any Struct or Class. (Internally wraped as a weak reference)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>action</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>closure called on timeout</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9kron_tvOS4KronC14watchDogCancelyyp3key_tF"></a>
+                    <a name="//apple_ref/swift/Method/watchDogCancel(key:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9kron_tvOS4KronC14watchDogCancelyyp3key_tF">watchDogCancel(key:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Used to cancel a watchdog timer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">watchDogCancel</span><span class="p">(</span><span class="n">key</span> <span class="nv">aKey</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:9kron_tvOS7KronKeya">KronKey</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>any active timer <code><a href="../Typealiases.html#/s:9kron_tvOS7KronKeya">KronKey</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Instance%20Idle%20Timeout"></a>
+                <a name="//apple_ref/swift/Section/Instance Idle Timeout" class="dashAnchor"></a>
+                <a href="#/Instance%20Idle%20Timeout">
+                  <h3 class="section-name">Instance Idle Timeout</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9kron_tvOS4KronC4idleySd_yp3keyypSg3ctxyyp_AFtctF"></a>
+                    <a name="//apple_ref/swift/Method/idle(_:key:ctx:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9kron_tvOS4KronC4idleySd_yp3keyypSg3ctxyyp_AFtctF">idle(_:key:ctx:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates am <code>idle</code> timer.
+The function will be called after timeout.
+Timer will be reset if called again with the same <code><a href="../Typealiases.html#/s:9kron_tvOS7KronKeya">KronKey</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">idle</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">interval</span><span class="p">:</span><span class="kt">Double</span><span class="p">,</span>
+    <span class="n">key</span> <span class="nv">aKey</span><span class="p">:</span><span class="kt"><a href="../Typealiases.html#/s:9kron_tvOS7KronKeya">KronKey</a></span><span class="p">,</span>
+    <span class="nv">ctx</span><span class="p">:</span><span class="kt">Any</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">action</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:9kron_tvOS11KronClosurea">KronClosure</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>interval</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the timeOut interval</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>an String or Class</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ctx</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>any Struct or Class. (Internally wraped as a weak reference)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>action</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>closure called on timeout</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
