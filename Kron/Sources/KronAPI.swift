@@ -135,6 +135,16 @@ extension Kron{
 //MARK: - Instance Debouncer
 extension Kron{
     
+    /// Creates both a `debounce` and idle `idle` timer.
+    /// The function will debounce actions as defined in `interval`
+    /// Additinally will ensure to perform the last call after timeout
+    /// Timer will be reset if called again with the same `KronKey`
+    ///
+    /// - Parameters:
+    ///   - interval: the timeOut interval
+    ///   - aKey: an String or Class
+    ///   - ctx: any Struct or Class. (Internally wraped as a weak reference)
+    ///   - action: closure called on timeout
     public func debounceLast(
         _ interval:Double,
         key aKey:KronKey,
@@ -149,6 +159,16 @@ extension Kron{
         idle(     interval ,key:idleKey     ,ctx:ctx, action)
     }
     
+    
+    /// Creates a `debounce` timer.
+    /// The function will debounce actions as defined in `interval`
+    /// Timer will be reset if called again with the same `KronKey`
+    ///
+    /// - Parameters:
+    ///   - interval: the timeOut interval
+    ///   - aKey: an String or Class
+    ///   - ctx: any Struct or Class. (Internally wraped as a weak reference)
+    ///   - action: closure called on timeout
     public func debounce(
         _ interval:Double,
         key aKey:KronKey,
@@ -168,6 +188,16 @@ extension Kron{
 //MARK: - Instance Watchdog
 extension Kron{
     
+    /// Creates am `watchdog` timer.
+    /// Use `watchdogCancel` to early abort the timer.
+    /// The function will be called after timeout.
+    /// Timer will be reset if called again with the same `KronKey`
+    ///
+    /// - Parameters:
+    ///   - interval: the timeOut interval
+    ///   - aKey: an String or Class
+    ///   - ctx: any Struct or Class. (Internally wraped as a weak reference)
+    ///   - action: closure called on timeout
     public func watchDog(
         _ interval:Double,
         key aKey:KronKey,
@@ -181,6 +211,10 @@ extension Kron{
                anAction: action)
     }
     
+    
+    /// Used to cancel a watchdog timer
+    ///
+    /// - Parameter aKey: any active timer `KronKey`
     public func watchDogCancel(key aKey:KronKey){
         cancelTimer(aKey)
     }
@@ -189,6 +223,16 @@ extension Kron{
 
 //MARK: - Instance Idle Timeout
 extension Kron{
+    
+    /// Creates am `idle` timer.
+    /// The function will be called after timeout.
+    /// Timer will be reset if called again with the same `KronKey`
+    ///
+    /// - Parameters:
+    ///   - interval: the timeOut interval
+    ///   - aKey: an String or Class
+    ///   - ctx: any Struct or Class. (Internally wraped as a weak reference)
+    ///   - action: closure called on timeout
     public func idle(
         _ interval:Double,
         key aKey:KronKey,
