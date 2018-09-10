@@ -1,8 +1,14 @@
+ <p align="center"> 
+    <img src="https://res.cloudinary.com/dmje5xfzh/image/upload/v1536538700/static/kron-logo.png" alt="alternate text">
+ </p>
+
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Delayed.svg)](#cocoapods) 
 [![GitHub release](https://img.shields.io/github/release/eonfluxor/kron.svg)](https://github.com/eonfluxor/delay/releases) 
 ![Swift 4.0](https://img.shields.io/badge/Swift-4.1-orange.svg) 
 ![platforms](https://img.shields.io/cocoapods/p/Delayed.svg)
 [![Build Status](https://travis-ci.org/eonfluxor/kron.svg?branch=master)](https://travis-ci.org/eonfluxor/kron)
+
+
 
 # What is Kron?
 **Kron** is a **NSTimer manager** offering **4 modes** through a unified api. Kron takes care of the involved implementation of NSTimers while ensuring a proper memory management with no extra effort:
