@@ -6,7 +6,7 @@
 output: ../docs
 readme: ../README.md
 documentation: ../Documentation/*.md
-theme: apple
+theme: fullwidth
 skip_undocumented: true
 hide_documentation_coverage: true
 #xcodebuild_arguments:
