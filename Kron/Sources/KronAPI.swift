@@ -23,7 +23,7 @@ extension Kron{
     
     /// Creates both a `debounce` and idle `idle` timer.
     /// The function will debounce actions as defined in `interval`
-    /// Additinally will ensure to perform the last call after timeout
+    /// Additionally will ensure to perform the last call after timeout
     /// Timer will be reset if called again with the same `KronKey`
     ///
     /// - Parameters:
@@ -136,9 +136,9 @@ extension Kron{
 extension Kron{
     
     /// Creates both a `debounce` and idle `idle` timer.
-    /// The function will debounce actions as defined in `interval`
-    /// Additinally will ensure to perform the last call after timeout
-    /// Timer will be reset if called again with the same `KronKey`
+    /// * The function will debounce actions as defined in `interval`
+    /// * Additionally will ensure to perform the last call after timeout
+    /// * Timer will be reset if called again with the same `KronKey`
     ///
     /// - Parameters:
     ///   - interval: the timeOut interval
