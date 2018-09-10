@@ -22,9 +22,9 @@ public typealias KronClosure = (_ key:KronKey,_ context:Any?)->Void
 extension Kron{
     
     /// Creates both a `debounce` and idle `idle` timer.
-    /// The function will debounce actions as defined in `interval`
-    /// Additionally will ensure to perform the last call after timeout
-    /// Timer will be reset if called again with the same `KronKey`
+    /// * The function will debounce actions as defined in `interval`
+    /// * Additionally will ensure to perform the last call after timeout
+    /// * Timer will be reset if called again with the same `KronKey`
     ///
     /// - Parameters:
     ///   - interval: the timeOut interval
@@ -45,8 +45,8 @@ extension Kron{
     }
     
     /// Creates a `debounce` timer.
-    /// The function will debounce actions as defined in `interval`
-    /// Timer will be reset if called again with the same `KronKey`
+    /// * The function will debounce actions as defined in `interval`
+    /// * Timer will be reset if called again with the same `KronKey`
     ///
     /// - Parameters:
     ///   - interval: the timeOut interval
@@ -74,9 +74,9 @@ extension Kron{
 extension Kron {
     
     /// Creates am `watchdog` timer.
-    /// Use `watchdogCancel` to early abort the timer.
-    /// The function will be called after timeout.
-    /// Timer will be reset if called again with the same `KronKey`
+    /// * Use `watchdogCancel` to early abort the timer.
+    /// * The function will be called after timeout.
+    /// * Timer will be reset if called again with the same `KronKey`
     ///
     /// - Parameters:
     ///   - interval: the timeOut interval
@@ -109,8 +109,8 @@ extension Kron {
 extension Kron{
     
     /// Creates am `idle` timer.
-    /// The function will be called after timeout.
-    /// Timer will be reset if called again with the same `KronKey`
+    /// * The function will be called after timeout.
+    /// * Timer will be reset if called again with the same `KronKey`
     ///
     /// - Parameters:
     ///   - interval: the timeOut interval
@@ -161,8 +161,8 @@ extension Kron{
     
     
     /// Creates a `debounce` timer.
-    /// The function will debounce actions as defined in `interval`
-    /// Timer will be reset if called again with the same `KronKey`
+    /// * The function will debounce actions as defined in `interval`
+    /// * Timer will be reset if called again with the same `KronKey`
     ///
     /// - Parameters:
     ///   - interval: the timeOut interval
@@ -189,9 +189,9 @@ extension Kron{
 extension Kron{
     
     /// Creates am `watchdog` timer.
-    /// Use `watchdogCancel` to early abort the timer.
-    /// The function will be called after timeout.
-    /// Timer will be reset if called again with the same `KronKey`
+    /// * Use `watchdogCancel` to early abort the timer.
+    /// * The function will be called after timeout.
+    /// * Timer will be reset if called again with the same `KronKey`
     ///
     /// - Parameters:
     ///   - interval: the timeOut interval
@@ -225,8 +225,8 @@ extension Kron{
 extension Kron{
     
     /// Creates am `idle` timer.
-    /// The function will be called after timeout.
-    /// Timer will be reset if called again with the same `KronKey`
+    /// * The function will be called after timeout.
+    /// * Timer will be reset if called again with the same `KronKey`
     ///
     /// - Parameters:
     ///   - interval: the timeOut interval
