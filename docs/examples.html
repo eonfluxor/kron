@@ -55,6 +55,9 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="examples.html">Examples</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="testcases.html">TestCases</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -118,7 +121,7 @@ Kron</p>
 <ol>
 <li><strong>Watchdog</strong></li>
 </ol>
-<pre class="highlight plaintext"><code>Kron.wachtDog(10, key:"ApiResponse"){ (key,ctx) in
+<pre class="highlight plaintext"><code>Kron.watchDog(10, key:"ApiResponse"){ (key,ctx) in
       print("performed  after 10 seconds unless canceled")
 
 }
@@ -126,7 +129,7 @@ Kron</p>
 ...
 
 // Called somewhere else to abort the timeOut
-Kron.wachtDogCancel("ApiResponse")
+Kron.watchDogCancel("ApiResponse")
 
 </code></pre>
 <h3 id='satic-vs-instance' class='heading'>Satic vs Instance</h3>

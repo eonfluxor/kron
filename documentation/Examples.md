@@ -33,7 +33,7 @@ Kron.debounceLast(1, key:"Scroll"){ (key,ctx) in
 1. **Watchdog**
 
 ```
-Kron.wachtDog(10, key:"ApiResponse"){ (key,ctx) in
+Kron.watchDog(10, key:"ApiResponse"){ (key,ctx) in
       print("performed  after 10 seconds unless canceled")
 
 }
@@ -41,7 +41,7 @@ Kron.wachtDog(10, key:"ApiResponse"){ (key,ctx) in
 ...
 
 // Called somewhere else to abort the timeOut
-Kron.wachtDogCancel("ApiResponse")
+Kron.watchDogCancel("ApiResponse")
 
 ```
 
