@@ -51,7 +51,7 @@ public class Kron: NSObject {
     }
     
     struct KronJob{
-        let key:String = ""
+        let aKey:KronKey
         let action:KronClosure?
         let ctx:KronRef
     }
@@ -92,7 +92,7 @@ public class Kron: NSObject {
         
         if( mode == .debounce && !hasKey(key)){
             
-            action(key, ctx)
+            action(aKey, ctx)
             action = { (key,ctx) in } //dummie action to debounce
             
         }else if (mode == .debounce && hasKey(key)){
@@ -105,7 +105,7 @@ public class Kron: NSObject {
         }
         
         let ref = KronRef(ctx)
-        let job = KronJob(action: action, ctx: ref)
+        let job = KronJob(aKey:aKey, action: action, ctx: ref)
         
         let timer = Timer(timeInterval: TimeInterval(interval), target: self, selector: #selector(timerTick), userInfo: job, repeats: false)
         self.timers[key] = timer
@@ -122,7 +122,7 @@ public class Kron: NSObject {
         
         let job = timer.userInfo! as! KronJob
         
-        let key = job.key
+        let key = job.aKey
         self.takeTimer(key)
         
         let action = job.action

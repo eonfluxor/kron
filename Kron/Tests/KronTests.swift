@@ -10,6 +10,32 @@ import XCTest
 
 class KronTests: XCTestCase {
     
+    func testKeyString() {
+        
+        let expectation = self.expectation(description: "execute once")
+        
+        Kron.idle(1, key:"test"){ (key,ctx) in
+            XCTAssert((key as! String) == "test")
+            expectation.fulfill()
+        }
+        
+        
+        waitForExpectations(timeout: 2, handler: nil)
+    }
+    
+    func testKeyObject() {
+        
+        let expectation = self.expectation(description: "execute once")
+        
+        let aKey = NSObject()
+        Kron.idle(1, key:aKey){ (key,ctx) in
+            XCTAssert((key as! NSObject) == aKey)
+            expectation.fulfill()
+        }
+        
+        
+        waitForExpectations(timeout: 2, handler: nil)
+    }
     
     func testIdleWithContext() {
         

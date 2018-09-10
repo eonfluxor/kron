@@ -15,7 +15,7 @@ import Cocoa
 /// Used to inderectly store and access the Timer instance. It can be an `String` or `AnyClass`. Instance references are internally wrapped with optional weak pointers
 public typealias KronKey = Any
 /// Defines the closure to be performed on timeout.
-public typealias KronClosure = (_ key:String,_ context:Any?)->Void
+public typealias KronClosure = (_ key:KronKey,_ context:Any?)->Void
 
 
 //MARK: - Static Debouncer
