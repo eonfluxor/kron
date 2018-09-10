@@ -24,26 +24,30 @@
 * As the intention is to facilitate calling **Kron** from distant implementations you can optional pass a context value `ctx`. A context can be `Any` struct or class instance and it's internally ***wrapped with a weak reference***  to prevent retain cycles. The context is then optionally passed to the timeOut closure.
 
 
-### Gist samples
+### Gist
 
 ```
-Kron.idle(1, key:"updateUI"){ (key,ctx) in
-            //
+Kron.idle( 1.0 , key:"updateUI"){ (key,ctx) in
+     
 }
 ```
 
 ```
 let context = 'userTap'
-Kron.idle(1, key:"updateUI", ctx: context){ (key,ctx) in
-       print(ctx as! String) // userTap
+Kron.debounce( 1.0 , key:"updateUI", ctx: context){ (key,ctx) in
+     print(ctx as! String) // userTap
 }
 ```
 
 ```
 //self.currentModel should be an AnyObject instance
-Kron.idle(1, key:self.currentModel){ (key,ctx) in
-            expectation2.fulfill()
+Kron.watchdog( 10.0 , key:self.currentModel){ (key,ctx) in
+           
 }
+
+//somewhere else
+Kron.watchdogCancel(key:self.currentModel)
+
 ```
 
 ## Documentation
