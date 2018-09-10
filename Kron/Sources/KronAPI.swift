@@ -73,7 +73,7 @@ extension Kron{
 // MARK: - Static Watchdog
 extension Kron {
     
-    /// Creates am `watchdog` timer.
+    /// Creates a `watchdog` timer.
     /// * Use `watchdogCancel` to early abort the timer.
     /// * The function will be called after timeout.
     /// * Timer will be reset if called again with the same `KronKey`
@@ -108,7 +108,7 @@ extension Kron {
 // MARK: - Static Idle Timeout
 extension Kron{
     
-    /// Creates am `idle` timer.
+    /// Creates an `idle` timer.
     /// * The function will be called after timeout.
     /// * Timer will be reset if called again with the same `KronKey`
     ///
@@ -188,7 +188,7 @@ extension Kron{
 //MARK: - Instance Watchdog
 extension Kron{
     
-    /// Creates am `watchdog` timer.
+    /// Creates a `watchdog` timer.
     /// * Use `watchdogCancel` to early abort the timer.
     /// * The function will be called after timeout.
     /// * Timer will be reset if called again with the same `KronKey`
@@ -224,7 +224,7 @@ extension Kron{
 //MARK: - Instance Idle Timeout
 extension Kron{
     
-    /// Creates am `idle` timer.
+    /// Creates an `idle` timer.
     /// * The function will be called after timeout.
     /// * Timer will be reset if called again with the same `KronKey`
     ///
