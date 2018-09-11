@@ -87,183 +87,192 @@
           <div class="section-content">
             
             <h2 id='test-cases' class='heading'>Test Cases</h2>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">XCTest</span>
 
-<p>The following tests cover 100% of the code. They may give you more ideas on how to implement Kron.</p>
-<pre class="highlight plaintext"><code>import XCTest
-
-class KronTests: XCTestCase {
-
-    func testKeyString() {
-
-        let expectation = self.expectation(description: "execute once")
-
-        Kron.idle(1, key:"test"){ (key,ctx) in
-            XCTAssert((key as! String) == "test")
-            expectation.fulfill()
-        }
-
-
-        waitForExpectations(timeout: 2, handler: nil)
-    }
-
-    func testKeyObject() {
-
-        let expectation = self.expectation(description: "execute once")
-
-        let aKey = NSObject()
-        Kron.idle(1, key:aKey){ (key,ctx) in
-            XCTAssert((key as! NSObject) == aKey)
-            expectation.fulfill()
-        }
-
-
-        waitForExpectations(timeout: 2, handler: nil)
-    }
-
-    func testIdleWithContext() {
-
-        let expectation = self.expectation(description: "execute once")
-        let expectation2 = self.expectation(description: "execute ignored")
-        expectation2.isInverted = true
-
-        let context:Int = 90
-
-        Kron.idle(1, key:"test", ctx: context){ (key,ctx) in
-            expectation2.fulfill()
-        }
-        Kron.idle(1, key:"test", ctx: context){ (key,ctx) in
-            expectation2.fulfill()
-        }
-        Kron.idle(1, key:"test", ctx: context){ (key,ctx) in
-            expectation.fulfill()
-            XCTAssert((ctx as! Int) == 90)
-        }
-
-        waitForExpectations(timeout: 2, handler: nil)
-    }
+<span class="kd">class</span> <span class="kt">KronTests</span><span class="p">:</span> <span class="kt">XCTestCase</span> <span class="p">{</span>
 
 
 
-    func testDebounceWithContext() {
 
-        let expectation = self.expectation(description: "execute once")
-        let expectation2 = self.expectation(description: "execute ignored")
-        expectation2.isInverted = true
+    <span class="kd">func</span> <span class="nf">test</span><span class="p">(){</span>
+        <span class="k">let</span> <span class="nv">context</span> <span class="o">=</span> <span class="s">"userTap"</span>
+        <span class="kt">Kron</span><span class="o">.</span><span class="nf">debounce</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"updateUI"</span><span class="p">,</span> <span class="nv">context</span><span class="p">:</span> <span class="n">context</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
 
-        let context:Int = 90
+            <span class="nf">print</span><span class="p">(</span><span class="n">context</span> <span class="k">as!</span> <span class="kt">String</span><span class="p">)</span> <span class="c1">// userTap</span>
 
-        Kron.debounce(1, key:"test", ctx: context){ (key,ctx) in
-            expectation.fulfill()
-            XCTAssert((ctx as! Int) == 90)
-        }
-        Kron.debounce(1, key:"test", ctx: context){ (key,ctx) in
-            expectation2.fulfill()
-        }
+        <span class="p">}</span>
+    <span class="p">}</span>
 
+    <span class="kd">func</span> <span class="nf">testKeyString</span><span class="p">()</span> <span class="p">{</span>
 
-        waitForExpectations(timeout: 2, handler: nil)
-    }
+        <span class="k">let</span> <span class="nv">expectation</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="nf">expectation</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"execute once"</span><span class="p">)</span>
 
-    func testDebounceLast() {
-
-        let expectation = self.expectation(description: "execute once")
-        let expectation2 = self.expectation(description: "execute once")
-        let ignore = self.expectation(description: "execute ignored")
-        ignore.isInverted = true
+        <span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"test"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+            <span class="kt">XCTAssert</span><span class="p">((</span><span class="n">key</span> <span class="k">as!</span> <span class="kt">String</span><span class="p">)</span> <span class="o">==</span> <span class="s">"test"</span><span class="p">)</span>
+            <span class="n">expectation</span><span class="o">.</span><span class="nf">fulfill</span><span class="p">()</span>
+        <span class="p">}</span>
 
 
-        Kron.debounceLast(1, key:"test"){ (key,ctx) in
-            expectation.fulfill()
-        }
-        Kron.debounceLast(1, key:"test"){ (key,ctx) in
-            ignore.fulfill()
-        }
-        Kron.debounceLast(1, key:"test"){ (key,ctx) in
-            expectation2.fulfill()
-        }
+        <span class="nf">waitForExpectations</span><span class="p">(</span><span class="nv">timeout</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="p">}</span>
 
-        waitForExpectations(timeout: 2, handler: nil)
-    }
+    <span class="kd">func</span> <span class="nf">testKeyObject</span><span class="p">()</span> <span class="p">{</span>
 
-    func testWatchdog() {
+        <span class="k">let</span> <span class="nv">expectation</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="nf">expectation</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"execute once"</span><span class="p">)</span>
 
-        let expectation = self.expectation(description: "execute once")
-        let ref:NSDictionary = ["foo":"bar"]
-
-        Kron.watchDog(1, key:"test",ctx:ref){ (key,ctx) in
-            expectation.fulfill()
-            let aRef = ctx as? NSDictionary
-            XCTAssert(ref == aRef)
-        }
-
-        waitForExpectations(timeout: 2, handler: nil)
-    }
-
-    func testWatchdogCancel() {
-
-        let expectation = self.expectation(description: "execute once")
-        expectation.isInverted = true
+        <span class="k">let</span> <span class="nv">aKey</span> <span class="o">=</span> <span class="kt">NSObject</span><span class="p">()</span>
+        <span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="n">aKey</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+            <span class="kt">XCTAssert</span><span class="p">((</span><span class="n">key</span> <span class="k">as!</span> <span class="kt">NSObject</span><span class="p">)</span> <span class="o">==</span> <span class="n">aKey</span><span class="p">)</span>
+            <span class="n">expectation</span><span class="o">.</span><span class="nf">fulfill</span><span class="p">()</span>
+        <span class="p">}</span>
 
 
-        Kron.watchDog(1, key:"test"){ (key,ctx) in
-            expectation.fulfill()
-        }
+        <span class="nf">waitForExpectations</span><span class="p">(</span><span class="nv">timeout</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="p">}</span>
 
-        Kron.watchDogCancel(key:"test")
-        waitForExpectations(timeout: 2, handler: nil)
-    }
+    <span class="kd">func</span> <span class="nf">testIdleWithContext</span><span class="p">()</span> <span class="p">{</span>
 
-    func testIdleWithRef() {
+        <span class="k">let</span> <span class="nv">expectation</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="nf">expectation</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"execute once"</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">expectation2</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="nf">expectation</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"execute ignored"</span><span class="p">)</span>
+        <span class="n">expectation2</span><span class="o">.</span><span class="n">isInverted</span> <span class="o">=</span> <span class="kc">true</span>
 
-        let expectation = self.expectation(description: "execute once")
-        let expectation2 = self.expectation(description: "execute ignored")
-        expectation2.isInverted = true
+        <span class="k">let</span> <span class="nv">context</span><span class="p">:</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">90</span>
 
-        let context:Int = 90
-        let ref:[String:Any] = [:]
+        <span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"test"</span><span class="p">,</span> <span class="nv">context</span><span class="p">:</span> <span class="n">context</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+            <span class="n">expectation2</span><span class="o">.</span><span class="nf">fulfill</span><span class="p">()</span>
+        <span class="p">}</span>
+        <span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"test"</span><span class="p">,</span> <span class="nv">context</span><span class="p">:</span> <span class="n">context</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+            <span class="n">expectation2</span><span class="o">.</span><span class="nf">fulfill</span><span class="p">()</span>
+        <span class="p">}</span>
+        <span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"test"</span><span class="p">,</span> <span class="nv">context</span><span class="p">:</span> <span class="n">context</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+            <span class="n">expectation</span><span class="o">.</span><span class="nf">fulfill</span><span class="p">()</span>
+            <span class="kt">XCTAssert</span><span class="p">((</span><span class="n">context</span> <span class="k">as!</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">==</span> <span class="mi">90</span><span class="p">)</span>
+        <span class="p">}</span>
 
-        Kron.idle(1, key:ref, ctx: context){ (key,ctx) in
-            expectation2.fulfill()
-        }
-        Kron.idle(1, key:ref, ctx: context){ (key,ctx) in
-            expectation2.fulfill()
-        }
-        Kron.idle(1, key:ref, ctx: context){ (key,ctx) in
-            expectation.fulfill()
-            XCTAssert((ctx as! Int) == 90)
-        }
+        <span class="nf">waitForExpectations</span><span class="p">(</span><span class="nv">timeout</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="p">}</span>
 
-        waitForExpectations(timeout: 2, handler: nil)
-    }
 
-    func testContextRetain() {
 
-        let expectation = self.expectation(description: "must release")
-        let expectation2 = self.expectation(description: "fail")
-        expectation2.isInverted=true
+    <span class="kd">func</span> <span class="nf">testDebounceWithContext</span><span class="p">()</span> <span class="p">{</span>
 
-        var ref:NSObject? = NSObject()
-        print(CFGetRetainCount(ref))
-        Kron.idle(1, key:"test", ctx: ref){ (key,ctx) in
-            print("reatin on closure \(CFGetRetainCount(ctx as CFTypeRef)))")
+        <span class="k">let</span> <span class="nv">expectation</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="nf">expectation</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"execute once"</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">expectation2</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="nf">expectation</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"execute ignored"</span><span class="p">)</span>
+        <span class="n">expectation2</span><span class="o">.</span><span class="n">isInverted</span> <span class="o">=</span> <span class="kc">true</span>
 
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0 ) {
+        <span class="k">let</span> <span class="nv">context</span><span class="p">:</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">90</span>
 
-                if(ctx == nil){
-                    expectation.fulfill()
-                }else{
-                     print(CFGetRetainCount(ctx as CFTypeRef))
-                    expectation2.fulfill()
-                }
+        <span class="kt">Kron</span><span class="o">.</span><span class="nf">debounce</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"test"</span><span class="p">,</span> <span class="nv">context</span><span class="p">:</span> <span class="n">context</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+            <span class="n">expectation</span><span class="o">.</span><span class="nf">fulfill</span><span class="p">()</span>
+            <span class="kt">XCTAssert</span><span class="p">((</span><span class="n">context</span> <span class="k">as!</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">==</span> <span class="mi">90</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="kt">Kron</span><span class="o">.</span><span class="nf">debounce</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"test"</span><span class="p">,</span> <span class="nv">context</span><span class="p">:</span> <span class="n">context</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+            <span class="n">expectation2</span><span class="o">.</span><span class="nf">fulfill</span><span class="p">()</span>
+        <span class="p">}</span>
 
-            }
-        }
 
-        ref = nil
-        waitForExpectations(timeout: 4, handler: nil)
-    }
+        <span class="nf">waitForExpectations</span><span class="p">(</span><span class="nv">timeout</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="p">}</span>
 
-}
+    <span class="kd">func</span> <span class="nf">testDebounceLast</span><span class="p">()</span> <span class="p">{</span>
+
+        <span class="k">let</span> <span class="nv">expectation</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="nf">expectation</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"execute once"</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">expectation2</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="nf">expectation</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"execute once"</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">ignore</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="nf">expectation</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"execute ignored"</span><span class="p">)</span>
+        <span class="n">ignore</span><span class="o">.</span><span class="n">isInverted</span> <span class="o">=</span> <span class="kc">true</span>
+
+
+        <span class="kt">Kron</span><span class="o">.</span><span class="nf">debounceLast</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"test"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+            <span class="n">expectation</span><span class="o">.</span><span class="nf">fulfill</span><span class="p">()</span>
+        <span class="p">}</span>
+        <span class="kt">Kron</span><span class="o">.</span><span class="nf">debounceLast</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"test"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+            <span class="n">ignore</span><span class="o">.</span><span class="nf">fulfill</span><span class="p">()</span>
+        <span class="p">}</span>
+        <span class="kt">Kron</span><span class="o">.</span><span class="nf">debounceLast</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"test"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+            <span class="n">expectation2</span><span class="o">.</span><span class="nf">fulfill</span><span class="p">()</span>
+        <span class="p">}</span>
+
+        <span class="nf">waitForExpectations</span><span class="p">(</span><span class="nv">timeout</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">testwatchDog</span><span class="p">()</span> <span class="p">{</span>
+
+        <span class="k">let</span> <span class="nv">expectation</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="nf">expectation</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"execute once"</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">ref</span><span class="p">:</span><span class="kt">NSDictionary</span> <span class="o">=</span> <span class="p">[</span><span class="s">"foo"</span><span class="p">:</span><span class="s">"bar"</span><span class="p">]</span>
+
+        <span class="kt">Kron</span><span class="o">.</span><span class="nf">watchDog</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"test"</span><span class="p">,</span><span class="nv">context</span><span class="p">:</span><span class="n">ref</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+            <span class="n">expectation</span><span class="o">.</span><span class="nf">fulfill</span><span class="p">()</span>
+            <span class="k">let</span> <span class="nv">aRef</span> <span class="o">=</span> <span class="n">context</span> <span class="k">as?</span> <span class="kt">NSDictionary</span>
+            <span class="kt">XCTAssert</span><span class="p">(</span><span class="n">ref</span> <span class="o">==</span> <span class="n">aRef</span><span class="p">)</span>
+        <span class="p">}</span>
+
+        <span class="nf">waitForExpectations</span><span class="p">(</span><span class="nv">timeout</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">testWatchdogCancel</span><span class="p">()</span> <span class="p">{</span>
+
+        <span class="k">let</span> <span class="nv">expectation</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="nf">expectation</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"execute once"</span><span class="p">)</span>
+        <span class="n">expectation</span><span class="o">.</span><span class="n">isInverted</span> <span class="o">=</span> <span class="kc">true</span>
+
+
+        <span class="kt">Kron</span><span class="o">.</span><span class="nf">watchDog</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"test"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+            <span class="n">expectation</span><span class="o">.</span><span class="nf">fulfill</span><span class="p">()</span>
+        <span class="p">}</span>
+
+        <span class="kt">Kron</span><span class="o">.</span><span class="nf">watchDogCancel</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span><span class="s">"test"</span><span class="p">)</span>
+        <span class="nf">waitForExpectations</span><span class="p">(</span><span class="nv">timeout</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">testIdleWithRef</span><span class="p">()</span> <span class="p">{</span>
+
+        <span class="k">let</span> <span class="nv">expectation</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="nf">expectation</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"execute once"</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">expectation2</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="nf">expectation</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"execute ignored"</span><span class="p">)</span>
+        <span class="n">expectation2</span><span class="o">.</span><span class="n">isInverted</span> <span class="o">=</span> <span class="kc">true</span>
+
+        <span class="k">let</span> <span class="nv">context</span><span class="p">:</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">90</span>
+        <span class="k">let</span> <span class="nv">ref</span><span class="p">:[</span><span class="kt">String</span><span class="p">:</span><span class="kt">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:]</span>
+
+        <span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="n">ref</span><span class="p">,</span> <span class="nv">context</span><span class="p">:</span> <span class="n">context</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+            <span class="n">expectation2</span><span class="o">.</span><span class="nf">fulfill</span><span class="p">()</span>
+        <span class="p">}</span>
+        <span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="n">ref</span><span class="p">,</span> <span class="nv">context</span><span class="p">:</span> <span class="n">context</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+            <span class="n">expectation2</span><span class="o">.</span><span class="nf">fulfill</span><span class="p">()</span>
+        <span class="p">}</span>
+        <span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="n">ref</span><span class="p">,</span> <span class="nv">context</span><span class="p">:</span> <span class="n">context</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+            <span class="n">expectation</span><span class="o">.</span><span class="nf">fulfill</span><span class="p">()</span>
+            <span class="kt">XCTAssert</span><span class="p">((</span><span class="n">context</span> <span class="k">as!</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">==</span> <span class="mi">90</span><span class="p">)</span>
+        <span class="p">}</span>
+
+        <span class="nf">waitForExpectations</span><span class="p">(</span><span class="nv">timeout</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">testContextRetain</span><span class="p">()</span> <span class="p">{</span>
+
+        <span class="k">let</span> <span class="nv">expectation</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="nf">expectation</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"must release"</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">expectation2</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="nf">expectation</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"fail"</span><span class="p">)</span>
+        <span class="n">expectation2</span><span class="o">.</span><span class="n">isInverted</span><span class="o">=</span><span class="kc">true</span>
+
+        <span class="k">var</span> <span class="nv">ref</span><span class="p">:</span><span class="kt">NSObject</span><span class="p">?</span> <span class="o">=</span> <span class="kt">NSObject</span><span class="p">()</span>
+        <span class="nf">print</span><span class="p">(</span><span class="kt">CFGetRetainCount</span><span class="p">(</span><span class="n">ref</span><span class="p">))</span>
+        <span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"test"</span><span class="p">,</span> <span class="nv">context</span><span class="p">:</span> <span class="n">ref</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+            <span class="nf">print</span><span class="p">(</span><span class="s">"reatin on closure </span><span class="se">\(</span><span class="kt">CFGetRetainCount</span><span class="p">(</span><span class="n">context</span> <span class="k">as</span> <span class="kt">CFTypeRef</span><span class="p">)</span><span class="se">)</span><span class="s">)"</span><span class="p">)</span>
+
+            <span class="kt">DispatchQueue</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="nf">asyncAfter</span><span class="p">(</span><span class="nv">deadline</span><span class="p">:</span> <span class="o">.</span><span class="nf">now</span><span class="p">()</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="p">)</span> <span class="p">{</span>
+
+                <span class="k">if</span><span class="p">(</span><span class="n">context</span> <span class="o">==</span> <span class="kc">nil</span><span class="p">){</span>
+                    <span class="n">expectation</span><span class="o">.</span><span class="nf">fulfill</span><span class="p">()</span>
+                <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+                     <span class="nf">print</span><span class="p">(</span><span class="kt">CFGetRetainCount</span><span class="p">(</span><span class="n">context</span> <span class="k">as</span> <span class="kt">CFTypeRef</span><span class="p">))</span>
+                    <span class="n">expectation2</span><span class="o">.</span><span class="nf">fulfill</span><span class="p">()</span>
+                <span class="p">}</span>
+
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="n">ref</span> <span class="o">=</span> <span class="kc">nil</span>
+        <span class="nf">waitForExpectations</span><span class="p">(</span><span class="nv">timeout</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="p">}</span> 
+<span class="p">}</span>
 </code></pre>
 
           </div>
