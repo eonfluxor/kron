@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Delayed"
-  s.version      = '1.3.11'
+  s.version      = '0.3.1'
   s.summary      = "Timers made easy. (debounce, idle, watchdog and more!) "
 
   # This description is used to generate tags and improve search results.
