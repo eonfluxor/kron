@@ -105,48 +105,128 @@
 <li><code>Kron.idle</code>: Performs the last call after not being called during the timeout interval</li>
 <li><code>Kron.watchdog</code>: As <code>idle</code> but allowing to be canceled with <code>watchDogCancel</code></li>
 </ol>
+<h2 id='cocoapods' class='heading'>CocoaPods</h2>
+
+<p>If you use <code>CocoaPods</code> to manage your dependencies, simply add
+Kron to your <code>Podfile</code>:</p>
+<pre class="highlight plaintext"><code>pod 'Delayed', '&gt; 2.2.2'
+</code></pre>
+
+<p>And then import the module</p>
+<pre class="highlight plaintext"><code>import Delayed
+</code></pre>
 <h3 id='why-kron' class='heading'>Why Kron?</h3>
 
+<p>Creating a Timer requires a setup similar to this:</p>
+<pre class="highlight swift"><code>
+<span class="kd">class</span> <span class="kt">SomeClass</span><span class="p">{</span>
+    <span class="k">var</span> <span class="nv">timer</span><span class="p">:</span><span class="kt">Timer</span><span class="p">?</span>
+
+    <span class="c1">/// create timer</span>
+    <span class="kd">func</span> <span class="nf">createTimer</span><span class="p">(){</span>
+        <span class="nf">assert</span><span class="p">(</span> <span class="n">timer</span> <span class="o">==</span> <span class="kc">nil</span><span class="p">,</span> <span class="s">"Please call cancelTimer first"</span> <span class="p">)</span>
+
+        <span class="n">timer</span> <span class="o">=</span> <span class="kt">Timer</span><span class="p">(</span><span class="nv">timeInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">(</span><span class="mf">1.0</span><span class="p">),</span> <span class="nv">target</span><span class="p">:</span> <span class="k">self</span><span class="p">,</span> <span class="nv">selector</span><span class="p">:</span> <span class="kd">#selector(</span><span class="nf">timerTick</span><span class="kd">)</span><span class="p">,</span> <span class="nv">userInfo</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">repeats</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span>
+        <span class="kt">RunLoop</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="n">timer</span><span class="o">!</span><span class="p">,</span> <span class="nv">forMode</span><span class="p">:</span> <span class="o">.</span><span class="n">commonModes</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="c1">// cancel timer</span>
+    <span class="kd">func</span> <span class="nf">cancelTimer</span><span class="p">(){</span>
+        <span class="k">if</span> <span class="k">let</span> <span class="nv">aTimer</span> <span class="o">=</span> <span class="n">timer</span> <span class="p">{</span>
+            <span class="n">aTimer</span><span class="o">.</span><span class="nf">invalidate</span><span class="p">()</span>
+        <span class="p">}</span>
+
+        <span class="n">timer</span> <span class="o">=</span> <span class="kc">nil</span>
+    <span class="p">}</span>
+
+    <span class="c1">// restart timer</span>
+    <span class="kd">func</span> <span class="nf">restartTimer</span><span class="p">(){</span>
+        <span class="nf">cancelTimer</span><span class="p">()</span>
+        <span class="nf">createTimer</span><span class="p">()</span>
+    <span class="p">}</span>
+
+    <span class="c1">/// handle callback</span>
+    <span class="kd">@objc</span> <span class="kd">func</span> <span class="nf">timerTick</span><span class="p">(</span><span class="n">_</span> <span class="nv">timer</span><span class="p">:</span><span class="kt">Timer</span><span class="p">){</span>
+        <span class="n">timer</span><span class="o">.</span><span class="nf">invalidate</span><span class="p">()</span>
+        <span class="c1">//Do something</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='what-about-doing-this-in-one-line' class='heading'>What about doing this in one line?</h3>
+
+<p>Kron takes care of all this setup by internally managing a map of Timers that can be accesed through a key. Calling again with the same key would cause the timer to be reset.</p>
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"updateUI"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+
+<span class="p">}</span>
+</code></pre>
+
+<p>So the main difference are</p>
+
 <ul>
-<li><p>Instead of returning a timer object, <strong>Kron</strong> manages the Timer instances internally through a [<code><a href="Typealiases.html#/s:9kron_tvOS7KronKeya">KronKey</a></code> : <code>Timer</code>]  dictionary. This makes easy to call <strong>Kron</strong> from distant components or threads accesing the timers by their key value.</p></li>
+<li><p>Instead of returning a <code>Timer</code> instance, <strong>Kron</strong> manages the Timers internally through a [<code><a href="Typealiases.html#/s:9kron_tvOS7KronKeya">KronKey</a></code> : <code>Timer</code>]  dictionary. This makes easy to call <strong>Kron</strong> from distant components or threads accesing the timers by their key value and in a single line.</p></li>
 <li><p>The <code><a href="Typealiases.html#/s:9kron_tvOS7KronKeya">KronKey</a></code> can be etiher a <code>String</code> struct or <code>AnyObject</code> instance.  If an object is passed the key is inferred from the object&rsquo;s pointer. Calling the methods with the same key causes all timer modes to be reset.</p></li>
-<li><p>As the intention is to facilitate calling <strong>Kron</strong> from distant implementations you can optional pass a context value <code>ctx</code>. A context can be <code>Any</code> struct or class instance and it&rsquo;s internally <strong><em>wrapped with a weak reference</em></strong>  to prevent retain cycles. The context is then optionally passed to the timeOut closure.</p></li>
+<li><p>An optional <code>context</code> of <code>Any?</code> type can be provided and it&rsquo;s internally <strong><em>wrapped with a weak reference</em></strong>  to prevent retain cycles. The context is then optionally passed to the <code>timeOut</code> closure. </p></li>
 </ul>
-<h3 id='gist' class='heading'>Gist</h3>
-<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span> <span class="mf">1.0</span> <span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"updateUI"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">ctx</span><span class="p">)</span> <span class="k">in</span>
+<h2 id='practical-applications' class='heading'>Practical Applications</h2>
+<h3 id='debounce-scroll' class='heading'>Debounce Scroll</h3>
 
+<p>This example will ensure to update the UI only every second during user scroll. Additionally using <code>debounceLast</code> will ensure to apply the last call on timeOut. This will guarante the last event will be performed.  (You cn alsu use <code>debounce</code> for traditional debouncing.</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didScroll</span><span class="p">(){</span>
+    <span class="kt">Kron</span><span class="o">.</span><span class="nf">debounceLast</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="s">"scroll"</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">keu</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+        <span class="c1">//updateUI     </span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">context</span> <span class="o">=</span> <span class="err">'</span><span class="n">userTap</span><span class="err">'</span>
-<span class="kt">Kron</span><span class="o">.</span><span class="nf">debounce</span><span class="p">(</span> <span class="mf">1.0</span> <span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"updateUI"</span><span class="p">,</span> <span class="nv">ctx</span><span class="p">:</span> <span class="n">context</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">ctx</span><span class="p">)</span> <span class="k">in</span>
-     <span class="nf">print</span><span class="p">(</span><span class="n">ctx</span> <span class="k">as!</span> <span class="kt">String</span><span class="p">)</span> <span class="c1">// userTap</span>
+<h3 id='ensure-context' class='heading'>Ensure Context</h3>
+
+<p>This example will save a document only if the user hasn&rsquo;t typed in 5 seconds. In the timeOut closure we check that the <code><a href="Typealiases.html#/s:9kron_tvOS7KronKeya">KronKey</a></code> is equal to the currentDocumet otherwise we abort the save action.</p>
+<pre class="highlight swift"><code>
+<span class="k">var</span> <span class="nv">currentDocument</span><span class="p">:</span><span class="kt">NSObject</span><span class="p">;</span>
+
+<span class="kd">func</span> <span class="nf">textViewDidChange</span><span class="p">(){</span>
+    <span class="nf">autoSave</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">autoSave</span><span class="p">(){</span>
+    <span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">10.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="k">self</span><span class="o">.</span><span class="n">currentDocument</span><span class="p">){</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+
+        <span class="k">let</span> <span class="nv">aDocument</span> <span class="o">=</span> <span class="n">key</span> <span class="k">as?</span> <span class="kt">NSObject</span>
+        <span class="k">guard</span> <span class="n">aDocument</span> <span class="o">==</span> <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">currentDocument</span> <span class="k">else</span><span class="p">{</span>
+            <span class="k">return</span>
+        <span class="p">}</span>
+        <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="nf">saveNow</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">saveNow</span><span class="p">(){</span>
+  <span class="c1">//save only if current document is still active</span>
 <span class="p">}</span>
 </code></pre>
-<pre class="highlight swift"><code><span class="c1">//self.currentModel should be an AnyObject instance</span>
-<span class="kt">Kron</span><span class="o">.</span><span class="nf">watchdog</span><span class="p">(</span> <span class="mf">10.0</span> <span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="k">self</span><span class="o">.</span><span class="n">currentModel</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">ctx</span><span class="p">)</span> <span class="k">in</span>
+<h3 id='watchdog' class='heading'>Watchdog</h3>
 
+<p>The following example shows how to add a watchdog for different Api Requests.</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startApiRequest</span><span class="p">(</span><span class="n">_</span> <span class="nv">endPointURL</span><span class="p">:</span><span class="kt">String</span><span class="p">){</span>
+
+    <span class="k">let</span> <span class="nv">watchdogkey</span> <span class="o">=</span> <span class="s">"ApiRequest</span><span class="se">\(</span><span class="n">endPointURL</span><span class="se">)</span><span class="s">"</span>
+
+    <span class="kt">Kron</span><span class="o">.</span><span class="nf">watchDog</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">10.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="n">watchdogkey</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+        <span class="c1">// retry or something else?</span>
+        <span class="nf">assert</span><span class="p">(</span><span class="kc">false</span><span class="p">,</span> <span class="s">"print api is not responding!"</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kt">SomeClass</span><span class="o">.</span><span class="nf">loadApi</span><span class="p">(</span><span class="n">endPointURL</span><span class="p">){</span>
+
+        <span class="kt">Kron</span><span class="o">.</span><span class="nf">watchDogCancel</span><span class="p">(</span><span class="n">watchdogkey</span><span class="p">)</span>
+
+    <span class="p">}</span>
 <span class="p">}</span>
-
-<span class="c1">//somewhere else</span>
-<span class="kt">Kron</span><span class="o">.</span><span class="nf">watchdogCancel</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span><span class="k">self</span><span class="o">.</span><span class="n">currentModel</span><span class="p">)</span>
-
 </code></pre>
 <h2 id='documentation' class='heading'>Documentation</h2>
 
 <p>Self-generated documentation using jazzy and hosted in github available here:</p>
 
 <p><a href="https://eonfluxor.github.io/kron/">Documentation</a></p>
-<h2 id='cocoapods' class='heading'>CocoaPods</h2>
-
-<p>If you use [CocoaPods][] to manage your dependencies, simply add
-Kron to your <code>Podfile</code>:</p>
-<pre class="highlight plaintext"><code>pod 'Delayed', '~&gt; 2.2.2'
-</code></pre>
-
-<p>And then import the module</p>
-<pre class="highlight plaintext"><code>import Delayed
-</code></pre>
-<h2 id='more-examples' class='heading'>More Examples</h2>
+<h2 id='gists' class='heading'>Gists</h2>
 
 <p>Please review the test units for exhaustive implementation samples.</p>
 
@@ -155,7 +235,7 @@ Kron to your <code>Podfile</code>:</p>
 <ul>
 <li><strong>Idle Timer</strong></li>
 </ul>
-<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"keyStrokes"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">ctx</span><span class="p">)</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"keyStrokes"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
       <span class="nf">print</span><span class="p">(</span><span class="s">"performed after 1 second of inactivity"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
@@ -163,7 +243,7 @@ Kron to your <code>Podfile</code>:</p>
 <ul>
 <li><strong>Debouncer</strong></li>
 </ul>
-<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">debounce</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"Scroll"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">ctx</span><span class="p">)</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">debounce</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"Scroll"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
       <span class="nf">print</span><span class="p">(</span><span class="s">"performed immediately and again no sooner than 1 second"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
@@ -171,7 +251,7 @@ Kron to your <code>Podfile</code>:</p>
 <ul>
 <li><strong>Debouncer and perform last</strong></li>
 </ul>
-<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">debounceLast</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"Scroll"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">ctx</span><span class="p">)</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">debounceLast</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"Scroll"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
       <span class="nf">print</span><span class="p">(</span><span class="s">"performed immediately and again no sooner than 1 second"</span><span class="p">)</span>
       <span class="nf">print</span><span class="p">(</span><span class="s">"also performs the last call after 1 second of inactivity"</span><span class="p">)</span>
 <span class="p">}</span>
@@ -180,7 +260,7 @@ Kron to your <code>Podfile</code>:</p>
 <ul>
 <li><strong>Watchdog</strong></li>
 </ul>
-<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">watchdog</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"ApiResponse"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">ctx</span><span class="p">)</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">watchdog</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">10.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"ApiResponse"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
       <span class="nf">print</span><span class="p">(</span><span class="s">"performed  after 10 seconds unless canceled"</span><span class="p">)</span>
 
 <span class="p">}</span>

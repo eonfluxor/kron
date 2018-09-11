@@ -87,70 +87,103 @@
           <div class="section-content">
             
             <h2 id='examples' class='heading'>Examples</h2>
+<h3 id='debounce-scroll' class='heading'>Debounce Scroll</h3>
+
+<p>This example will ensure to update the UI only every second during user scroll. Additionally using <code>debounceLast</code> will ensure to apply the last call on timeOut. This will guarante the last event will be performed.  (You cn alsu use <code>debounce</code> for traditional debouncing.</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didScroll</span><span class="p">(){</span>
+    <span class="kt">Kron</span><span class="o">.</span><span class="nf">debounceLast</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="s">"scroll"</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">keu</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+        <span class="c1">//updateUI     </span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='ensure-context' class='heading'>Ensure Context</h3>
+
+<p>This example will save a document only if the user hasn&rsquo;t typed in 5 seconds. In the timeOut closure we check that the <code><a href="Typealiases.html#/s:9kron_tvOS7KronKeya">KronKey</a></code> is equal to the currentDocumet otherwise we abort the save action.</p>
+<pre class="highlight swift"><code>
+<span class="k">var</span> <span class="nv">currentDocument</span><span class="p">:</span><span class="kt">NSObject</span><span class="p">;</span>
+
+<span class="kd">func</span> <span class="nf">textViewDidChange</span><span class="p">(){</span>
+    <span class="nf">autoSave</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">autoSave</span><span class="p">(){</span>
+    <span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">10.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="k">self</span><span class="o">.</span><span class="n">currentDocument</span><span class="p">){</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+
+        <span class="k">let</span> <span class="nv">aDocument</span> <span class="o">=</span> <span class="n">key</span> <span class="k">as?</span> <span class="kt">NSObject</span>
+        <span class="k">guard</span> <span class="n">aDocument</span> <span class="o">==</span> <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">currentDocument</span> <span class="k">else</span><span class="p">{</span>
+            <span class="k">return</span>
+        <span class="p">}</span>
+        <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="nf">saveNow</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">saveNow</span><span class="p">(){</span>
+  <span class="c1">//save only if current document is still active</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='watchdog' class='heading'>Watchdog</h3>
+
+<p>The following example shows how to add a watchdog for different Api Requests.</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startApiRequest</span><span class="p">(</span><span class="n">_</span> <span class="nv">endPointURL</span><span class="p">:</span><span class="kt">String</span><span class="p">){</span>
+
+    <span class="k">let</span> <span class="nv">watchdogkey</span> <span class="o">=</span> <span class="s">"ApiRequest</span><span class="se">\(</span><span class="n">endPointURL</span><span class="se">)</span><span class="s">"</span>
+
+    <span class="kt">Kron</span><span class="o">.</span><span class="nf">watchDog</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">10.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="n">watchdogkey</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+        <span class="c1">// retry or something else?</span>
+        <span class="nf">assert</span><span class="p">(</span><span class="kc">false</span><span class="p">,</span> <span class="s">"print api is not responding!"</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kt">SomeClass</span><span class="o">.</span><span class="nf">loadApi</span><span class="p">(</span><span class="n">endPointURL</span><span class="p">){</span>
+
+        <span class="kt">Kron</span><span class="o">.</span><span class="nf">watchDogCancel</span><span class="p">(</span><span class="n">watchdogkey</span><span class="p">)</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='gists' class='heading'>Gists</h2>
 
 <p>Please review the test units for exhaustive implementation samples.</p>
 
-<p>In all instances the timer will be reset by simply calling Kron with the same key. (See below <code>Static vs Instance</code> to learn more about the Static keyspace).
-Kron</p>
+<p>In all instances the timer will be reset by simply calling Kron with the same key. (See below <code>Static vs Instance</code> to learn more about the Static keyspace).</p>
 
-<ol>
+<ul>
 <li><strong>Idle Timer</strong></li>
-</ol>
-<pre class="highlight plaintext"><code>Kron.idle(1, key:"keyStrokes"){ (key,ctx) in
-      print("performed after 1 second of inactivity")
-}
+</ul>
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"keyStrokes"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+      <span class="nf">print</span><span class="p">(</span><span class="s">"performed after 1 second of inactivity"</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre>
 
-<ol>
+<ul>
 <li><strong>Debouncer</strong></li>
-</ol>
-<pre class="highlight plaintext"><code>Kron.debounce(1, key:"Scroll"){ (key,ctx) in
-      print("performed immediately and again no sooner than 1 second")
-}
+</ul>
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">debounce</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"Scroll"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+      <span class="nf">print</span><span class="p">(</span><span class="s">"performed immediately and again no sooner than 1 second"</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre>
 
-<ol>
+<ul>
 <li><strong>Debouncer and perform last</strong></li>
-</ol>
-<pre class="highlight plaintext"><code>Kron.debounceLast(1, key:"Scroll"){ (key,ctx) in
-      print("performed immediately and again no sooner than 1 second")
-      print("also performs the last call after 1 second of inactivity")
-}
+</ul>
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">debounceLast</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"Scroll"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+      <span class="nf">print</span><span class="p">(</span><span class="s">"performed immediately and again no sooner than 1 second"</span><span class="p">)</span>
+      <span class="nf">print</span><span class="p">(</span><span class="s">"also performs the last call after 1 second of inactivity"</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre>
 
-<ol>
+<ul>
 <li><strong>Watchdog</strong></li>
-</ol>
-<pre class="highlight plaintext"><code>Kron.watchDog(10, key:"ApiResponse"){ (key,ctx) in
-      print("performed  after 10 seconds unless canceled")
+</ul>
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">watchdog</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">10.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"ApiResponse"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+      <span class="nf">print</span><span class="p">(</span><span class="s">"performed  after 10 seconds unless canceled"</span><span class="p">)</span>
 
-}
+<span class="p">}</span>
 
-...
+<span class="o">...</span>
 
-// Called somewhere else to abort the timeOut
-Kron.watchDogCancel("ApiResponse")
+<span class="c1">// Called somewhere else to abort the timeOut</span>
+<span class="kt">Kron</span><span class="o">.</span><span class="nf">watchdogCancel</span><span class="p">(</span><span class="s">"ApiResponse"</span><span class="p">)</span>
 
-</code></pre>
-<h3 id='satic-vs-instance' class='heading'>Satic vs Instance</h3>
-
-<p>You can use the provided static functions. Internally <strong>Kron</strong> manages 4 singletons to prevent key collisions between the different modes:</p>
-<pre class="highlight plaintext"><code>//Debouncer
-Kron.debounce
-
-//Debouncing Last
-Kron.debounceLast
-
-//Idle
-Kron.idle
-
-//Watchdog
-Kron.watchdog
-</code></pre>
-
-<p>Optionally you can instantiate <strong>Kron</strong> to manage your own keyspace in that given intance.</p>
-<pre class="highlight plaintext"><code>let myKron = Kron()
-myKron( ...
 </code></pre>
 
           </div>
