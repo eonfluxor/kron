@@ -107,7 +107,7 @@ func didScroll(){
 }
 ```
 
-### Ensure Context
+### Idleand Ensure Context
 
 This example will save a document only if the user hasn't typed in 5 seconds. In the timeOut closure we check that the `KronKey` is equal to the currentDocumet otherwise we abort the save action.
 
