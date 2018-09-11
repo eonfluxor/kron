@@ -24,6 +24,7 @@ env:
 before_script:
 - cd Kron
 - gem install cocoapods
+- pod repo update
 - pod install
 script:
 - set -o pipefail
