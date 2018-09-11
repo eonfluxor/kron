@@ -32,20 +32,20 @@
 
 ### Gist
 
-```
+```swift
 Kron.idle( 1.0 , key:"updateUI"){ (key,ctx) in
      
 }
 ```
 
-```
+```swift
 let context = 'userTap'
 Kron.debounce( 1.0 , key:"updateUI", ctx: context){ (key,ctx) in
      print(ctx as! String) // userTap
 }
 ```
 
-```
+```swift
 //self.currentModel should be an AnyObject instance
 Kron.watchdog( 10.0 , key:self.currentModel){ (key,ctx) in
            
@@ -87,7 +87,7 @@ In all instances the timer will be reset by simply calling Kron with the same ke
 * **Idle Timer**
 
 
-```
+```swift
 Kron.idle(1, key:"keyStrokes"){ (key,ctx) in
       print("performed after 1 second of inactivity")
 }
@@ -95,7 +95,7 @@ Kron.idle(1, key:"keyStrokes"){ (key,ctx) in
 
 * **Debouncer**
 
-```
+```swift
 Kron.debounce(1, key:"Scroll"){ (key,ctx) in
       print("performed immediately and again no sooner than 1 second")
 }
@@ -103,7 +103,7 @@ Kron.debounce(1, key:"Scroll"){ (key,ctx) in
 
 * **Debouncer and perform last**
 
-```
+```swift
 Kron.debounceLast(1, key:"Scroll"){ (key,ctx) in
       print("performed immediately and again no sooner than 1 second")
       print("also performs the last call after 1 second of inactivity")
@@ -112,7 +112,7 @@ Kron.debounceLast(1, key:"Scroll"){ (key,ctx) in
 
 * **Watchdog**
 
-```
+```swift
 Kron.watchdog(10, key:"ApiResponse"){ (key,ctx) in
       print("performed  after 10 seconds unless canceled")
 
@@ -145,7 +145,7 @@ Kron.watchdog
 
 Optionally you can instantiate **Kron** to manage your own keyspace in that given intance.
 
-```
+```swift
 let myKron = Kron()
 myKron( ...
 ```
