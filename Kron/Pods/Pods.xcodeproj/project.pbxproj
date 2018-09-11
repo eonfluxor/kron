@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -64,13 +64,14 @@
 		1D089A2D86F370153B2729A0EBD1094B /* Pods-kron-macOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-kron-macOSTests-resources.sh"; sourceTree = "<group>"; };
 		20267156B1F334343E626954ED0F65C1 /* Pods-kron-macOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-kron-macOSTests-umbrella.h"; sourceTree = "<group>"; };
 		23492457C0652E5410EAE22E68E7AC84 /* Pods-kron-iOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-kron-iOSTests-resources.sh"; sourceTree = "<group>"; };
+		2622A52F2148524C003F4C38 /* Kron.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Kron.playground; path = ../Kron.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2780A04B4FA8297487E74ACCB8C7E77F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BC1F04DF62AC45CA58D9B8F3B59A736 /* Pods-kron-iOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-kron-iOSTests-frameworks.sh"; sourceTree = "<group>"; };
 		2E6B14D42F93986FE51A6068E64727E4 /* Pods-kron-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-kron-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		2F1B0534B6F5C5F7091E5CEF1BA13171 /* Pods-kron-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kron-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		35894F87D636EE1438F519B598BAA9B1 /* Pods-kron-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kron-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		359F827ED6EC2F5041EB7CCCD952640C /* Pods_kron_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_kron_iOS.framework; path = "Pods-kron-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		38C430342C2852F62B48B9C3E9DC1D20 /* Pods_kron_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_kron_iOSTests.framework; path = "Pods-kron-iOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		359F827ED6EC2F5041EB7CCCD952640C /* Pods_kron_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kron_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38C430342C2852F62B48B9C3E9DC1D20 /* Pods_kron_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kron_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEBFEEAB0EFD24C1CC2E6940A124741 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		429961E3A75141B2658A6B75F13B698E /* Pods-kron-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-kron-tvOS-resources.sh"; sourceTree = "<group>"; };
 		431D334C455E16522AD0E41506C7B4D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -90,7 +91,7 @@
 		850C1314A48EAD3AB956274FEF60F096 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D4BEAEE60383927CB1B2769591AFDF3 /* Pods-kron-macOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-kron-macOSTests-frameworks.sh"; sourceTree = "<group>"; };
 		8DA2551DD291339B90EFD25AEB2C617D /* Pods-kron-iOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-kron-iOSTests-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9522C42CD05700AC6CE084C10979C6B9 /* Pods-kron-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kron-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		976006078776DDA73E8FCDB58ADB63D3 /* Pods-kron-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-kron-iOS-resources.sh"; sourceTree = "<group>"; };
 		9CC71FA989833DAEB2044B4D114E32A7 /* Pods-kron-iOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-kron-iOSTests-umbrella.h"; sourceTree = "<group>"; };
@@ -100,14 +101,14 @@
 		A5106E7ADA83B25845786713476E78F0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A86B0BD055E25C4443A7C9ECB136D8D6 /* Pods-kron-macOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-kron-macOSTests.modulemap"; sourceTree = "<group>"; };
 		ACD4A34FBA7E4E130376A129E7EC4780 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2041632E285AB8D155C0A53DD997034 /* Pods_kron_tvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_kron_tvOSTests.framework; path = "Pods-kron-tvOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2041632E285AB8D155C0A53DD997034 /* Pods_kron_tvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kron_tvOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B25E41BE01E46E6A89B6BF00E381A822 /* Pods-kron-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-kron-macOS-dummy.m"; sourceTree = "<group>"; };
 		B294FFDBE3AF0D52071C17BF4D4539D0 /* Pods-kron-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kron-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		B7EC40F1E100BB55A63BA8DF2CA87EA2 /* Pods-kron-tvOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-kron-tvOSTests.modulemap"; sourceTree = "<group>"; };
 		B9639C10B7409D9B9D1EF14824CC8D5F /* Pods-kron-macOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kron-macOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BAC825B91F647893982B0E75A2EAD052 /* Pods-kron-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-kron-iOS-umbrella.h"; sourceTree = "<group>"; };
 		BDDC1566A7C792477E9196890F24883D /* Pods-kron-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-kron-tvOS-umbrella.h"; sourceTree = "<group>"; };
-		BE7BE7D6114BDE660E7D1414D18F1326 /* Pods_kron_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_kron_tvOS.framework; path = "Pods-kron-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE7BE7D6114BDE660E7D1414D18F1326 /* Pods_kron_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kron_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE45942494897F9F8944E36DAA37D9D5 /* Pods-kron-tvOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-kron-tvOSTests-resources.sh"; sourceTree = "<group>"; };
 		D367A844222A958F12F249B8A08BCA8A /* Pods-kron-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-kron-iOS-dummy.m"; sourceTree = "<group>"; };
 		D9E5C544C05C2B732CDC18F8E47BD13D /* Pods-kron-iOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-kron-iOSTests.modulemap"; sourceTree = "<group>"; };
@@ -116,9 +117,9 @@
 		E6A2D7C0B25F0E871D05F85AF934334F /* Pods-kron-tvOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-kron-tvOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E82CDB2BCD2122789B102E358C8D98B8 /* Pods-kron-macOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kron-macOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		EAD53C1B4FFF24C4878BAE98A9BEFFDE /* Pods-kron-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kron-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		EC862D70C85AE6F5D9A7A72FCEA75A68 /* Pods_kron_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_kron_macOS.framework; path = "Pods-kron-macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC862D70C85AE6F5D9A7A72FCEA75A68 /* Pods_kron_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kron_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F080A7B4403C2B37BD0C8314296B60C0 /* Pods-kron-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-kron-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		F1B9317C35017C7728E07A0F00E7BE83 /* Pods_kron_macOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_kron_macOSTests.framework; path = "Pods-kron-macOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1B9317C35017C7728E07A0F00E7BE83 /* Pods_kron_macOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kron_macOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +278,7 @@
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
+				2622A52F2148524C003F4C38 /* Kron.playground */,
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				E9474CE87C6AA9A851AEC24006206CAA /* Frameworks */,
 				7BAAF50CDF459EF4699E371059A5552E /* Products */,
@@ -681,11 +683,7 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Target Support Files/Pods-kron-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MODULEMAP_FILE = "Target Support Files/Pods-kron-macOS/Pods-kron-macOS.modulemap";
@@ -781,11 +779,7 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Target Support Files/Pods-kron-macOSTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MODULEMAP_FILE = "Target Support Files/Pods-kron-macOSTests/Pods-kron-macOSTests.modulemap";
@@ -819,11 +813,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-kron-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-kron-iOS/Pods-kron-iOS.modulemap";
 				OTHER_LDFLAGS = "";
@@ -857,11 +847,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-kron-iOSTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-kron-iOSTests/Pods-kron-iOSTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -893,11 +879,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-kron-tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-kron-tvOS/Pods-kron-tvOS.modulemap";
 				OTHER_LDFLAGS = "";
@@ -998,11 +980,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-kron-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-kron-iOS/Pods-kron-iOS.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1038,11 +1016,7 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Target Support Files/Pods-kron-macOSTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MODULEMAP_FILE = "Target Support Files/Pods-kron-macOSTests/Pods-kron-macOSTests.modulemap";
@@ -1074,11 +1048,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-kron-tvOSTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-kron-tvOSTests/Pods-kron-tvOSTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1112,11 +1082,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-kron-tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-kron-tvOS/Pods-kron-tvOS.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1150,11 +1116,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-kron-tvOSTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-kron-tvOSTests/Pods-kron-tvOSTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1189,11 +1151,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-kron-iOSTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-kron-iOSTests/Pods-kron-iOSTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1229,11 +1187,7 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Target Support Files/Pods-kron-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MODULEMAP_FILE = "Target Support Files/Pods-kron-macOS/Pods-kron-macOS.modulemap";

@@ -18,57 +18,13 @@
 1. `Kron.idle`: Performs the last call after not being called during the timeout interval
 1. `Kron.watchdog`: As `idle` but allowing to be canceled with `watchDogCancel`
 
-### Why Kron?
-
-
-* Instead of returning a timer object, **Kron** manages the Timer instances internally through a [`KronKey` : `Timer`]  dictionary. This makes easy to call **Kron** from distant components or threads accesing the timers by their key value.
-
-
-* The `KronKey` can be etiher a `String` struct or `AnyObject` instance.  If an object is passed the key is inferred from the object's pointer. Calling the methods with the same key causes all timer modes to be reset.
-
-
-* As the intention is to facilitate calling **Kron** from distant implementations you can optional pass a context value `ctx`. A context can be `Any` struct or class instance and it's internally ***wrapped with a weak reference***  to prevent retain cycles. The context is then optionally passed to the timeOut closure.
-
-
-### Gist
-
-```swift
-Kron.idle( 1.0 , key:"updateUI"){ (key,ctx) in
-     
-}
-```
-
-```swift
-let context = 'userTap'
-Kron.debounce( 1.0 , key:"updateUI", ctx: context){ (key,ctx) in
-     print(ctx as! String) // userTap
-}
-```
-
-```swift
-//self.currentModel should be an AnyObject instance
-Kron.watchdog( 10.0 , key:self.currentModel){ (key,ctx) in
-           
-}
-
-//somewhere else
-Kron.watchdogCancel(key:self.currentModel)
-
-```
-
-## Documentation
-
-Self-generated documentation using jazzy and hosted in github available here:
-
-[Documentation](https://eonfluxor.github.io/kron/)
-
 ## CocoaPods
 
-If you use [CocoaPods][] to manage your dependencies, simply add
+If you use `CocoaPods` to manage your dependencies, simply add
 Kron to your `Podfile`:
 
 ```
-pod 'Delayed', '~> 2.2.2'
+pod 'Delayed', '> 2.2.2'
 ```
 
 And then import the module
@@ -76,9 +32,143 @@ And then import the module
 ```
 import Delayed
 ```
+
+
+### Why Kron?
+
+
+Creating a Timer requires a setup similar to this:
+
+```swift
+
+class SomeClass{
+    var timer:Timer?
+    
+    /// create timer
+    func createTimer(){
+        assert( timer == nil, "Please call cancelTimer first" )
+        
+        timer = Timer(timeInterval: TimeInterval(1.0), target: self, selector: #selector(timerTick), userInfo: nil, repeats: false)
+        RunLoop.main.add(timer!, forMode: .commonModes)
+    }
+    
+    // cancel timer
+    func cancelTimer(){
+        if let aTimer = timer {
+            aTimer.invalidate()
+        }
+        
+        timer = nil
+    }
+    
+    // restart timer
+    func restartTimer(){
+        cancelTimer()
+        createTimer()
+    }
+    
+    /// handle callback
+    @objc func timerTick(_ timer:Timer){
+        timer.invalidate()
+        //Do something
+    }
+}
+```
+
+### What about doing this in one line?
+
+Kron takes care of all this setup by internally managing a map of Timers that can be accesed through a key. Calling again with the same key would cause the timer to be reset.
+
+```swift
+Kron.idle(timeOut:1.0, key:"updateUI"){ (key,context) in
+     
+}
+```
+
+So the main difference are
+
+* Instead of returning a `Timer` instance, **Kron** manages the Timers internally through a [`KronKey` : `Timer`]  dictionary. This makes easy to call **Kron** from distant components or threads accesing the timers by their key value and in a single line.
+
+* The `KronKey` can be etiher a `String` struct or `AnyObject` instance.  If an object is passed the key is inferred from the object's pointer. Calling the methods with the same key causes all timer modes to be reset.
+
+* An optional `context` of `Any?` type can be provided and it's internally ***wrapped with a weak reference***  to prevent retain cycles. The context is then optionally passed to the `timeOut` closure. 
+       
+## Practical Applications
+
+### Debounce Scroll
+
+This example will ensure to update the UI only every second during user scroll. Additionally using `debounceLast` will ensure to apply the last call on timeOut. This will guarante the last event will be performed.  (You cn alsu use `debounce` for traditional debouncing.
+
+```swift
+func didScroll(){
+	Kron.debounceLast(timeOut: 1, key: "scroll") { (keu, context) in
+   		//updateUI     
+	}
+}
+```
+
+### Ensure Context
+
+This example will save a document only if the user hasn't typed in 5 seconds. In the timeOut closure we check that the `KronKey` is equal to the currentDocumet otherwise we abort the save action.
+
+
+```swift
+
+var currentDocument:NSObject;
+
+func textViewDidChange(){
+	autoSave()
+}
+
+func autoSave(){
+    Kron.idle(timeOut:10.0, key:self.currentDocument){ [weak self] (key,context) in
+          
+        let aDocument = key as? NSObject
+        guard aDocument == self?.currentDocument else{
+            return
+        }
+        self?.saveNow()
+    }
+}
+
+func saveNow(){
+  //save only if current document is still active
+}
+```
+
+### Watchdog
+
+The following example shows how to add a watchdog for different Api Requests.
+
+
+```swift
+func startApiRequest(_ endPointURL:String){
+    
+    let watchdogkey = "ApiRequest\(endPointURL)"
+    
+    Kron.watchDog(timeOut:10.0, key:watchdogkey){ (key,context) in
+        // retry or something else?
+        assert(false, "print api is not responding!")
+    }
+    
+    SomeClass.loadApi(endPointURL){
+        
+        Kron.watchDogCancel(watchdogkey)
+        
+    }
+}
+```
+
+
+## Documentation
+
+Self-generated documentation using jazzy and hosted in github available here:
+
+[Documentation](https://eonfluxor.github.io/kron/)
+
    
    
-## More Examples
+## Gists
 
 Please review the test units for exhaustive implementation samples.
 
@@ -88,7 +178,7 @@ In all instances the timer will be reset by simply calling Kron with the same ke
 
 
 ```swift
-Kron.idle(1, key:"keyStrokes"){ (key,ctx) in
+Kron.idle(timeOut:1.0, key:"keyStrokes"){ (key,context) in
       print("performed after 1 second of inactivity")
 }
 ```
@@ -96,7 +186,7 @@ Kron.idle(1, key:"keyStrokes"){ (key,ctx) in
 * **Debouncer**
 
 ```swift
-Kron.debounce(1, key:"Scroll"){ (key,ctx) in
+Kron.debounce(timeOut:1.0, key:"Scroll"){ (key,context) in
       print("performed immediately and again no sooner than 1 second")
 }
 ```
@@ -104,7 +194,7 @@ Kron.debounce(1, key:"Scroll"){ (key,ctx) in
 * **Debouncer and perform last**
 
 ```swift
-Kron.debounceLast(1, key:"Scroll"){ (key,ctx) in
+Kron.debounceLast(timeOut:1.0, key:"Scroll"){ (key,context) in
       print("performed immediately and again no sooner than 1 second")
       print("also performs the last call after 1 second of inactivity")
 }
@@ -113,7 +203,7 @@ Kron.debounceLast(1, key:"Scroll"){ (key,ctx) in
 * **Watchdog**
 
 ```swift
-Kron.watchdog(10, key:"ApiResponse"){ (key,ctx) in
+Kron.watchdog(timeOut:10.0, key:"ApiResponse"){ (key,context) in
       print("performed  after 10 seconds unless canceled")
 
 }
