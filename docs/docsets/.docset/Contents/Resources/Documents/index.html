@@ -113,22 +113,22 @@
 <li><p>As the intention is to facilitate calling <strong>Kron</strong> from distant implementations you can optional pass a context value <code>ctx</code>. A context can be <code>Any</code> struct or class instance and it&rsquo;s internally <strong><em>wrapped with a weak reference</em></strong>  to prevent retain cycles. The context is then optionally passed to the timeOut closure.</p></li>
 </ul>
 <h3 id='gist' class='heading'>Gist</h3>
-<pre class="highlight plaintext"><code>Kron.idle( 1.0 , key:"updateUI"){ (key,ctx) in
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span> <span class="mf">1.0</span> <span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"updateUI"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">ctx</span><span class="p">)</span> <span class="k">in</span>
 
-}
+<span class="p">}</span>
 </code></pre>
-<pre class="highlight plaintext"><code>let context = 'userTap'
-Kron.debounce( 1.0 , key:"updateUI", ctx: context){ (key,ctx) in
-     print(ctx as! String) // userTap
-}
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">context</span> <span class="o">=</span> <span class="err">'</span><span class="n">userTap</span><span class="err">'</span>
+<span class="kt">Kron</span><span class="o">.</span><span class="nf">debounce</span><span class="p">(</span> <span class="mf">1.0</span> <span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"updateUI"</span><span class="p">,</span> <span class="nv">ctx</span><span class="p">:</span> <span class="n">context</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">ctx</span><span class="p">)</span> <span class="k">in</span>
+     <span class="nf">print</span><span class="p">(</span><span class="n">ctx</span> <span class="k">as!</span> <span class="kt">String</span><span class="p">)</span> <span class="c1">// userTap</span>
+<span class="p">}</span>
 </code></pre>
-<pre class="highlight plaintext"><code>//self.currentModel should be an AnyObject instance
-Kron.watchdog( 10.0 , key:self.currentModel){ (key,ctx) in
+<pre class="highlight swift"><code><span class="c1">//self.currentModel should be an AnyObject instance</span>
+<span class="kt">Kron</span><span class="o">.</span><span class="nf">watchdog</span><span class="p">(</span> <span class="mf">10.0</span> <span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="k">self</span><span class="o">.</span><span class="n">currentModel</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">ctx</span><span class="p">)</span> <span class="k">in</span>
 
-}
+<span class="p">}</span>
 
-//somewhere else
-Kron.watchdogCancel(key:self.currentModel)
+<span class="c1">//somewhere else</span>
+<span class="kt">Kron</span><span class="o">.</span><span class="nf">watchdogCancel</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span><span class="k">self</span><span class="o">.</span><span class="n">currentModel</span><span class="p">)</span>
 
 </code></pre>
 <h2 id='documentation' class='heading'>Documentation</h2>
@@ -155,40 +155,40 @@ Kron to your <code>Podfile</code>:</p>
 <ul>
 <li><strong>Idle Timer</strong></li>
 </ul>
-<pre class="highlight plaintext"><code>Kron.idle(1, key:"keyStrokes"){ (key,ctx) in
-      print("performed after 1 second of inactivity")
-}
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"keyStrokes"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">ctx</span><span class="p">)</span> <span class="k">in</span>
+      <span class="nf">print</span><span class="p">(</span><span class="s">"performed after 1 second of inactivity"</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre>
 
 <ul>
 <li><strong>Debouncer</strong></li>
 </ul>
-<pre class="highlight plaintext"><code>Kron.debounce(1, key:"Scroll"){ (key,ctx) in
-      print("performed immediately and again no sooner than 1 second")
-}
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">debounce</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"Scroll"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">ctx</span><span class="p">)</span> <span class="k">in</span>
+      <span class="nf">print</span><span class="p">(</span><span class="s">"performed immediately and again no sooner than 1 second"</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre>
 
 <ul>
 <li><strong>Debouncer and perform last</strong></li>
 </ul>
-<pre class="highlight plaintext"><code>Kron.debounceLast(1, key:"Scroll"){ (key,ctx) in
-      print("performed immediately and again no sooner than 1 second")
-      print("also performs the last call after 1 second of inactivity")
-}
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">debounceLast</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"Scroll"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">ctx</span><span class="p">)</span> <span class="k">in</span>
+      <span class="nf">print</span><span class="p">(</span><span class="s">"performed immediately and again no sooner than 1 second"</span><span class="p">)</span>
+      <span class="nf">print</span><span class="p">(</span><span class="s">"also performs the last call after 1 second of inactivity"</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre>
 
 <ul>
 <li><strong>Watchdog</strong></li>
 </ul>
-<pre class="highlight plaintext"><code>Kron.watchdog(10, key:"ApiResponse"){ (key,ctx) in
-      print("performed  after 10 seconds unless canceled")
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">watchdog</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"ApiResponse"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">ctx</span><span class="p">)</span> <span class="k">in</span>
+      <span class="nf">print</span><span class="p">(</span><span class="s">"performed  after 10 seconds unless canceled"</span><span class="p">)</span>
 
-}
+<span class="p">}</span>
 
-...
+<span class="o">...</span>
 
-// Called somewhere else to abort the timeOut
-Kron.watchdogCancel("ApiResponse")
+<span class="c1">// Called somewhere else to abort the timeOut</span>
+<span class="kt">Kron</span><span class="o">.</span><span class="nf">watchdogCancel</span><span class="p">(</span><span class="s">"ApiResponse"</span><span class="p">)</span>
 
 </code></pre>
 <h3 id='satic-vs-instance' class='heading'>Satic vs Instance</h3>
@@ -208,8 +208,8 @@ Kron.watchdog
 </code></pre>
 
 <p>Optionally you can instantiate <strong>Kron</strong> to manage your own keyspace in that given intance.</p>
-<pre class="highlight plaintext"><code>let myKron = Kron()
-myKron( ...
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">myKron</span> <span class="o">=</span> <span class="kt">Kron</span><span class="p">()</span>
+<span class="nf">myKron</span><span class="p">(</span> <span class="o">...</span>
 </code></pre>
 <h2 id='have-a-question' class='heading'>Have a question?</h2>
 
@@ -229,7 +229,7 @@ myKron( ...
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://eonflux.io/" target="_blank" rel="external">Eonflux - Hassan Uriostegui</a>. All rights reserved. (Last updated: 2018-09-10)</p>
+      <p>&copy; 2018 <a class="link" href="https://eonflux.io/" target="_blank" rel="external">Eonflux - Hassan Uriostegui</a>. All rights reserved. (Last updated: 2018-09-11)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
