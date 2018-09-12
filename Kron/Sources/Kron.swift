@@ -118,7 +118,7 @@ public class Kron: NSObject {
     
     @objc func timerTick(_ timer:Timer){
         
-        timer.invalidate()
+       
         // TODO: sync this with self
         
         let job = timer.userInfo! as! KronJob
