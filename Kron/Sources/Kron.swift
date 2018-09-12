@@ -140,17 +140,14 @@ public class Kron: NSObject {
     func cancelTimer(_ aKey:KronKey)->Bool{
         
         var result = true
-        
-        var aTimer = self.takeTimer(aKey)
+        let aTimer = self.takeTimer(aKey)
         
         if let timer = aTimer {
-            timer.invalidate()
+            autoreleasepool{
+                timer.invalidate()
+            }
         }else{
             result = false
-        }
-        
-        autoreleasepool{
-            aTimer = nil
         }
         
         return result
