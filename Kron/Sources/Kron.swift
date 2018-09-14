@@ -81,10 +81,10 @@ public class Kron: NSObject {
     //MARK: - Core
     
     func _timer(_ aKey:KronKey,
-                            timeOut interval:Double,
-                            mode:KronMode,
-                            context:Any?,
-                            anAction:@escaping KronClosure){
+                timeOut interval:Double,
+                mode:KronMode,
+                context:Any?,
+                anAction:@escaping KronClosure){
         
         
         let key = self.key(aKey)

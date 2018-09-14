@@ -33,13 +33,13 @@ extension Kron{
     ///   - action: closure called on timeout
     public static func debounceLast(
         timeOut interval:Double,
-        key aKey:KronKey,
+        resetKey aKey:KronKey,
         context:Any? = nil,
         action:@escaping KronClosure){
         
         debounceLastTimer.debounceLast(
             timeOut: interval,
-            key: aKey,
+            resetKey: aKey,
             context: context,
             action: action)
     }
@@ -55,13 +55,13 @@ extension Kron{
     ///   - action: closure called on timeout
     public static func debounce(
         timeOut interval:Double,
-        key aKey:KronKey,
+        resetKey aKey:KronKey,
         context:Any? = nil,
         action:@escaping KronClosure){
         
         debounceTimer.debounce(
             timeOut: interval,
-            key: aKey,
+            resetKey: aKey,
             context: context,
             action)
         
@@ -85,13 +85,13 @@ extension Kron {
     ///   - action: closure called on timeout
     public static func watchDog(
         timeOut interval:Double,
-        key aKey:KronKey,
+        resetKey aKey:KronKey,
         context:Any? = nil,
         action:@escaping KronClosure){
         
         watchdogTimer.watchDog(
             timeOut: interval,
-            key: aKey,
+            resetKey: aKey,
             context: context,
             action)
     }
@@ -119,13 +119,13 @@ extension Kron{
     ///   - action: closure called on timeout
     public static func idle(
         timeOut interval:Double,
-        key aKey:KronKey,
+        resetKey aKey:KronKey,
         context:Any? = nil,
         action:@escaping KronClosure){
         
         idleTimer.idle(
             timeOut: interval,
-            key: aKey,
+            resetKey: aKey,
             context: context,
             action)
     }
@@ -147,7 +147,7 @@ extension Kron{
     ///   - action: closure called on timeout
     public func debounceLast(
         timeOut interval:Double,
-        key aKey:KronKey,
+        resetKey aKey:KronKey,
         context:Any? = nil,
         action:@escaping KronClosure){
         
@@ -156,12 +156,12 @@ extension Kron{
         let idleKey = "idle.\(key)"
         
         debounce(timeOut: interval,
-                 key:debounceKey,
+                 resetKey:debounceKey,
                  context:context,
                  action)
         
         idle(timeOut: interval,
-             key:idleKey,
+             resetKey:idleKey,
              context:context,
              action)
     }
@@ -178,7 +178,7 @@ extension Kron{
     ///   - action: closure called on timeout
     public func debounce(
         timeOut interval:Double,
-        key aKey:KronKey,
+        resetKey aKey:KronKey,
         context:Any? = nil,
         _ action:@escaping KronClosure){
         
@@ -207,7 +207,7 @@ extension Kron{
     ///   - action: closure called on timeout
     public func watchDog(
         timeOut interval:Double,
-        key aKey:KronKey,
+        resetKey aKey:KronKey,
         context:Any? = nil,
         _ action:@escaping KronClosure){
         
@@ -242,7 +242,7 @@ extension Kron{
     ///   - action: closure called on timeout
     public func idle(
         timeOut interval:Double,
-        key aKey:KronKey,
+        resetKey aKey:KronKey,
         context:Any? = nil,
         _ action:@escaping KronClosure){
         
