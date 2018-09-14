@@ -91,7 +91,7 @@
 
 <p>This example will ensure to update the UI only every second during user scroll. Additionally using <code>debounceLast</code> will ensure to apply the last call on timeOut. This will guarante the last event will be performed.  (You cn alsu use <code>debounce</code> for traditional debouncing.</p>
 <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didScroll</span><span class="p">(){</span>
-    <span class="kt">Kron</span><span class="o">.</span><span class="nf">debounceLast</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="s">"scroll"</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">keu</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+    <span class="kt">Kron</span><span class="o">.</span><span class="nf">debounceLast</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">resetKey</span><span class="p">:</span> <span class="s">"scroll"</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">keu</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span> <span class="k">in</span>
         <span class="c1">//updateUI     </span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -107,7 +107,7 @@
 <span class="p">}</span>
 
 <span class="kd">func</span> <span class="nf">autoSave</span><span class="p">(){</span>
-    <span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">10.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="k">self</span><span class="o">.</span><span class="n">currentDocument</span><span class="p">){</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+    <span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">10.0</span><span class="p">,</span> <span class="nv">resetKey</span><span class="p">:</span><span class="k">self</span><span class="o">.</span><span class="n">currentDocument</span><span class="p">){</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
 
         <span class="k">let</span> <span class="nv">aDocument</span> <span class="o">=</span> <span class="n">key</span> <span class="k">as?</span> <span class="kt">NSObject</span>
         <span class="k">guard</span> <span class="n">aDocument</span> <span class="o">==</span> <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">currentDocument</span> <span class="k">else</span><span class="p">{</span>
@@ -128,7 +128,7 @@
 
     <span class="k">let</span> <span class="nv">watchdogkey</span> <span class="o">=</span> <span class="s">"ApiRequest</span><span class="se">\(</span><span class="n">endPointURL</span><span class="se">)</span><span class="s">"</span>
 
-    <span class="kt">Kron</span><span class="o">.</span><span class="nf">watchDog</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">10.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="n">watchdogkey</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+    <span class="kt">Kron</span><span class="o">.</span><span class="nf">watchDog</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">10.0</span><span class="p">,</span> <span class="nv">resetKey</span><span class="p">:</span><span class="n">watchdogkey</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
         <span class="c1">// retry or something else?</span>
         <span class="nf">assert</span><span class="p">(</span><span class="kc">false</span><span class="p">,</span> <span class="s">"print api is not responding!"</span><span class="p">)</span>
     <span class="p">}</span>
@@ -149,7 +149,7 @@
 <ul>
 <li><strong>Idle Timer</strong></li>
 </ul>
-<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"keyStrokes"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">resetKey</span><span class="p">:</span><span class="s">"keyStrokes"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
       <span class="nf">print</span><span class="p">(</span><span class="s">"performed after 1 second of inactivity"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
@@ -157,7 +157,7 @@
 <ul>
 <li><strong>Debouncer</strong></li>
 </ul>
-<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">debounce</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"Scroll"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">debounce</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">resetKey</span><span class="p">:</span><span class="s">"Scroll"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
       <span class="nf">print</span><span class="p">(</span><span class="s">"performed immediately and again no sooner than 1 second"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
@@ -165,7 +165,7 @@
 <ul>
 <li><strong>Debouncer and perform last</strong></li>
 </ul>
-<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">debounceLast</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"Scroll"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">debounceLast</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">resetKey</span><span class="p">:</span><span class="s">"Scroll"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
       <span class="nf">print</span><span class="p">(</span><span class="s">"performed immediately and again no sooner than 1 second"</span><span class="p">)</span>
       <span class="nf">print</span><span class="p">(</span><span class="s">"also performs the last call after 1 second of inactivity"</span><span class="p">)</span>
 <span class="p">}</span>
@@ -174,7 +174,7 @@
 <ul>
 <li><strong>Watchdog</strong></li>
 </ul>
-<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">watchdog</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">10.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"ApiResponse"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">watchdog</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">10.0</span><span class="p">,</span> <span class="nv">resetKey</span><span class="p">:</span><span class="s">"ApiResponse"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
       <span class="nf">print</span><span class="p">(</span><span class="s">"performed  after 10 seconds unless canceled"</span><span class="p">)</span>
 
 <span class="p">}</span>

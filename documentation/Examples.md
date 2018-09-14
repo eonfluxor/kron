@@ -7,7 +7,7 @@ This example will ensure to update the UI only every second during user scroll. 
 
 ```swift
 func didScroll(){
-	Kron.debounceLast(timeOut: 1, key: "scroll") { (keu, context) in
+	Kron.debounceLast(timeOut: 1, resetKey: "scroll") { (keu, context) in
    		//updateUI     
 	}
 }
@@ -27,7 +27,7 @@ func textViewDidChange(){
 }
 
 func autoSave(){
-    Kron.idle(timeOut:10.0, key:self.currentDocument){ [weak self] (key,context) in
+    Kron.idle(timeOut:10.0, resetKey:self.currentDocument){ [weak self] (key,context) in
           
         let aDocument = key as? NSObject
         guard aDocument == self?.currentDocument else{
@@ -52,7 +52,7 @@ func startApiRequest(_ endPointURL:String){
     
     let watchdogkey = "ApiRequest\(endPointURL)"
     
-    Kron.watchDog(timeOut:10.0, key:watchdogkey){ (key,context) in
+    Kron.watchDog(timeOut:10.0, resetKey:watchdogkey){ (key,context) in
         // retry or something else?
         assert(false, "print api is not responding!")
     }
@@ -76,7 +76,7 @@ In all instances the timer will be reset by simply calling Kron with the same ke
 
 
 ```swift
-Kron.idle(timeOut:1.0, key:"keyStrokes"){ (key,context) in
+Kron.idle(timeOut:1.0, resetKey:"keyStrokes"){ (key,context) in
       print("performed after 1 second of inactivity")
 }
 ```
@@ -84,7 +84,7 @@ Kron.idle(timeOut:1.0, key:"keyStrokes"){ (key,context) in
 * **Debouncer**
 
 ```swift
-Kron.debounce(timeOut:1.0, key:"Scroll"){ (key,context) in
+Kron.debounce(timeOut:1.0, resetKey:"Scroll"){ (key,context) in
       print("performed immediately and again no sooner than 1 second")
 }
 ```
@@ -92,7 +92,7 @@ Kron.debounce(timeOut:1.0, key:"Scroll"){ (key,context) in
 * **Debouncer and perform last**
 
 ```swift
-Kron.debounceLast(timeOut:1.0, key:"Scroll"){ (key,context) in
+Kron.debounceLast(timeOut:1.0, resetKey:"Scroll"){ (key,context) in
       print("performed immediately and again no sooner than 1 second")
       print("also performs the last call after 1 second of inactivity")
 }
@@ -101,7 +101,7 @@ Kron.debounceLast(timeOut:1.0, key:"Scroll"){ (key,context) in
 * **Watchdog**
 
 ```swift
-Kron.watchdog(timeOut:10.0, key:"ApiResponse"){ (key,context) in
+Kron.watchdog(timeOut:10.0, resetKey:"ApiResponse"){ (key,context) in
       print("performed  after 10 seconds unless canceled")
 
 }

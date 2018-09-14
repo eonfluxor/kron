@@ -10,7 +10,7 @@ class KronTests: XCTestCase {
     
     func test(){
         let context = "userTap"
-        Kron.debounce(timeOut:1.0, key:"updateUI", context: context){ (key,context) in
+        Kron.debounce(timeOut:1.0, resetKey:"updateUI", context: context){ (key,context) in
             
             print(context as! String) // userTap
             
@@ -21,7 +21,7 @@ class KronTests: XCTestCase {
         
         let expectation = self.expectation(description: "execute once")
         
-        Kron.idle(timeOut:1, key:"test"){ (key,context) in
+        Kron.idle(timeOut:1, resetKey:"test"){ (key,context) in
             XCTAssert((key as! String) == "test")
             expectation.fulfill()
         }
@@ -35,7 +35,7 @@ class KronTests: XCTestCase {
         let expectation = self.expectation(description: "execute once")
         
         let aKey = NSObject()
-        Kron.idle(timeOut:1, key:aKey){ (key,context) in
+        Kron.idle(timeOut:1, resetKey:aKey){ (key,context) in
             XCTAssert((key as! NSObject) == aKey)
             expectation.fulfill()
         }
@@ -52,13 +52,13 @@ class KronTests: XCTestCase {
         
         let context:Int = 90
         
-        Kron.idle(timeOut:1, key:"test", context: context){ (key,context) in
+        Kron.idle(timeOut:1, resetKey:"test", context: context){ (key,context) in
             expectation2.fulfill()
         }
-        Kron.idle(timeOut:1, key:"test", context: context){ (key,context) in
+        Kron.idle(timeOut:1, resetKey:"test", context: context){ (key,context) in
             expectation2.fulfill()
         }
-        Kron.idle(timeOut:1, key:"test", context: context){ (key,context) in
+        Kron.idle(timeOut:1, resetKey:"test", context: context){ (key,context) in
             expectation.fulfill()
             XCTAssert((context as! Int) == 90)
         }
@@ -76,11 +76,11 @@ class KronTests: XCTestCase {
         
         let context:Int = 90
         
-        Kron.debounce(timeOut: 1, key:"test", context: context){ (key,context) in
+        Kron.debounce(timeOut: 1, resetKey:"test", context: context){ (key,context) in
             expectation.fulfill()
             XCTAssert((context as! Int) == 90)
         }
-        Kron.debounce(timeOut: 1, key:"test", context: context){ (key,context) in
+        Kron.debounce(timeOut: 1, resetKey:"test", context: context){ (key,context) in
             expectation2.fulfill()
         }
         
@@ -96,13 +96,13 @@ class KronTests: XCTestCase {
         ignore.isInverted = true
         
         
-        Kron.debounceLast(timeOut:1, key:"test"){ (key,context) in
+        Kron.debounceLast(timeOut:1, resetKey:"test"){ (key,context) in
             expectation.fulfill()
         }
-        Kron.debounceLast(timeOut:1, key:"test"){ (key,context) in
+        Kron.debounceLast(timeOut:1, resetKey:"test"){ (key,context) in
             ignore.fulfill()
         }
-        Kron.debounceLast(timeOut:1, key:"test"){ (key,context) in
+        Kron.debounceLast(timeOut:1, resetKey:"test"){ (key,context) in
             expectation2.fulfill()
         }
         
@@ -114,7 +114,7 @@ class KronTests: XCTestCase {
         let expectation = self.expectation(description: "execute once")
         let ref:NSDictionary = ["foo":"bar"]
         
-        Kron.watchDog(timeOut:1, key:"test",context:ref){ (key,context) in
+        Kron.watchDog(timeOut:1, resetKey:"test",context:ref){ (key,context) in
             expectation.fulfill()
             let aRef = context as? NSDictionary
             XCTAssert(ref == aRef)
@@ -129,11 +129,11 @@ class KronTests: XCTestCase {
         expectation.isInverted = true
         
         
-        Kron.watchDog(timeOut:1, key:"test"){ (key,context) in
+        Kron.watchDog(timeOut:1, resetKey:"test"){ (key,context) in
             expectation.fulfill()
         }
         
-        Kron.watchDogCancel(key:"test")
+        Kron.watchDogCancel(resetKey:"test")
         waitForExpectations(timeout: 2, handler: nil)
     }
     
@@ -146,13 +146,13 @@ class KronTests: XCTestCase {
         let context:Int = 90
         let ref:[String:Any] = [:]
         
-        Kron.idle(timeOut:1, key:ref, context: context){ (key,context) in
+        Kron.idle(timeOut:1, resetKey:ref, context: context){ (key,context) in
             expectation2.fulfill()
         }
-        Kron.idle(timeOut:1, key:ref, context: context){ (key,context) in
+        Kron.idle(timeOut:1, resetKey:ref, context: context){ (key,context) in
             expectation2.fulfill()
         }
-        Kron.idle(timeOut:1, key:ref, context: context){ (key,context) in
+        Kron.idle(timeOut:1, resetKey:ref, context: context){ (key,context) in
             expectation.fulfill()
             XCTAssert((context as! Int) == 90)
         }
@@ -168,7 +168,7 @@ class KronTests: XCTestCase {
         
         var ref:NSObject? = NSObject()
         print(CFGetRetainCount(ref))
-        Kron.idle(timeOut:1, key:"test", context: ref){ (key,context) in
+        Kron.idle(timeOut:1, resetKey:"test", context: ref){ (key,context) in
             print("reatin on closure \(CFGetRetainCount(context as CFTypeRef)))")
         
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0 ) {

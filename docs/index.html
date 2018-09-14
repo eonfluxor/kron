@@ -97,7 +97,7 @@
 <a href="https://travis-ci.org/eonfluxor/kron"><img src="https://travis-ci.org/eonfluxor/kron.svg?branch=master" alt="Build Status"></a></p>
 <h1 id='what-is-kron' class='heading'>What is Kron?</h1>
 
-<p><strong>Kron</strong> is a <strong>NSTimer manager</strong> offering <strong>4 modes</strong> through a unified api. Kron takes care of the involved implementation of NSTimers while ensuring a proper memory management with no extra effort:</p>
+<p><strong>Kron</strong> is a <strong>reset-able Timers manager</strong> offering <strong>4 modes</strong> through a unified api. Kron takes care of the involved implementation of reset-able Timers while ensuring a proper memory management with no extra effort:</p>
 
 <ol>
 <li><code>Kron.debounce</code>: Calls immediatly and reject calls until time out elapses</li>
@@ -117,7 +117,7 @@ Kron to your <code>Podfile</code>:</p>
 </code></pre>
 <h3 id='why-kron' class='heading'>Why Kron?</h3>
 
-<p>Creating a Timer requires a setup similar to this:</p>
+<p>Creating a reset-able Timer requires a setup similar to this:</p>
 <pre class="highlight swift"><code>
 <span class="kd">class</span> <span class="kt">SomeClass</span><span class="p">{</span>
     <span class="k">var</span> <span class="nv">timer</span><span class="p">:</span><span class="kt">Timer</span><span class="p">?</span>
@@ -154,8 +154,8 @@ Kron to your <code>Podfile</code>:</p>
 </code></pre>
 <h3 id='what-about-doing-this-in-one-line' class='heading'>What about doing this in one line?</h3>
 
-<p>Kron takes care of all this setup by internally managing a map of Timers that can be accesed through a key. Calling again with the same key would cause the timer to be reset.</p>
-<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"updateUI"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+<p>Kron takes care of all this setup by internally managing a map of Timers that can be accesed through a <code>resetKey</code>. Recursively calling with the same <code>resetKey</code> will cause that particular timer to reset in all modes.</p>
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">resetKey</span><span class="p">:</span><span class="s">"updateUI"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
 
 <span class="p">}</span>
 </code></pre>
@@ -172,7 +172,7 @@ Kron to your <code>Podfile</code>:</p>
 
 <p>This example will ensure to update the UI only every second during user scroll. Additionally using <code>debounceLast</code> will ensure to apply the last call on timeOut. This will guarante the last event will be performed.  (You cn alsu use <code>debounce</code> for traditional debouncing.</p>
 <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">didScroll</span><span class="p">(){</span>
-    <span class="kt">Kron</span><span class="o">.</span><span class="nf">debounceLast</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span> <span class="s">"scroll"</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">keu</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+    <span class="kt">Kron</span><span class="o">.</span><span class="nf">debounceLast</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">resetKey</span><span class="p">:</span> <span class="s">"scroll"</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">keu</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span> <span class="k">in</span>
         <span class="c1">//updateUI     </span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -188,7 +188,7 @@ Kron to your <code>Podfile</code>:</p>
 <span class="p">}</span>
 
 <span class="kd">func</span> <span class="nf">autoSave</span><span class="p">(){</span>
-    <span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">10.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="k">self</span><span class="o">.</span><span class="n">currentDocument</span><span class="p">){</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+    <span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">10.0</span><span class="p">,</span> <span class="nv">resetKey</span><span class="p">:</span><span class="k">self</span><span class="o">.</span><span class="n">currentDocument</span><span class="p">){</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
 
         <span class="k">let</span> <span class="nv">aDocument</span> <span class="o">=</span> <span class="n">key</span> <span class="k">as?</span> <span class="kt">NSObject</span>
         <span class="k">guard</span> <span class="n">aDocument</span> <span class="o">==</span> <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">currentDocument</span> <span class="k">else</span><span class="p">{</span>
@@ -209,7 +209,7 @@ Kron to your <code>Podfile</code>:</p>
 
     <span class="k">let</span> <span class="nv">watchdogkey</span> <span class="o">=</span> <span class="s">"ApiRequest</span><span class="se">\(</span><span class="n">endPointURL</span><span class="se">)</span><span class="s">"</span>
 
-    <span class="kt">Kron</span><span class="o">.</span><span class="nf">watchDog</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">10.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="n">watchdogkey</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+    <span class="kt">Kron</span><span class="o">.</span><span class="nf">watchDog</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">10.0</span><span class="p">,</span> <span class="nv">resetKey</span><span class="p">:</span><span class="n">watchdogkey</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
         <span class="c1">// retry or something else?</span>
         <span class="nf">assert</span><span class="p">(</span><span class="kc">false</span><span class="p">,</span> <span class="s">"print api is not responding!"</span><span class="p">)</span>
     <span class="p">}</span>
@@ -235,7 +235,7 @@ Kron to your <code>Podfile</code>:</p>
 <ul>
 <li><strong>Idle Timer</strong></li>
 </ul>
-<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"keyStrokes"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">idle</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">resetKey</span><span class="p">:</span><span class="s">"keyStrokes"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
       <span class="nf">print</span><span class="p">(</span><span class="s">"performed after 1 second of inactivity"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
@@ -243,7 +243,7 @@ Kron to your <code>Podfile</code>:</p>
 <ul>
 <li><strong>Debouncer</strong></li>
 </ul>
-<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">debounce</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"Scroll"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">debounce</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">resetKey</span><span class="p">:</span><span class="s">"Scroll"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
       <span class="nf">print</span><span class="p">(</span><span class="s">"performed immediately and again no sooner than 1 second"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
@@ -251,7 +251,7 @@ Kron to your <code>Podfile</code>:</p>
 <ul>
 <li><strong>Debouncer and perform last</strong></li>
 </ul>
-<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">debounceLast</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"Scroll"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">debounceLast</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span> <span class="nv">resetKey</span><span class="p">:</span><span class="s">"Scroll"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
       <span class="nf">print</span><span class="p">(</span><span class="s">"performed immediately and again no sooner than 1 second"</span><span class="p">)</span>
       <span class="nf">print</span><span class="p">(</span><span class="s">"also performs the last call after 1 second of inactivity"</span><span class="p">)</span>
 <span class="p">}</span>
@@ -260,7 +260,7 @@ Kron to your <code>Podfile</code>:</p>
 <ul>
 <li><strong>Watchdog</strong></li>
 </ul>
-<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">watchdog</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">10.0</span><span class="p">,</span> <span class="nv">key</span><span class="p">:</span><span class="s">"ApiResponse"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Kron</span><span class="o">.</span><span class="nf">watchdog</span><span class="p">(</span><span class="nv">timeOut</span><span class="p">:</span><span class="mf">10.0</span><span class="p">,</span> <span class="nv">resetKey</span><span class="p">:</span><span class="s">"ApiResponse"</span><span class="p">){</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">context</span><span class="p">)</span> <span class="k">in</span>
       <span class="nf">print</span><span class="p">(</span><span class="s">"performed  after 10 seconds unless canceled"</span><span class="p">)</span>
 
 <span class="p">}</span>

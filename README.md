@@ -11,7 +11,7 @@
 
 
 # What is Kron?
-**Kron** is a **NSTimer manager** offering **4 modes** through a unified api. Kron takes care of the involved implementation of NSTimers while ensuring a proper memory management with no extra effort:
+**Kron** is a **reset-able Timers manager** offering **4 modes** through a unified api. Kron takes care of the involved implementation of reset-able Timers while ensuring a proper memory management with no extra effort:
 
 1. `Kron.debounce`: Calls immediatly and reject calls until time out elapses
 1. `Kron.debounceLast`: As `debounce` but also performs the last call after time out
@@ -37,7 +37,7 @@ import Delayed
 ### Why Kron?
 
 
-Creating a Timer requires a setup similar to this:
+Creating a reset-able Timer requires a setup similar to this:
 
 ```swift
 
@@ -77,10 +77,10 @@ class SomeClass{
 
 ### What about doing this in one line?
 
-Kron takes care of all this setup by internally managing a map of Timers that can be accesed through a key. Calling again with the same key would cause the timer to be reset.
+Kron takes care of all this setup by internally managing a map of Timers that can be accesed through a `resetKey`. Recursively calling with the same `resetKey` will cause that particular timer to reset in all modes.
 
 ```swift
-Kron.idle(timeOut:1.0, key:"updateUI"){ (key,context) in
+Kron.idle(timeOut:1.0, resetKey:"updateUI"){ (key,context) in
      
 }
 ```
@@ -101,7 +101,7 @@ This example will ensure to update the UI only every second during user scroll. 
 
 ```swift
 func didScroll(){
-	Kron.debounceLast(timeOut: 1, key: "scroll") { (keu, context) in
+	Kron.debounceLast(timeOut: 1, resetKey: "scroll") { (keu, context) in
    		//updateUI     
 	}
 }
@@ -121,7 +121,7 @@ func textViewDidChange(){
 }
 
 func autoSave(){
-    Kron.idle(timeOut:10.0, key:self.currentDocument){ [weak self] (key,context) in
+    Kron.idle(timeOut:10.0, resetKey:self.currentDocument){ [weak self] (key,context) in
           
         let aDocument = key as? NSObject
         guard aDocument == self?.currentDocument else{
@@ -146,7 +146,7 @@ func startApiRequest(_ endPointURL:String){
     
     let watchdogkey = "ApiRequest\(endPointURL)"
     
-    Kron.watchDog(timeOut:10.0, key:watchdogkey){ (key,context) in
+    Kron.watchDog(timeOut:10.0, resetKey:watchdogkey){ (key,context) in
         // retry or something else?
         assert(false, "print api is not responding!")
     }
@@ -178,7 +178,7 @@ In all instances the timer will be reset by simply calling Kron with the same ke
 
 
 ```swift
-Kron.idle(timeOut:1.0, key:"keyStrokes"){ (key,context) in
+Kron.idle(timeOut:1.0, resetKey:"keyStrokes"){ (key,context) in
       print("performed after 1 second of inactivity")
 }
 ```
@@ -186,7 +186,7 @@ Kron.idle(timeOut:1.0, key:"keyStrokes"){ (key,context) in
 * **Debouncer**
 
 ```swift
-Kron.debounce(timeOut:1.0, key:"Scroll"){ (key,context) in
+Kron.debounce(timeOut:1.0, resetKey:"Scroll"){ (key,context) in
       print("performed immediately and again no sooner than 1 second")
 }
 ```
@@ -194,7 +194,7 @@ Kron.debounce(timeOut:1.0, key:"Scroll"){ (key,context) in
 * **Debouncer and perform last**
 
 ```swift
-Kron.debounceLast(timeOut:1.0, key:"Scroll"){ (key,context) in
+Kron.debounceLast(timeOut:1.0, resetKey:"Scroll"){ (key,context) in
       print("performed immediately and again no sooner than 1 second")
       print("also performs the last call after 1 second of inactivity")
 }
@@ -203,7 +203,7 @@ Kron.debounceLast(timeOut:1.0, key:"Scroll"){ (key,context) in
 * **Watchdog**
 
 ```swift
-Kron.watchdog(timeOut:10.0, key:"ApiResponse"){ (key,context) in
+Kron.watchdog(timeOut:10.0, resetKey:"ApiResponse"){ (key,context) in
       print("performed  after 10 seconds unless canceled")
 
 }
