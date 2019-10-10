@@ -110,7 +110,7 @@ public class Kron: NSObject {
         let timer = Timer(timeInterval: TimeInterval(interval), target: self, selector: #selector(timerTick), userInfo: job, repeats: false)
         self.timers[key] = timer
         
-        RunLoop.main.add(timer, forMode: .commonModes)
+        RunLoop.main.add(timer, forMode: RunLoop.Mode.common)
         
     }
     
